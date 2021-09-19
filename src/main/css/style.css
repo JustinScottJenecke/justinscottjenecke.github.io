@@ -23,9 +23,9 @@
             --colorAccent: #55ff4d; /*Lime-Neon*/
 
         /*Font Sizes*/
-            --sizeTitle: 2.6rem;
-            --sizeHeading_a: 2.2rem; 
-            --sizeHeading_b: 1.6rem;
+            --sizeTitle: 2.4rem;
+            --sizeHeading_a: 2.rem; 
+            --sizeHeading_b: 1.4rem;
             --sizeBody: 1rem;
         
             
@@ -67,8 +67,8 @@
         flex-direction: column;
         width: 100%;
         height: 100%;
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
         overflow-x: hidden; 
 
         font-family: var(--fontBody);
@@ -177,11 +177,20 @@
         margin-top: 1vh;
         display: inline-flex;
         justify-content: space-evenly;
-        gap: 5vw;
+        gap: 1vw;
     }
-    .projects__category__list h3 {
+    .projects__category__list button {
         margin: 0;
+        font-size: 1.2rem;
     }
+
+    @media (min-width: 800px) {
+        .projects__category__list button {
+            gap: 8vw;
+            font-size: 2.2rem;
+        }
+    }
+
     .projects__category__list button {
         padding: 0 3% 0 3%;
         background-color: var(--colorDominant);
@@ -285,8 +294,9 @@
         .contact__form {
             display: grid;
             grid-template-columns: repeat(2,1fr);
-            padding: 5vh 0 5vh 0;
+            padding: 5vh 0 5vh 0;            
             /*min-width: 50vw;*/
+
         }
 
         .table__submit {
@@ -298,7 +308,6 @@
             color: var(--colorDominant_b);
             font-size: var(--sizeHeading_b);
         }
-
     }
 
     .table__submit {
@@ -319,9 +328,15 @@
 
     .ti__input {
         font-family: var(--fontlink);
+        font-size: var(--sizeBody);
         background-color: var(--colorDominant_a);
         color: var(--colorAccent);
         border-color: var(--colorDominant_a);
+    }
+    @media (min-width: 800px) {
+        .ti__input {
+            margin-bottom: 5vh;
+        }
     }
 
 /*================================================
