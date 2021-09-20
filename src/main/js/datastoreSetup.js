@@ -26,34 +26,67 @@ const technologies = new Array;
     Projects DataStore 
 ----------------------- */
 
-projects[0] = new Project(
-    'backend', 
-    'courier manager',
-    'courierManager.gif',
-    'details',
-    'https://github.com/JustinScottJenecke/courier-manager-rest-service.git',
-    '#');
+const populateProjects = (array) => {
+
+    array.push(  new Project(
+        'backend', 
+        'Courier Manager API',
+        'courierManager.gif',
+        'details',
+        'https://github.com/JustinScottJenecke/courier-manager-rest-service.git',
+        '#')
+    );
+
+    array.push( new Project(
+        'backend', 
+        'Tutorspace API',
+        'courierManager.gif',
+        'details',
+        'https://github.com/JustinScottJenecke/courier-manager-rest-service.git',
+        '#')
+    );
+        
+}
 
 /* ----------------------
     Skills DataStore 
 ----------------------- */
 
-skills[0] = new Skill(
-    'Web Development', 
-    'Full stack web development. (APIs, clients, databases)');
+const populateSkills = (array) => {
+
+    array.push( new Skill(
+        'Web Development', 
+        'Full stack web development. (APIs, clients, databases)'));
+
+}
 
 /* ----------------------
     Stories DataStore 
 ----------------------- */
 
-stories[0] = new StoryBlock('I am a final year Applications Development student, studying at CPUT');
+const populateStories = (array) => {
+
+    array.push( new StoryBlock('I am a final year Applications Development student, studying at CPUT'));
+
+}
 
 /* ----------------------
     Technologies DataStore 
 ----------------------- */
 
-technologies[0] = new Tech('backend','Java');
-technologies.push(new Tech('frontend', 'JavaScript'));
+const populateTechnologies = (array) => {
+
+    array.push( new Tech('backend','Java'));
+    array.push( new Tech('frontend', 'JavaScript'));
+
+}
+
+
 /*-------- Tests --------*/
+
+populateProjects(projects);
+populateSkills(skills);
+populateStories(stories);
+populateTechnologies(technologies);
 
 console.log(projects, skills, stories, technologies);
