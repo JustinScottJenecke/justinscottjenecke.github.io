@@ -1,7 +1,6 @@
 export default class Skill {
-    constructor (type, name, details) {
+    constructor (name, details) {
 
-        this.type = type;
         this.name = name;
         this.details = details;
     }
