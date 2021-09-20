@@ -1,4 +1,4 @@
-class Project {
+export default class Project {
     constructor(type, title, preview, details, demo, repo) {
 
         this.type = type;

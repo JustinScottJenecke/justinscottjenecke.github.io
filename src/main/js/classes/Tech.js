@@ -1,4 +1,4 @@
-class Tech {    
+export default class Tech {    
     constructor(type, icon) {
 
         this.type = type;
