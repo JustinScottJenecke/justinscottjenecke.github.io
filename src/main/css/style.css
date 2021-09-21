@@ -200,6 +200,15 @@
         margin-bottom: 1rem;
     }
 
+    #skill__carousel skill-card {
+        min-width: 50%;
+        text-align: center;
+        color: var(--colorCompliment);
+        background-color: var(--colorDominant);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
     @media (min-width: 800px) {
 
         #skill_carousel {
@@ -209,6 +218,11 @@
         #skill__carousel article {
             min-height: 50vh;
             min-width: 35%;
+        }
+
+        #skill__carousel skill-card {
+            min-height: 50vh;
+            min-width: 40%;
         }
         
     }    

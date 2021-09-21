@@ -4,6 +4,7 @@ import { populateStories } from "./js/datastoreSetup.js";
 import { populateTechnologies } from "./js/datastoreSetup.js";
 
 import ProjectComponent from "./js/components/ProjectComponent.js";
+import SkillCard from "./js/components/SkillCard.js";
 
 const projects = new Array;
 const skills = new Array;
