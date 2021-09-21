@@ -92,8 +92,10 @@
                 </button>
             </nav>
 
-            <div id="projects__carousel" >
-                <section id="projects__backend">
+            <div class="projects__carousel" id="projects__carousel">
+                <button class="projects__carousel__scroller"><</button>
+                <section class="projects__list" id="projects__backend">
+                    <project-component></project-component>
                     <!--<article>
                         <h4>Project Title</h4>
                         <figure>
@@ -107,7 +109,7 @@
                     </article>-->
                 </section><!--BE-->
 
-                <section id="projects__frontend">
+                <section class="projects__list" id="projects__frontend">
                     <!--<article>
                         <h4>Project Title</h4>
                         <figure>
@@ -121,11 +123,11 @@
                     </article>-->
                 </section><!--FE-->
 
-                <section id="projects__fullstack">
+                <section class="projects__list" id="projects__fullstack">
                     <!---->
                 </section><!--FS-->
-            </div>
-
+                <button class="projects__carousel__scroller">></button>
+            </div>  
         </section>
       
 <!--================= Technologies Section ==================-->

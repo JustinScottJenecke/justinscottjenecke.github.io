@@ -3,29 +3,11 @@ template.innerHTML = `
 
     <style>
 
-        body {
-            background-color: var(--colorDominant);
-            color: var(--colorCompliment);
-        }
-
-        /*:root {
-            
-            /*Colours*/
-            --colorDominant: #181818; /*Main*/
-            --colorDominant_a:#1d1d1d;
-            --colorDominant_b:#333333; /*Components and Contrast*/
-
-            --colorCompliment: #ececec;  /*Text & Contrast*/
-            --colorCompliment_a: #c0bebe;
-            --colorCompliment_b: #797979;
-
-            --colorAccent: #55ff4d;
-        }*/
-
         .project__article {
             margin: 0;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            min-height: 70vh;
         }
 
         h4 {
@@ -33,26 +15,28 @@ template.innerHTML = `
             grid-column-start: 1;
             grid-column-end: 3;
             padding: 0.5rem;
+            height: 5vh;
+            text-align: center;
         }
 
         figure {
             margin: 0;
             grid-column-start: 1;
             grid-column-end: 3;
-            background-color: white;
+            height: 35vh
         }
 
         p {
             margin: 0;
             padding: 1rem;
-
+            height: 15vh;
         }
 
         h5 {
             text-align: center;
             margin: 0;
             padding: 0.5rem;
-
+            height: 5vh
         }
 
         button {
@@ -60,6 +44,7 @@ template.innerHTML = `
                 background-color:var(--colorAccent);
                 color: var(--colorDominant_a);
                 border-style: none;
+                height: 5vh
             }
 
         @media (min-width:800px){
@@ -67,6 +52,13 @@ template.innerHTML = `
             button:hover {
                 background-color: var(--colorCompliment);
                 color: rgb(26, 211, 2);
+            }
+
+            figure {
+                height: 45vh;
+            }
+            p {
+                height: 10vh
             }
         }
     </style>
@@ -82,14 +74,28 @@ template.innerHTML = `
         <h5>Technologies</h5>
 
         <p id="project__article__description">
-            aaa
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Dolore ducimus porro perspiciatis,
+            quasi, dolor quisquam.
         </p>
         
         <p id="project__article__technology">
-            bbb
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Dolore ducimus porro perspiciatis,
+            quasi, dolor quisquam.
         </p>
 
         <button>Visit/Demo</button>                      
         <button>Repository</button>
     </article>
 `
+export default class ProjectComponent extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({mode:'open'});
+        
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+}
+
+window.customElements.define('project-component', ProjectComponent);

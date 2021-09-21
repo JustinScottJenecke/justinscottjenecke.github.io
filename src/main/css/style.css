@@ -251,6 +251,41 @@
         color: var(--colorAccent);
     }
 
+    /*--- carousel ---*/
+
+    .projects__carousel {
+        display: flex;
+        flex-direction: row;
+        min-height: 70vh;
+        min-width: 100%;
+    }
+
+    .projects__list {
+        margin-top: 1rem;
+        height: 20vh;
+    }
+
+   .projects__carousel__scroller {
+       color: var(--colorAccent);
+       border: var(--colorAccent) solid 1px;
+       background-color: transparent;
+       width: 1vw;
+   }
+
+   @media (min-width:800px) {
+
+        .projects__carousel__scroller {
+            color: var(--colorDominant_b);
+            border: var(--colorDominant_b) solid;
+        }
+
+        .projects__carousel__scroller:hover {
+            color: var(--colorAccent);
+            border: var(--colorAccent) solid;
+        }
+
+   }
+    
 
 /*================================================
     --- Tech ---
