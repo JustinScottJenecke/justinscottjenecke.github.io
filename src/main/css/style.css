@@ -24,7 +24,7 @@
 
         /*Font Sizes*/
             --sizeTitle: 2.4rem;
-            --sizeHeading_a: 2.rem; 
+            --sizeHeading_a: 2rem; 
             --sizeHeading_b: 1.4rem;
             --sizeBody: 1rem;
         
@@ -165,6 +165,54 @@
 
         }
     }
+/*================================================
+    --- Skills ---
+================================================*/
+
+    #skill__carousel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-top: 1rem;
+        min-height: 30vh;
+        overflow-x: auto;
+        column-gap: 2vw;
+    }
+
+    #skill__carousel::-webkit-scrollbar {
+        background: black;
+    }
+
+    #skill__carousel::-webkit-scrollbar-track {
+        border: 1px solid var(--colorAccent);
+    }
+
+    #skill__carousel::-webkit-scrollbar-thumb {
+        background: var(--colorAccent);
+    }
+    #skill__carousel article {
+        min-width: 50%;
+        text-align: center;
+        color: var(--colorCompliment);
+        background-color: var(--colorDominant);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    @media (min-width: 800px) {
+
+        #skill_carousel {
+            min-height: 50vh;
+        }
+
+        #skill__carousel article {
+            min-height: 50vh;
+            min-width: 35%;
+        }
+        
+    }    
+
 
 /*================================================
     --- Projects ---

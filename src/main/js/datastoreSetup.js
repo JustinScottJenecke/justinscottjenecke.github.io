@@ -17,16 +17,10 @@ import Skill from './classes/Skill.js';
 import StoryBlock from './classes/StoryBlock.js';
 import Tech from './classes/Tech.js';
 
-const projects = new Array;
-const skills = new Array;
-const stories = new Array;
-const technologies = new Array;
-
 /* ----------------------
-    Projects DataStore 
------------------------ */
+    Projects DataStore*/
 
-const populateProjects = (array) => {
+export const populateProjects = (array) => {
 
     array.push(  new Project(
         'backend', 
@@ -49,10 +43,9 @@ const populateProjects = (array) => {
 }
 
 /* ----------------------
-    Skills DataStore 
------------------------ */
+    Skills DataStore*/
 
-const populateSkills = (array) => {
+export const populateSkills = (array) => {
 
     array.push( new Skill(
         'Web Development', 
@@ -61,20 +54,18 @@ const populateSkills = (array) => {
 }
 
 /* ----------------------
-    Stories DataStore 
------------------------ */
+    Stories DataStore*/ 
 
-const populateStories = (array) => {
+export const populateStories = (array) => {
 
     array.push( new StoryBlock('I am a final year Applications Development student, studying at CPUT'));
 
 }
 
 /* ----------------------
-    Technologies DataStore 
------------------------ */
+    Technologies DataStore*/ 
 
-const populateTechnologies = (array) => {
+export const populateTechnologies = (array) => {
 
     array.push( new Tech('backend','Java'));
     array.push( new Tech('frontend', 'JavaScript'));
@@ -83,6 +74,11 @@ const populateTechnologies = (array) => {
 
 
 /*-------- Tests --------*/
+/*
+const projects = new Array;
+const skills = new Array;
+const stories = new Array;
+const technologies = new Array;
 
 populateProjects(projects);
 populateSkills(skills);
@@ -90,3 +86,4 @@ populateStories(stories);
 populateTechnologies(technologies);
 
 console.log(projects, skills, stories, technologies);
+*/
