@@ -10,16 +10,17 @@ template.innerHTML = `
 
         .content {
             position: absolute;
-            /*background-color: red;*/
             min-width: inherit;
             min-height: inherit;
+            color: var(--colorDominant);
         }
         .overlay {
             position: absolute;
             left: 0;
             height: 100%;
             width: 100%;
-            background-color: rgb(255,255, 255);
+            color: var(--colorCompliment);
+            background-color: var(--colorDominant);
         }
 
         .card:hover > .overlay {

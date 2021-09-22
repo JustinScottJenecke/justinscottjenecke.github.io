@@ -202,6 +202,7 @@
 
     #skill__carousel skill-card {
         min-width: 50%;
+        min-height: 30vh;
         text-align: center;
         color: var(--colorCompliment);
         background-color: var(--colorDominant);
