@@ -3,6 +3,10 @@ template.innerHTML = `
 
     <style>
 
+        body {
+            font-family: var(--fontBody);
+        }
+
         button {
             font-family: var(--fontlink);
         }
