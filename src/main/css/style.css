@@ -105,6 +105,10 @@
         font-family: var(--fontlink);
     }
 
+    .tab__heading {
+        text-align: center;
+    }
+
 
 /*
     --- Navigation Bar ---
@@ -368,12 +372,13 @@
     }
 
     .story__tab figure {
-        width: 40%;
+        min-width: 35%;
+        background-color: var(--colorCompliment_a);
     }
 
     .story__tab__content {
         justify-content: flex-end;
-        width: 60%;
+        min-width: 65%;
     }
 /*================================================
     --- Contact ---
