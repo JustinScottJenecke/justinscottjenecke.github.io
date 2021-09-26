@@ -1,6 +1,15 @@
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
+
+        button {
+            font-family: var(--fontlink);
+        }
+
+        a {
+            font-family: var(--fontlink);
+        }
+
         .card {
             margin: 0;
             position: relative;

@@ -3,6 +3,14 @@ template.innerHTML = `
 
     <style>
 
+        button {
+            font-family: var(--fontlink);
+        }
+
+        a {
+            font-family: var(--fontlink);
+        }
+
         .project__article {
             margin: 0;
             display: grid;

@@ -97,6 +97,14 @@
         font-weight: var(--weightHeading);
     }
 
+    button {
+        font-family: var(--fontlink);
+    }
+
+    a {
+        font-family: var(--fontlink);
+    }
+
 
 /*
     --- Navigation Bar ---
@@ -382,6 +390,13 @@
 
     }
 
+    .table__submit {
+        font-family: var(--fontlink);
+        background-color: var(--colorCompliment);
+        border: solid var(--colorCompliment_a);
+        color: var(--colorCompliment_b);
+    }
+
     @media (max-width: 799px) {
         .contact__form {
             text-align: justify;
@@ -406,12 +421,6 @@
             color: var(--colorDominant_b);
             font-size: var(--sizeHeading_b);
         }
-    }
-
-    .table__submit {
-        background-color: var(--colorCompliment);
-        border: solid var(--colorCompliment_a);
-        color: var(--colorCompliment_b);
     }
 
     .table__submit:hover {
