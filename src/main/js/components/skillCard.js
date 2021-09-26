@@ -43,11 +43,11 @@ template.innerHTML = `
 
     <article class="card">
         <div class="content" style='background-color: lime'>
-            <h1 id="title">title</h1>
-            <p id='body'>ljhjhgjlgljkh lugiuhgiuho;ho</p>
+            <h1 id="title2"></h1>
+            <p id='body'></p>
         </div>
         <div class="overlay">
-            <h1 id="title">title</h1>
+            <h1 id="title1"></h1>
         </div>
     </article>
 `;
@@ -57,7 +57,10 @@ export default class SkillCard extends HTMLElement {
         super();
         this.attachShadow({mode:'open'});
 
-        this.shadowRoot.appendChild(template.content.cloneNode(true));             
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        this.shadowRoot.querySelector('#title1').innerHTML = this.getAttribute('skillTitle');  
+        this.shadowRoot.querySelector('#title2').innerHTML = this.getAttribute('skillTitle'); 
+        this.shadowRoot.querySelector('#body').innerHTML = this.getAttribute('skillDescription');             
     }
 }
 

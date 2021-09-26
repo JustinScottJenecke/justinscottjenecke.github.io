@@ -16,4 +16,16 @@ populateSkills(skills);
 populateStories(stories);
 populateTechnologies(technologies);
 
-console.log(projects, skills, stories, technologies);
+//console.log(projects, skills, stories, technologies);
+
+const addSkills = () => {
+
+    const entrypoint = document.querySelector('#skill__carousel');
+
+    const newSkill = document.createElement('skill-card');
+
+    entrypoint.appendChild(newSkill);
+
+}
+
+addSkills();
