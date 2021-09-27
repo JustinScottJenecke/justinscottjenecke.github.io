@@ -43,11 +43,11 @@ template.innerHTML = `
 
     <article class="card">
         <div class="content" style='background-color: lime'>
-            <h1 id="title2"></h1>
-            <p id='body'></p>
+            <h1 id="title2">Skill</h1>
+            <p id='body'>This skills is this, I have so much experience with this and am very good at doing this</p>
         </div>
         <div class="overlay">
-            <h1 id="title1"></h1>
+            <h1 id="title1">Skill</h1>
         </div>
     </article>
 `;

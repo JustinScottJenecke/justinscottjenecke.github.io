@@ -22,10 +22,11 @@ const addSkills = () => {
 
     const entrypoint = document.querySelector('#skill__carousel');
 
-    const newSkill = document.createElement('skill-card');
-
-    entrypoint.appendChild(newSkill);
-
+    entrypoint.innerHTML += 
+        `<skill-card
+            skillTitle = "Hello"
+            skillDescription = "Hello world, I am working"
+        ></skill-card>`;
 }
 
 addSkills();
