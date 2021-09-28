@@ -18,7 +18,19 @@ populateTechnologies(technologies);
 
 //console.log(projects, skills, stories, technologies);
 
-const addSkills = () => {
+const loadProjects = () => {
+
+    const entrypoint = document.querySelector('#projects__carousel');
+
+    entrypoint.innerHTML +=
+    `<project-component
+        
+    ><project-component>
+    `
+
+}
+
+const loadSkills = () => {
 
     const entrypoint = document.querySelector('#skill__carousel');
 
@@ -29,4 +41,4 @@ const addSkills = () => {
         ></skill-card>`;
 }
 
-addSkills();
+loadSkills();

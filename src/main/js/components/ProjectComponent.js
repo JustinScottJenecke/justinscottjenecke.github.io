@@ -78,7 +78,7 @@ template.innerHTML = `
     <article class="project__article">
         <h4 id="project__article__title">Project Title</h4>
         
-        <figure id="">
+        <figure id="project__article__preview">
             <img src="#" alt="preview">
         </figure>
 
@@ -97,8 +97,8 @@ template.innerHTML = `
             quasi, dolor quisquam.
         </p>
 
-        <button>Visit/Demo</button>                      
-        <button>Repository</button>
+        <button onclick="">Visit/Demo</button>                      
+        <button onclick="">Repository</button>
     </article>
 `
 export default class ProjectComponent extends HTMLElement {
@@ -107,6 +107,10 @@ export default class ProjectComponent extends HTMLElement {
         this.attachShadow({mode:'open'});
         
         this.shadowRoot.appendChild(template.content.cloneNode(true));
+        this.shadowRoot.querySelector('#project__article__title').innerHTML = this.getAttribute('projectTitle');
+        this.shadowRoot.querySelector('#project__article__preview').innerHTML = this.getAttribute('projectPreview'); 
+        this.shadowRoot.querySelector('#project__article__description').innerHTML = this.getAttribute('projectDescription'); 
+        this.shadowRoot.querySelector('#project__article__technology').innerHTML = this.getAttribute('projectTechnology');  
     }
 }
 
