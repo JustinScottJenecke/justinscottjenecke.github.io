@@ -39,7 +39,7 @@
             
         /*Font Sizes*/
             --sizeTitle: 4rem;
-            --sizeHeading_a: 3rem; 
+            --sizeHeading_a: 3rem;
             --sizeHeading_b: 2.2rem;
             --sizeBody: 1.5rem;
         }
@@ -56,7 +56,6 @@
     *::after {
         box-sizing: border-box;
     }
-
 
 /*
     --- Global ---
