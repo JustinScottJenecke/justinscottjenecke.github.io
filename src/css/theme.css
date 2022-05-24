@@ -45,7 +45,18 @@ h2 {
 
 /* ======================== Projects ======================== */
 
-    .swiper {
-        width: 600px;
-        height: 300px;
-    }
+    /* --- swiper --- */
+        .swiper {
+            width: 70vw;
+            height: 80vh;
+        }
+
+        .swiper-slide {
+            background-color: whitesmoke;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
