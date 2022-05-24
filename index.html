@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <!-- Head -->
+    <!--=================== Head ===================-->
     <head>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -20,11 +20,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Justin Scott Isaac Jenecke</title>
         <link rel="shortcut icon" href="./public/icon/JJ.ico" type="image/x-icon">
+        <script src="https://unpkg.com/vue@next"></script>
 
         <!-- Css -->
-        <link rel="stylesheet" href="src/main/css/style.css">
+        <link rel="stylesheet" href="./src/css/theme.css">
+        <!-- Bulma -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
         <!-- JavaScript -->
+        <script src="./src/app.js" defer></script>
 
     </head>
     <!--=================== Head =====================-->
@@ -32,30 +36,59 @@
     <!--=================== Body =====================-->
     <body>
 
-        <!------ Nav ------>
-        <nav id="nav">
-            
-        </nav>
+        <div id="app">
 
-        <!------ Hero ------>
-        <header id="hero">
-            
-        </header>
+            <!------ Nav ------>
+            <nav id="header">
+                <div class="columns">
+                    <div class="column" id="logo">
+                        <a href="" class="button">
+                            JJ
+                        </a>  
+                    </div>
+                    <div class="column">
+                        <div class="columns" id="nav">
+                            <div class="column">
+                                <a href="" class="button">
+                                    Projects
+                                </a>     
+                            </div>
+                            <div class="column">
+                                <a href="" class="button">
+                                    About
+                                </a>   
+                            </div>
+                            <div class="column">
+                                <a href="" class="button">
+                                    Contact
+                                </a>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
 
-        <!------ Projects ------>
-        <section id="projects">
+            <!------ Hero ------>
+            <header id="hero" class="page-tab">
+                
+            </header>
 
-        </section>
+            <!------ Projects ------>
+            <section id="projects" class="page-tab">
+                {{count}}
+            </section>
 
-        <!------ About ------>
-        <section id="about">
+            <!------ About ------>
+            <section id="about" class="page-tab">
 
-        </section>
+            </section>
 
-        <!------ Contact ------>
-        <footer id="contact">
+            <!------ Contact ------>
+            <footer id="contact" class="page-tab">
 
-        </footer>
+            </footer>
+
+        </div>
 
     </body>
     <!--=================== Body =====================-->

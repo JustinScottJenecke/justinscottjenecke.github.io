@@ -1,0 +1,10 @@
+#app {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.page-tab {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
