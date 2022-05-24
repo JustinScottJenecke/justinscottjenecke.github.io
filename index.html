@@ -138,6 +138,41 @@
                 <h2>
                     About
                 </h2>
+                <div class="columns">
+                    <!-- About -->
+                    <div class="column">
+                        <h3>
+                            More about me
+                        </h3>
+                        <div class="about">
+                            <span v-for="info in about" class="box has-background-info has-text-black p-5 m-2">
+                                <b>{{info}}</b>
+                            </span> 
+                        </div>
+                    </div>
+                    <!-- Skills -->
+                    <div class="column">
+                      <h3>
+                          Skills
+                      </h3>
+                      <br>
+                      <div class="skills-tools">
+                        <span v-for="skill in skills" class="box has-background-primary p-1 m-3">
+                            <b>{{skill}}</b>
+                        </span>
+                    </div>
+                    <br>
+                    <h3>
+                        Tools
+                    </h3>
+                    <br>
+                    <div class="skills-tools">
+                        <span v-for="tool in tools" class="box has-background-success p-1 m-3">
+                            <b>{{tool}}</b>
+                        </span>
+                      </div>
+                    </div>
+                </div>
             </section>
 
             <!------ Contact ------>
