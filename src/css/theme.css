@@ -3,8 +3,43 @@
     margin: 0;
 }
 
+#header {
+    position: sticky;
+    margin: 0;
+    top: 0;
+    z-index: 1;
+}
+
 .page-tab {
-    padding: 2rem;
     display: flex;
     flex-direction: column;
+
+    min-height: 100vh;
+    padding: 2rem 4rem;
+
+    color: whitesmoke;
 }
+
+h2 {
+    font-size: 3rem !important;
+    text-align: center;
+}
+
+/* ======================== Hero ======================== */
+
+    #hero {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 3.5rem;
+    }
+    #hero h2 {
+        font-size: 3rem;
+    }
+
+    .hero-links {
+        margin: 2rem 15vw;
+    }
+
