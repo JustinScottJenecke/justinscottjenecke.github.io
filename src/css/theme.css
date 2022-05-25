@@ -55,9 +55,11 @@ h3 {
         .swiper {
             width: 65vw;
             min-height: 60vh;
+            
         }
 
         .swiper-slide {
+            background-color: none;
             display: flex;
             flex-direction: column;
             text-align: center;
@@ -65,7 +67,7 @@ h3 {
         }
 
         :root {
-            --swiper-navigation-color: #2dffd1;
+            --swiper-navigation-color: #2dff7d;
           }
 /* ======================== About ======================== */
 
