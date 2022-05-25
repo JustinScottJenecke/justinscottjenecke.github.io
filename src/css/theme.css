@@ -54,18 +54,19 @@ h3 {
     /* --- swiper --- */
         .swiper {
             width: 65vw;
-            height: 85vh;
+            min-height: 60vh;
         }
 
         .swiper-slide {
-            /* background-color: whitesmoke; */
-            /* color: black; */
             display: flex;
             flex-direction: column;
             text-align: center;
             padding: 0.5rem;
         }
 
+        :root {
+            --swiper-navigation-color: #2dffd1;
+          }
 /* ======================== About ======================== */
 
         #about * :hover {
