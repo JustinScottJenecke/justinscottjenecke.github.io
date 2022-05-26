@@ -96,17 +96,20 @@ const App = Vue.createApp({
             {
                 name : "Email",
                 details : "justinjenecke@gmail.com",
-                icon : "gmail.png"
+                icon : "gmail.png",
+                link : "mailto:https://justinjenecke@gmail.com",
             },
             {
                 name : "LinkedIn",
-                details : "Justin Scott Jenecke",
-                icon : "linkedin.png"
+                details : "za.linkedin.com/in/justin-scott-jenecke",
+                icon : "linkedin.png",
+                link : "https://www.linkedin.com/in/justin-scott-jenecke/"
             }, 
             {
                 name : "GitHub",
-                details : "JustinScottJenecke",
-                icon : "github.png"
+                details : "github.com/JustinScottJenecke",
+                icon : "github.png",
+                link : "https://github.com/JustinScottJenecke"
             }
         ]
 

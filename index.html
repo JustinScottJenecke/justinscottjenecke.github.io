@@ -52,24 +52,24 @@
         <nav id="header" class="pl-4 pr-4 pt-1.25 pb-1.25 has-background-white">
             <div class="columns">
                 <div class="column" id="logo">
-                    <a href="" class="button is-success">
+                    <a href="" class="button is-success hover">
                         JJ
                     </a>
                 </div>
                 <div class="column">
                     <div class="columns" id="nav">
                         <div class="column">
-                            <a href="#projects" class="button">
+                            <a href="#projects" class="button hover">
                                 Projects
                             </a>
                         </div>
                         <div class="column">
-                            <a href="#about" class="button">
+                            <a href="#about" class="button hover">
                                 About
                             </a>
                         </div>
                         <div class="column">
-                            <a href="#contact" class="button">
+                            <a href="#contact" class="button hover">
                                 Contact
                             </a>
                         </div>
@@ -90,8 +90,12 @@
                 </h2>
                 <div class="hero-links">
                     <div class="is-flex">
-                        <button v-for="(link, id) in links" :id="link.type"
-                            class="button column is-medium is-responsive p-1 m-1" :class="link.color">
+                        <button 
+                            v-for="(link, id) in links" 
+                            :id="link.type"
+                            class="button column is-medium is-responsive p-1 m-1 mx-5 hover" 
+                            :class="link.color"
+                        >
                             <b>{{link.type}}</b>
                         </button>
                     </div>
@@ -108,7 +112,7 @@
 
             <!-- Controls -->
             <div class="buttons is-centered">
-                <button v-for="stack in projectStacks" class="button is-black mx-5 is-medium">
+                <button v-for="stack in projectStacks" class="button is-black mx-5 is-medium hover">
                     {{stack}}
                 </button>
             </div>
@@ -187,8 +191,8 @@
                 <div class="swiper-pagination"></div>
 
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-next btn"></div>
-                <div class="swiper-button-prev btn"></div>
+                <div class="swiper-button-next btn hover"></div>
+                <div class="swiper-button-prev btn hover"></div>
             </div>
 
             <!-- ========== Backend Content ========== -->
@@ -409,6 +413,29 @@
             <h2>
                 Contact
             </h2>
+
+            <h3 class="mt-5 mb-5">
+                {{contactMessage}}
+            </h3>
+
+            <div class="contact-grid is-centered mt-5">
+                <div 
+                    v-for="(detail, i) in contactDetails"
+                    :i="detail.name"
+                    class="contact-grid-col  has-text-light m-2 mx-5 p-5"
+                >
+                    <div class="invisi">
+                        {{detail.details}}
+                    </div>
+                    <a :href="detail.link" target="_blank">
+                        <img 
+                            :src=" './src/resource/contact/' + detail.icon " 
+                            alt="detail.name"
+                            class="contact-icon"
+                        >
+                    </a>
+                </div>
+              </div>
         </footer>
 
     </div>
