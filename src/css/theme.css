@@ -66,8 +66,18 @@ h3 {
             padding: 0.5rem;
         }
 
+        .preview-thumb {
+            height: 40vh;
+            margin: 2rem 0;
+        }
+
+        .controls {
+            margin: 1rem 0.25rem;
+        }
+
         :root {
             --swiper-navigation-color: #2dff7d;
+            --swiper-pagination-color: #2dff7d;
           }
 /* ======================== About ======================== */
 

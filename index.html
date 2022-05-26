@@ -1,226 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <!--=================== Head ===================-->
-    <head>
+<!--=================== Head ===================-->
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-83RKS6CYK5"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+<head>
 
-            gtag('config', 'G-83RKS6CYK5');
-        </script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-83RKS6CYK5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Justin Scott Isaac Jenecke</title>
-        <link rel="shortcut icon" href="./public/icon/JJ.ico" type="image/x-icon">
-        <script src="https://unpkg.com/vue@next"></script>
+        gtag('config', 'G-83RKS6CYK5');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
-        <!-- Css -->
-        <link rel="stylesheet" href="./src/css/theme.css">
-        <!-- Bulma -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"> -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Scott Isaac Jenecke</title>
+    <link rel="shortcut icon" href="./public/icon/JJ.ico" type="image/x-icon">
+    <script src="https://unpkg.com/vue@next"></script>
 
-        <!-- Swiper -->
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-        />
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="./src/css/theme.css">
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
 
-        <!-- JavaScript -->
-        <script src="./src/app.js" defer></script>
-        <script src="./src/js/swiper.js" defer></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-    </head>
-    <!--=================== Head =====================-->
+    <!-- JavaScript -->
+    <script src="./src/app.js" defer></script>
+    <script src="./src/js/swiper.js" defer></script>
 
-    <!--=================== Body =====================-->
-    <body>
+</head>
+<!--=================== Head =====================-->
 
-        <div id="app">
+<!--=================== Body =====================-->
 
-            <!------ Nav ------>
-            <nav id="header" class="pl-4 pr-4 pt-1.25 pb-1.25 has-background-white"> 
-                <div class="columns">
-                    <div class="column" id="logo">
-                        <a href="" class="button">
-                            JJ
-                        </a>  
-                    </div>
-                    <div class="column">
-                        <div class="columns" id="nav">
-                            <div class="column">
-                                <a href="#projects" class="button">
-                                    Projects
-                                </a>     
-                            </div>
-                            <div class="column">
-                                <a href="#about" class="button">
-                                    About
-                                </a>   
-                            </div>
-                            <div class="column">
-                                <a href="#contact" class="button">
-                                    Contact
-                                </a>   
-                            </div>
+<body>
+
+    <div id="app">
+
+        <!--========================================== Nav ==========================================-->
+
+        <nav id="header" class="pl-4 pr-4 pt-1.25 pb-1.25 has-background-white">
+            <div class="columns">
+                <div class="column" id="logo">
+                    <a href="" class="button is-success">
+                        JJ
+                    </a>
+                </div>
+                <div class="column">
+                    <div class="columns" id="nav">
+                        <div class="column">
+                            <a href="#projects" class="button">
+                                Projects
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a href="#about" class="button">
+                                About
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a href="#contact" class="button">
+                                Contact
+                            </a>
                         </div>
                     </div>
                 </div>
-            </nav>
+            </div>
+        </nav>
 
-            <!------ Hero ------>
-            <header id="hero" class="page-tab has-background-black is-white">
-                <h1>
-                    {{title}}
-                </h1>
-                <--->
+        <!--========================================== Hero ==========================================-->
+
+        <header id="hero" class="page-tab has-background-black is-white">
+            <h1>
+                {{title}}
+            </h1>
+            <--->
                 <h2>
                     {{jobTitle}}
                 </h2>
                 <div class="hero-links">
                     <div class="is-flex">
-                        <button 
-                            v-for="(link, id) in links"
-                            :id="link.type"    
-                            class="button column is-medium is-responsive p-1"
-                            :class="link.color"
-                        >
+                        <button v-for="(link, id) in links" :id="link.type"
+                            class="button column is-medium is-responsive p-1 m-1" :class="link.color">
                             <b>{{link.type}}</b>
                         </button>
                     </div>
                 </div>
 
-            </header>
+        </header>
 
-            <!------ Projects ------>
-            <section id="projects" class="page-tab has-background-dark">
-                <h2>
-                    Projects
-                </h2>
-                <!-- Template Here -->
-                    <div class="swiper">
+        <!--========================================== Projects ==========================================-->
 
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <article class="message is-dark box">
-                                    <div class="message-header">
-                                      <h3 class="p-4">Project 1</h3>
-                                    </div>
-                                    <div class="message-body">
-                                        <!-- img place -->
-                                        <br>
-                                        <img src="" alt="preview">
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <!-- img place -->
-                                        <div class="columns">
-                                            <div class="column">
-                                              Description
-                                            </div>
-                                            <div class="column">
-                                              Links
-                                            </div>
-                                            <div class="column">
-                                              Tech and Tools
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
+        <section id="projects" class="page-tab has-background-dark">
+            <h2>
+                Projects
+            </h2>
+
+            <!-- Controls -->
+            <div class="buttons is-centered">
+                <button v-for="stack in projectStacks" class="button is-black mx-5 is-medium">
+                    {{stack}}
+                </button>
+            </div>
+
+            <!-- ========== Frontend Content ========== -->
+            <div class="swiper">
+
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <article class="message is-black box p-0">
+                            <div class="message-header">
+                                <h3 class="p-4">Project 1</h3>
                             </div>
-                            <br>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-                    
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-next btn"></div>
-                        <div class="swiper-button-prev btn"></div>
-                        
-                        <!-- If we need scrollbar -->
-                        <!-- <div class="swiper-scrollbar"></div> -->
+                            <div class="message-body">
+                                <!-- img place -->
+                                <img class="preview-thumb"
+                                    src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX100_CR0,0,100,100_.jpg"
+                                    alt="proj_thumb">
+                                <!-- controls -->
+                                <div class="columns controls">
+                                    <div class="column">
+                                        Description
+                                    </div>
+                                    <div class="column">
+                                        Links
+                                    </div>
+                                    <div class="column">
+                                        Tech and Tools
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                <!-- Template Here -->
-            </section>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
-            <!------ About ------>
-            <section id="about" class="page-tab has-background-black">
-                <h2>
-                    About
-                </h2>
-                <div class="columns">
-                    <!-- About -->
-                    <div class="column">
-                        <!-- 
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-next btn"></div>
+                <div class="swiper-button-prev btn"></div>
+            </div>
+
+            <!-- ========== Backend Content ========== -->
+            <div class="swiper">
+
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <article class="message is-black box p-0">
+                            <div class="message-header">
+                                <h3 class="p-4">Project 1</h3>
+                            </div>
+                            <div class="message-body">
+                                <!-- img place -->
+                                <img class="preview-thumb"
+                                    src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX100_CR0,0,100,100_.jpg"
+                                    alt="proj_thumb">
+                                <!-- controls -->
+                                <div class="columns controls">
+                                    <div class="column">
+                                        Description
+                                    </div>
+                                    <div class="column">
+                                        Links
+                                    </div>
+                                    <div class="column">
+                                        Tech and Tools
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-next btn"></div>
+                <div class="swiper-button-prev btn"></div>
+            </div>
+
+            <!-- ========== Full Stack ========== -->
+            <div class="swiper">
+
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <article class="message is-black box p-0">
+                            <div class="message-header">
+                                <h3 class="p-4">Project 1</h3>
+                            </div>
+                            <div class="message-body">
+                                <!-- img place -->
+                                <img class="preview-thumb"
+                                    src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX100_CR0,0,100,100_.jpg"
+                                    alt="proj_thumb">
+                                <!-- controls -->
+                                <div class="columns controls">
+                                    <div class="column">
+                                        Description
+                                    </div>
+                                    <div class="column">
+                                        Links
+                                    </div>
+                                    <div class="column">
+                                        Tech and Tools
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- nav buttons -->
+                <div class="swiper-button-next btn"></div>
+                <div class="swiper-button-prev btn"></div>
+            </div>
+        </section>
+
+        <!--========================================== About ==========================================-->
+
+        <section id="about" class="page-tab has-background-black">
+            <h2>
+                About
+            </h2>
+            <div class="columns">
+                <!-- About -->
+                <div class="column">
+                    <!-- 
                         <div class="about container">
                             <span v-for="info in about" class="box has-text-black p-4 m-5">
                                 <b>{{info}}</b>
                             </span> 
                         </div> -->
-                        <article class="message is-info">
-                            <div class="message-header">
-                                <h3>
-                                    More about me
-                                </h3>
-                            </div>
-                            <div class="message-body">
-                                <span v-for="info in about" class="box has-text-black p-4 px-5 mt-5 mb-5">
-                                    <b>{{info}}</b>
-                                </span> 
-                            </div>
-                          </article>
-                    </div>
-                    <!-- Skills & Tools-->
-                    <div class="column">
-                        <!-- Skills -->
-                        <h3 class="has-background-primary p-2 m-0">
-                            Skills
-                        </h3>
-                        <div class="skills-tools has-background-light p-4 m-0">
-                            <span v-for="skill in skills" class="box has-text-primary p-1 m-4">
-                                <b>{{skill}}</b>
+                    <article class="message is-dark">
+                        <div class="message-header">
+                            <h3>
+                                More about me
+                            </h3>
+                        </div>
+                        <div class="message-body">
+                            <span v-for="info in about" class="box has-text-primary p-2 pb-5 px-5 mt-5 mb-5">
+                                <b>{{info}}</b>
                             </span>
                         </div>
-                        <br>
-                        <br>
-                        <!-- Tools -->
-                        <h3 class="has-background-primary p-2 m-0">
-                            Tools
-                        </h3>
-                        <div class="skills-tools has-background-light p-4 m-0">
-                          <span v-for="tool in tools" class="box has-text-success p-1 m-4">
-                              <b>{{tool}}</b>
-                          </span>
-                        </div>
+                    </article>
+                </div>
+                <!-- Skills & Tools-->
+                <div class="column">
+                    <!-- Skills -->
+                    <h3 class="has-background-dark p-2 m-0">
+                        Skills
+                    </h3>
+                    <div class="skills-tools has-background-light p-4 m-0">
+                        <span v-for="skill in skills" class="box has-text-primary p-1 m-4">
+                            <b>{{skill}}</b>
+                        </span>
                     </div>
                     <br>
+                    <br>
+                    <!-- Tools -->
+                    <h3 class="has-background-dark p-2 m-0">
+                        Tools
+                    </h3>
+                    <div class="skills-tools has-background-light p-4 m-0">
+                        <span v-for="tool in tools" class="box has-text-success p-1 m-4">
+                            <b>{{tool}}</b>
+                        </span>
+                    </div>
                 </div>
-            </section>
+                <br>
+            </div>
+        </section>
 
-            <!------ Contact ------>
-            <footer id="contact" class="page-tab has-background-dark">
-                <h2>
-                    Contact
-                </h2>
-            </footer>
+        <!--========================================== Contact ==========================================-->
 
-        </div>
+        <footer id="contact" class="page-tab has-background-dark">
+            <h2>
+                Contact
+            </h2>
+        </footer>
 
-    </body>
-    <!--=================== Body =====================-->
+    </div>
+
+</body>
+
+<!--=================== Body =====================-->
 
 </html>
