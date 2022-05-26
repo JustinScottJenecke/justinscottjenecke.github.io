@@ -83,8 +83,31 @@ const App = Vue.createApp({
             "Slack",
             "Maven",
             "NPM"
-        ]
+        ],
         // ===== About =====
+
+        // ===== Contact =====
+
+        contactMessage : "Thanks for reading through my portfolio and making it this far. If you wish to in contact me for any reason, " +
+                         "or your company is hiring Juniors and think I might be a good fit, please do not hesitate to contact me using the " +
+                         "details below:",
+
+        contactDetails : [
+            {
+                name : "Email",
+                details : "justinjenecke@gmail.com"
+            },
+            {
+                name : "LinkedIn",
+                details : "Justin Scott Jenecke"
+            }, 
+            {
+                name : "GitHub",
+                details : "JustinScottJenecke"
+            }
+        ]
+
+        // ===== Contact =====
       }
     },
 
