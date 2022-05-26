@@ -64,6 +64,14 @@ h3 {
         margin: 2rem 15vw;
     }
 
+    @media only screen and (max-width: 600px) {
+            
+        h3 {font-size: 1.15rem !important}
+        h2 {font-size: 2rem !important}
+        h1 {font-size: 2.5rem !important}
+        
+    }
+
 /* ======================== Projects ======================== */
 
     /* --- swiper --- */
@@ -115,12 +123,6 @@ h3 {
             margin-top: 1rem;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            text-align: center;
-        }
-
         .contact-grid-col {
             display: flex;
             flex-direction: column;
@@ -139,4 +141,17 @@ h3 {
         .contact-icon:hover {
             box-shadow: 0px 0px 4px 4px rgba(0, 255, 34, 0.568);
 
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+        }
+        @media only screen and (max-width: 1000px) {
+            
+            .contact-grid {
+                display: flex;
+                flex-direction: column;
+            }
         }

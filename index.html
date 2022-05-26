@@ -89,7 +89,7 @@
                     {{jobTitle}}
                 </h2>
                 <div class="hero-links">
-                    <div class="is-flex">
+                    <div class="is-flex columns is-desktop">
                         <button 
                             v-for="(link, id) in links" 
                             :id="link.type"
@@ -422,9 +422,9 @@
                 <div 
                     v-for="(detail, i) in contactDetails"
                     :i="detail.name"
-                    class="contact-grid-col  has-text-light m-2 mx-5 p-5"
+                    class="contact-grid-col  has-text-light m-2 mx-2 p-5"
                 >
-                    <div class="invisi">
+                    <div class="tag is-medium is-black">
                         {{detail.details}}
                     </div>
                     <a :href="detail.link" target="_blank">
