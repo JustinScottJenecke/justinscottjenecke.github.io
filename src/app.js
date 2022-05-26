@@ -18,12 +18,12 @@ const App = Vue.createApp({
             },
             {
                 type : "GitHub",
-                link : "",
+                link : "https://github.com/JustinScottJenecke",
                 color : "is-success"
             },
             {
                 type : "LinkedIn",
-                link : "",
+                link : "https://www.linkedin.com/in/justin-scott-jenecke/",
                 color : "is-info"
             }
         ],
@@ -31,6 +31,8 @@ const App = Vue.createApp({
 
         // ===== Projects =====
         projectStacks : ["Frontend", "Backend", "Full-Stack"],
+
+        activeProjectTab : 0,
 
         projects : [
             {
@@ -46,8 +48,9 @@ const App = Vue.createApp({
         // ===== About =====
         
         about : [
-            "Hi, I'm Justin, a Cape Town-born Junior software developer. My development journey began with a program known as " +
-            "'Game Maker' back in primary school. After a few years of hiatus from computers during high school, I decided to pick" +
+            "Hi, I'm Justin, a Cape Town-born Junior software developer. " +
+            "My development journey began back in primary school when I started experimenting "+
+            "with a program known as 'Game Maker' since I was into computer gaming as a kid. After a few years of hiatus from computers during high school, I decided to pick" +
             "up the keyboard again after thinking about what career I wanted to pursue, which led to me graduating from CPUT with a Diploma in ICT: Application Development.",
 
             "My main focus as a developer is on the backend, however I have picked up several frontend skills in the past two years to " + 
