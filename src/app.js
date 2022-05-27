@@ -95,7 +95,7 @@ const App = Vue.createApp({
         contactDetails : [
             {
                 name : "Email",
-                details : "thedon@gmail.com",
+                details : "keenan@gmail.com",
                 icon : "gmail.png",
                 link : "mailto:https://justinjenecke@gmail.com",
             },
