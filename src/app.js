@@ -95,7 +95,7 @@ const App = Vue.createApp({
         contactDetails : [
             {
                 name : "Email",
-                details : "justinjenecke@gmail.com",
+                details : "thedon@gmail.com",
                 icon : "gmail.png",
                 link : "mailto:https://justinjenecke@gmail.com",
             },
@@ -135,3 +135,14 @@ const App = Vue.createApp({
     }
 
 }).mount('#app')
+
+
+/*
+                1
+            Github
+
+
+    don                 Evelyn
+    1.1                 1.2
+
+*/
