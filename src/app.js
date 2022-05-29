@@ -36,8 +36,20 @@ const App = Vue.createApp({
 
         projects : [
             {
-                name : "project",
-                stack : "none",
+                name : "project1",
+                stack : "front",
+                descript : "lorem",
+                tech : "lrem",
+                previews : [] 
+            },            {
+                name : "project2",
+                stack : "back",
+                descript : "lorem",
+                tech : "lrem",
+                previews : [] 
+            },            {
+                name : "project3",
+                stack : "full",
                 descript : "lorem",
                 tech : "lrem",
                 previews : [] 
