@@ -35,7 +35,7 @@ const App = Vue.createApp({
         activeProjectTab : 0,
 
         projects : [
-            {
+           /* {
                 name : "Frontend Mock",
                 stack : "front",
                 thumbnail : '',
@@ -66,7 +66,7 @@ const App = Vue.createApp({
                 descript : "lorem",
                 tech : "lrem",
                 previews : [] 
-            }
+            }*/
         ],
         // ===== Projects =====
 
@@ -169,17 +169,12 @@ const App = Vue.createApp({
             })
         }
 
+    },
+
+    //  ================================== Lifecycle hook - created ==================================
+    created() {
+        axios.get('./src/includes/mock.json')
+            .then(response => this.projects = response.data)
     }
 
 }).mount('#app')
-
-
-/*
-                1
-            Github
-
-
-    don                 Evelyn
-    1.1                 1.2
-
-*/
