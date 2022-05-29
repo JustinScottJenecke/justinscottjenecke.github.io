@@ -122,10 +122,13 @@
 
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">
+                    <div
+                        v-for="project in frontendProjects" 
+                        class="swiper-slide"
+                    >
                         <article class="message is-black box p-0">
                             <div class="message-header">
-                                <h3 class="p-4">Project 1</h3>
+                                <h3 class="p-4"> {{project.name}} </h3>
                             </div>
                             <div class="message-body">
                                 <!-- img place -->
@@ -200,10 +203,13 @@
 
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">
+                    <div
+                        v-for="project in backendProjects" 
+                        class="swiper-slide"
+                    >
                         <article class="message is-black box p-0">
                             <div class="message-header">
-                                <h3 class="p-4">Project 1</h3>
+                                <h3 class="p-4"> {{project.name}} </h3>
                             </div>
                             <div class="message-body">
                                 <!-- img place -->
@@ -278,10 +284,13 @@
 
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">
+                    <div
+                        v-for="project in fullStackProjects" 
+                        class="swiper-slide"
+                    >
                         <article class="message is-black box p-0">
                             <div class="message-header">
-                                <h3 class="p-4">Project 1</h3>
+                                <h3 class="p-4">{{project.name}}</h3>
                             </div>
                             <div class="message-body">
                                 <!-- img place -->

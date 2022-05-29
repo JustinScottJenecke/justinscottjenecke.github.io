@@ -36,20 +36,33 @@ const App = Vue.createApp({
 
         projects : [
             {
-                name : "project1",
+                name : "Frontend Mock",
                 stack : "front",
+                thumbnail : '',
                 descript : "lorem",
                 tech : "lrem",
                 previews : [] 
-            },            {
-                name : "project2",
+            },            
+            {
+                name : "Backend Mock",
                 stack : "back",
+                thumbnail : '',
                 descript : "lorem",
                 tech : "lrem",
                 previews : [] 
-            },            {
-                name : "project3",
+            }, 
+            {
+                name : "Backend Mock 2",
+                stack : "back",
+                thumbnail : '',
+                descript : "lorem",
+                tech : "lrem",
+                previews : [] 
+            },            
+            {
+                name : "Full-Stack Mock",
                 stack : "full",
+                thumbnail : '',
                 descript : "lorem",
                 tech : "lrem",
                 previews : [] 
@@ -133,15 +146,27 @@ const App = Vue.createApp({
     computed : {
 
         frontendProjects() {
-            return null
+            return this.projects.filter(project => {
+                if (project.stack === 'front') {
+                    return true
+                }
+            })
         },
         
         backendProjects() {
-            return null
+            return this.projects.filter(project => {
+                if (project.stack === 'back') {
+                    return true
+                }
+            })
         },
         
         fullStackProjects() {
-            return null
+            return this.projects.filter(project => {
+                if (project.stack === 'full') {
+                    return true
+                }
+            })
         }
 
     }
