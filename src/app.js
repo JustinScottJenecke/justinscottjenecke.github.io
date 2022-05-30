@@ -34,40 +34,7 @@ const App = Vue.createApp({
 
         activeProjectTab : 0,
 
-        projects : [
-           /* {
-                name : "Frontend Mock",
-                stack : "front",
-                thumbnail : '',
-                descript : "lorem",
-                tech : "lrem",
-                previews : [] 
-            },            
-            {
-                name : "Backend Mock",
-                stack : "back",
-                thumbnail : '',
-                descript : "lorem",
-                tech : "lrem",
-                previews : [] 
-            }, 
-            {
-                name : "Backend Mock 2",
-                stack : "back",
-                thumbnail : '',
-                descript : "lorem",
-                tech : "lrem",
-                previews : [] 
-            },            
-            {
-                name : "Full-Stack Mock",
-                stack : "full",
-                thumbnail : '',
-                descript : "lorem",
-                tech : "lrem",
-                previews : [] 
-            }*/
-        ],
+        projects : [],
         // ===== Projects =====
 
         // ===== About =====

@@ -5,6 +5,17 @@
         "thumbnail": "",
         "descript": "lorem",
         "tech": "lrem",
+        "previews": [
+            "link1/ajfnek/asjfnhsa",
+            "link1/ajfnek/asjfnhsa"
+        ]
+    },
+    {
+        "name": "Frontend Mock 10",
+        "stack": "front",
+        "thumbnail": "",
+        "descript": "lorem",
+        "tech": "lrem",
         "previews": []
     },
     {

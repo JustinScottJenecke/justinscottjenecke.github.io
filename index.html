@@ -124,26 +124,20 @@
                             <div class="message-header">
                                 <h3 class="p-4"> {{project.name}} </h3>
                             </div>
-                            <div class="message-body">
+                            <div class="message-body has-background-grey">
                                 <!-- img place -->
                                 <img class="preview-thumb"
                                     src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX100_CR0,0,100,100_.jpg"
                                     alt="proj_thumb">
                                 <!-- controls -->
-                                <div class="columns controls">
+                                <div class="columns controls p-5">
                                     <div class="column">
-                                        <article class="message is-black">
-                                            <div class="message-header">
+                                        <article class="message is-black " >
+                                            <div class="message-header ">
                                                 <p>Description</p>
                                             </div>
-                                            <div class="message-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta
-                                                nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida
-                                                purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
-                                                <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                                sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna
-                                                a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                            <div class="message-body ">
+                                                {{project.descript}}
                                             </div>
                                         </article>
                                     </div>
@@ -153,13 +147,7 @@
                                                 <p>Tech & Tools</p>
                                             </div>
                                             <div class="message-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta
-                                                nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida
-                                                purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
-                                                <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                                sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna
-                                                a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                                {{project.tech}}
                                             </div>
                                         </article>
                                     </div>
@@ -169,13 +157,11 @@
                                                 <p>Links</p>
                                             </div>
                                             <div class="message-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta
-                                                nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida
-                                                purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
-                                                <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                                sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna
-                                                a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                                <ul>
+                                                    <li v-for="link in project.previews">
+                                                        - { {link}}
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </article>
                                     </div>
