@@ -29,7 +29,20 @@ const App = Vue.createApp({
         ],
 
         // ===== Projects =====
-        projectStacks : ["Frontend", "Backend", "Full-Stack"],
+        projectStacks : [
+            {
+                stack : "Frontend",
+                no : 0
+            }, 
+            {
+                stack : "Backend",
+                no : 1
+            }, 
+            {
+                stack : "Full-Stack",
+                no : 2
+            }
+        ],
 
         activeProjectTab : 0,
 
@@ -137,6 +150,14 @@ const App = Vue.createApp({
     created() {
         axios.get('./src/includes/projects.json')
             .then(response => this.projects = response.data)
+    },
+
+    //  ================================== Methods ==================================
+    methods : {
+
+        changeTab(stack) {
+            this.activeProjectTab = stack.no
+        }
     }
 
 }).mount('#app')

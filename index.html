@@ -42,11 +42,11 @@
     <div id="app">
 
         <!--========================================== Nav ==========================================-->
-
+        <span id="top"></span>
         <nav id="header" class="pl-4 pr-4 pt-1.25 pb-1.25 has-background-white">
             <div class="columns">
                 <div class="column" id="logo">
-                    <a href="" class="button is-success hover">
+                    <a href="#top" class="button is-success hover">
                         JJ
                     </a>
                 </div>
@@ -113,8 +113,10 @@
                 <button 
                     v-for="stack in projectStacks" 
                     class="button is-black mx-5 is-medium hover"
+                    :class=" {'is-primary' : activeProjectTab == stack.no} "
+                    @click="changeTab(stack)"
                 >
-                    {{stack}}
+                    {{stack.stack}}
                 </button>
             </div>
 
