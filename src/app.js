@@ -27,7 +27,6 @@ const App = Vue.createApp({
                 color : "is-info"
             }
         ],
-        // ===== Hero =====
 
         // ===== Projects =====
         projectStacks : ["Frontend", "Backend", "Full-Stack"],
@@ -35,10 +34,8 @@ const App = Vue.createApp({
         activeProjectTab : 0,
 
         projects : [],
-        // ===== Projects =====
 
         // ===== About =====
-        
         about : [
             "Hi, I'm Justin, a Cape Town-born Junior software developer. " +
             "My development journey began back in primary school when I started experimenting "+
@@ -76,7 +73,6 @@ const App = Vue.createApp({
             "Maven",
             "NPM"
         ],
-        // ===== About =====
 
         // ===== Contact =====
 
@@ -87,7 +83,7 @@ const App = Vue.createApp({
         contactDetails : [
             {
                 name : "Email",
-                details : "keenan@gmail.com",
+                details : "justinjenecke@gmail.com",
                 icon : "gmail.png",
                 link : "mailto:https://justinjenecke@gmail.com",
             },
@@ -105,7 +101,6 @@ const App = Vue.createApp({
             }
         ]
 
-        // ===== Contact =====
       }
     },
 
@@ -140,7 +135,7 @@ const App = Vue.createApp({
 
     //  ================================== Lifecycle hook - created ==================================
     created() {
-        axios.get('./src/includes/mock.json')
+        axios.get('./src/includes/projects.json')
             .then(response => this.projects = response.data)
     }
 

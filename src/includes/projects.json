@@ -38,7 +38,7 @@
     {
         "name": "First Portfolio Website",
         "stack": "front",
-        "thumbnail": "first-portolio.png",
+        "thumbnail": "first-portfolio.png",
         "descript": "My very first portfolio website I built during University. This website was built solely using vanilla frontend stack, with HTML and CSS for the design and mark-up, and I used JavaScript for the DOM manipulation, building of widgets, carousels, etc.",
         "tech": "HTML, CSS, JavaScript",
         "previews": [

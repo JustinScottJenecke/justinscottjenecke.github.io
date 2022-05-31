@@ -84,14 +84,18 @@
                 </h2>
                 <div class="hero-links">
                     <div class="is-flex columns is-desktop">
-                        <button 
+                        <a 
                             v-for="(link, id) in links" 
-                            :id="link.type"
+                            :href="link.link" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
                             class="button column is-medium is-responsive p-1 m-1 mx-5 hover" 
                             :class="link.color"
+                            :id="link.type"
                         >
-                            <b>{{link.type}}</b>
-                        </button>
+                            <b>{{link.type}}</b>                      
+                        </a>
+
                     </div>
                 </div>
 
@@ -106,13 +110,19 @@
 
             <!-- Controls -->
             <div class="buttons is-centered">
-                <button v-for="stack in projectStacks" class="button is-black mx-5 is-medium hover">
+                <button 
+                    v-for="stack in projectStacks" 
+                    class="button is-black mx-5 is-medium hover"
+                >
                     {{stack}}
                 </button>
             </div>
 
             <!-- ========== Frontend Content ========== -->
-            <div class="swiper">
+            <div 
+                class="swiper"
+                :class=" {'is-hidden' : activeProjectTab != 0} "
+            >
 
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -127,7 +137,7 @@
                             <div class="message-body has-background-grey">
                                 <!-- img place -->
                                 <img class="preview-thumb"
-                                    src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX100_CR0,0,100,100_.jpg"
+                                    :src=" './src/resource/projects/' + project.thumbnail "
                                     alt="proj_thumb">
                                 <!-- controls -->
                                 <div class="columns controls p-5">
@@ -158,9 +168,21 @@
                                             </div>
                                             <div class="message-body">
                                                 <ul>
-                                                    <li v-for="link in project.previews">
-                                                        - { {link}}
-                                                    </li>
+                                                    <a :href="project.previews[0]" target="_blank" rel="noopener noreferrer">
+                                                        <li>
+                                                            GitHub Repo
+                                                        </li>
+                                                    </a>
+                                                    <a :href="project.previews[1]" target="_blank" rel="noopener noreferrer">
+                                                        <li>
+                                                            Demo Video/Site
+                                                        </li>
+                                                    </a>
+                                                    <a :href="project.previews[2]" target="_blank" rel="noopener noreferrer">
+                                                        <li>
+                                                            Documentation
+                                                        </li>
+                                                    </a>
                                                 </ul>
                                             </div>
                                         </article>
@@ -179,7 +201,10 @@
             </div>
 
             <!-- ========== Backend Content ========== -->
-            <div class="swiper">
+            <div 
+                class="swiper"
+                :class=" {'is-hidden' : activeProjectTab != 1} "
+            >
 
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -191,26 +216,20 @@
                             <div class="message-header">
                                 <h3 class="p-4"> {{project.name}} </h3>
                             </div>
-                            <div class="message-body">
+                            <div class="message-body has-background-grey">
                                 <!-- img place -->
                                 <img class="preview-thumb"
-                                    src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX100_CR0,0,100,100_.jpg"
+                                    :src=" './src/resource/projects/' + project.thumbnail "
                                     alt="proj_thumb">
                                 <!-- controls -->
-                                <div class="columns controls">
+                                <div class="columns controls p-5">
                                     <div class="column">
-                                        <article class="message is-black">
-                                            <div class="message-header">
+                                        <article class="message is-black " >
+                                            <div class="message-header ">
                                                 <p>Description</p>
                                             </div>
-                                            <div class="message-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta
-                                                nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida
-                                                purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
-                                                <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                                sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna
-                                                a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                            <div class="message-body ">
+                                                {{project.descript}}
                                             </div>
                                         </article>
                                     </div>
@@ -220,13 +239,7 @@
                                                 <p>Tech & Tools</p>
                                             </div>
                                             <div class="message-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta
-                                                nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida
-                                                purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
-                                                <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                                sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna
-                                                a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                                {{project.tech}}
                                             </div>
                                         </article>
                                     </div>
@@ -236,13 +249,23 @@
                                                 <p>Links</p>
                                             </div>
                                             <div class="message-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta
-                                                nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida
-                                                purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
-                                                <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                                sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna
-                                                a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                                <ul>
+                                                    <a :href="project.previews[0]" target="_blank" rel="noopener noreferrer">
+                                                        <li>
+                                                            GitHub Repo
+                                                        </li>
+                                                    </a>
+                                                    <a :href="project.previews[1]" target="_blank" rel="noopener noreferrer">
+                                                        <li>
+                                                            Demo Video/Site
+                                                        </li>
+                                                    </a>
+                                                    <a :href="project.previews[2]" target="_blank" rel="noopener noreferrer">
+                                                        <li>
+                                                            Documentation
+                                                        </li>
+                                                    </a>
+                                                </ul>
                                             </div>
                                         </article>
                                     </div>
@@ -260,7 +283,10 @@
             </div>
 
             <!-- ========== Full Stack ========== -->
-            <div class="swiper">
+            <div 
+                class="swiper"
+                :class=" {'is-hidden' : activeProjectTab != 0} "    
+            >
 
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -270,28 +296,22 @@
                     >
                         <article class="message is-black box p-0">
                             <div class="message-header">
-                                <h3 class="p-4">{{project.name}}</h3>
+                                <h3 class="p-4"> {{project.name}} </h3>
                             </div>
-                            <div class="message-body">
+                            <div class="message-body has-background-grey">
                                 <!-- img place -->
                                 <img class="preview-thumb"
-                                    src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX100_CR0,0,100,100_.jpg"
+                                    :src=" './src/resource/projects/' + project.thumbnail "
                                     alt="proj_thumb">
                                 <!-- controls -->
-                                <div class="columns controls">
+                                <div class="columns controls p-5">
                                     <div class="column">
-                                        <article class="message is-black">
-                                            <div class="message-header">
+                                        <article class="message is-black " >
+                                            <div class="message-header ">
                                                 <p>Description</p>
                                             </div>
-                                            <div class="message-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta
-                                                nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida
-                                                purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
-                                                <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                                sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna
-                                                a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                            <div class="message-body ">
+                                                {{project.descript}}
                                             </div>
                                         </article>
                                     </div>
@@ -301,13 +321,7 @@
                                                 <p>Tech & Tools</p>
                                             </div>
                                             <div class="message-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta
-                                                nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida
-                                                purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
-                                                <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                                sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna
-                                                a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                                {{project.tech}}
                                             </div>
                                         </article>
                                     </div>
@@ -317,13 +331,23 @@
                                                 <p>Links</p>
                                             </div>
                                             <div class="message-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta
-                                                nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida
-                                                purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
-                                                <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                                sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna
-                                                a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                                <ul>
+                                                    <a :href="project.previews[0]" target="_blank" rel="noopener noreferrer">
+                                                        <li>
+                                                            GitHub Repo
+                                                        </li>
+                                                    </a>
+                                                    <a :href="project.previews[1]" target="_blank" rel="noopener noreferrer">
+                                                        <li>
+                                                            Demo Video/Site
+                                                        </li>
+                                                    </a>
+                                                    <a :href="project.previews[2]" target="_blank" rel="noopener noreferrer">
+                                                        <li>
+                                                            Documentation
+                                                        </li>
+                                                    </a>
+                                                </ul>
                                             </div>
                                         </article>
                                     </div>
