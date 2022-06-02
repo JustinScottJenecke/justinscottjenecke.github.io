@@ -1,3 +1,8 @@
+
+/* =========================================================
+ * Vue Instance
+==========================================================*/
+
 const App = Vue.createApp({
 
     name : "app",
@@ -161,3 +166,26 @@ const App = Vue.createApp({
     }
 
 }).mount('#app')
+
+
+/* =========================================================
+ * Regular JavaScript
+==========================================================*/
+
+const burgerBtn = document.querySelector('#burger-btn')
+const nav = document.querySelector('#nav')
+
+burgerBtn.addEventListener('click', (e) => {
+
+    if (nav.classList.contains('nav')) {
+
+        nav.classList.remove('nav')
+        nav.classList.add('nav-mobile-display')
+
+    } else if (nav.classList.contains('nav-mobile-display')) {
+
+        nav.classList.remove('nav-mobile-display')
+        nav.classList.add('nav')
+
+    }
+})

@@ -62,14 +62,30 @@ h3 {
     justify-content: space-between;
 }
 
+#burger-btn {
+    display: none;
+}
+
 
 @media only screen and (max-width: 769px) {
         
+    #burger-btn {
+        display: block;
+    }
+    
     .nav-btn {
         width: 100%;
-    }   
+    }
+
+    .nav {
+        display: none !important;
+    }
 }
 
+.nav-mobile-display {
+
+    display: fixed;
+}
 
 /* ======================== Helpers ======================== */
 
