@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #app {
     box-sizing: border-box;
     margin: 0;
@@ -78,13 +82,17 @@ h3 {
     }
 
     .nav {
-        display: none !important;
+        /* display: none !important; */
+        display: fixed;
+        height: 0px;
+        opacity: 0;
     }
 }
 
 .nav-mobile-display {
-
-    display: fixed;
+    transition: 400ms ease-in;
+    height: 100%;
+    opacity: 0.8;
 }
 
 /* ======================== Helpers ======================== */
