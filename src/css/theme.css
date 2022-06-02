@@ -35,6 +35,26 @@ h3 {
     text-align: center;
 }
 
+/* ======================== Background ======================== */
+
+.background {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.bg {
+    height: 100vh;
+    width: 100vw;
+}
+
+.bg-filter {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+}
+
 /* ======================== Helpers ======================== */
 
 .hover:hover {
