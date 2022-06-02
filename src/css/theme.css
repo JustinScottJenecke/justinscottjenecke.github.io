@@ -50,10 +50,26 @@ h3 {
 }
 
 .bg-filter {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
 }
+
+/* ======================== Header/Nav ======================== */
+
+#logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 769px) {
+        
+    .nav-btn {
+        width: 100%;
+    }   
+}
+
 
 /* ======================== Helpers ======================== */
 
@@ -85,7 +101,7 @@ h3 {
     }
 
     
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 769px) {
         
         #hero-links {
             display: flex;
@@ -93,7 +109,7 @@ h3 {
         }    
     }
 
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 769px) {
             
         h3 {font-size: 1.15rem !important}
         h2 {font-size: 2rem !important}
