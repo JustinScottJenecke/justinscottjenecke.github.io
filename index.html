@@ -95,17 +95,17 @@
                     {{jobTitle}}
                 </h2>
                 <div class="hero-links">
-                    <div class="is-flex columns is-desktop">
+                    <div id="hero-links" class="is-flex columns is-desktop">
                         <a 
                             v-for="(link, id) in links" 
                             :href="link.link" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            class="button column is-medium is-responsive p-1 m-1 mx-5 hover" 
+                            class="button column is-medium p-1 m-1 mx-5 hover" 
                             :class="link.color"
                             :id="link.type"
                         >
-                            <b>{{link.type}}</b>                      
+                            <h3>{{link.type}}</h3>                      
                         </a>
                     </div>
                 </div>
