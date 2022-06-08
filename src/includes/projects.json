@@ -82,6 +82,19 @@
             "",
             "https://github.com/JustinScottJenecke/cput-tutorspace-api/blob/main/README.md"
         ]
+    },
+    {
+        "name": "OOP Hotel Booking App",
+        "stack": "back",
+        "thumbnail": "booking-app.gif",
+        "descript": "Simple PHP app where users are able to sign-up, select one of two available hotels, compare prices and a list of features for both hotels, and finally confirm their booking using PHP mailer which sends an email with the booking details to the users email address.",
+        "tech": "PHP, Composer, HTML & CSS, Bulma CSS, PHP Mailer",
+        "previews": [
+            "https://github.com/JustinScottJenecke/csa-book-app-php",
+            "",
+            ""
+        ]
     }
 ]
+
 
