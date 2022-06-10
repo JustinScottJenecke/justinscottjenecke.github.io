@@ -18,7 +18,7 @@ const App = Vue.createApp({
         links : [
             {
                 type : "Resume",
-                link : "",
+                link : "../public/docs/Resume-Justin-Jenecke.pdf",
                 color : "is-primary"
             },
             {
