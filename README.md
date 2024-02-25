@@ -1,12 +1,16 @@
 # My Portfolio Website
 
-** Link to Website: **
+**Link to Website:**
   - https://justinscottjenecke.github.io/
 
 <br>
 
 **Stack:**
-  HTML, CSS, Vanilla JavaScript, Tailwind CSS
+  - HTML
+  - CSS
+  - Vanill
+  - JavaScript
+  - Tailwind CSS
 
 **Tools:**
   FigJam for the wireframe, GitHub pages for deployment
