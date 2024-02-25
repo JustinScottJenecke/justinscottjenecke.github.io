@@ -1,10 +1,14 @@
 # My Portfolio Website
 
 **Stack:**
-HTML, CSS, Vanilla JavaScript, Tailwind CSS
+  HTML, CSS, Vanilla JavaScript, Tailwind CSS
+
+<br>
 
 **Tools:**
-FigJam for the wireframe, GitHub pages for deployment
+  FigJam for the wireframe, GitHub pages for deployment
+
+<br>
 
 # Links and docs:
 
