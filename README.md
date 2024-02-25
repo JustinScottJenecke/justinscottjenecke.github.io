@@ -3,8 +3,6 @@
 **Stack:**
   HTML, CSS, Vanilla JavaScript, Tailwind CSS
 
-<br>
-
 **Tools:**
   FigJam for the wireframe, GitHub pages for deployment
 
