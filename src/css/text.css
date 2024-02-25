@@ -1,0 +1,38 @@
+.led-button {
+
+}
+
+.led-icon-button:hover {
+    filter: drop-shadow(1px 1px 3px rgb(52 211 153));
+/* 
+    border: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+    text-align: center;
+    clip-path: polygon(15% 10%, 85% 10%, 100% 50%, 85% 90%, 15% 90%, 0 50%);*/
+    /* background-color: #161213; */
+    /* background-image: radial-gradient(200% 70% at center 20%, rgba(48, 44, 45, 1) -30%, rgba(50, 46, 47, 1) 49%, rgba(22, 18, 19, 1) 50%, rgba(22, 18, 19, 1) 150%); */
+    /* background-repeat: no-repeat;
+    transition: background-position-y ease-in-out 250ms;  */
+}
+
+.led-icon-button span {
+    display:inline-block;
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    text-align: center;
+    clip-path: polygon(15% 10%, 85% 10%, 100% 50%, 85% 90%, 15% 90%, 0 50%);
+    background-color: #fff;
+    background-image: radial-gradient(200% 70% at center 20%, rgb(255, 255, 255) -30%, rgb(255, 255, 255) 49%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 150%);
+    background-repeat: no-repeat;
+    /* transition: background-position-y ease-in-out 250ms; */
+}
+
+.led-icon-button:hover span {
+    background-position-y: -50px;
+}
