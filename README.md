@@ -13,7 +13,8 @@
   - Tailwind CSS
 
 **Tools:**
-  FigJam for the wireframe, GitHub pages for deployment
+  - FigJam for the wireframe
+  - GitHub pages for deployment
 
 <br>
 
