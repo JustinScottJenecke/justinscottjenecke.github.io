@@ -13,7 +13,7 @@
   - Tailwind CSS
 
 **Tools:**
-  - FigJam for the wireframe
+  - FigJam for creating the documentation
   - GitHub pages for deployment
 
 <br>
