@@ -1,6 +1,12 @@
 /* General */
 section {
     min-height: 100vh;
+    padding: 0 5vh;
+}
+@media only screen and (max-width: 600px) {
+    section {
+        padding: 0 2.5vh;
+    }
 }
 
 /* Top nav */
@@ -25,7 +31,6 @@ section {
 
 .hero {
     min-height: 100vh;
-    padding: 10vh 2.5vh;
     display: flex;
     align-items: center;
 }
