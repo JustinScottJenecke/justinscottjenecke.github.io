@@ -87,3 +87,18 @@ section {
         color: white;
     }
 } 
+
+/* skills */
+.card-wrapper:hover > .card-cover-image {
+    z-index: -1;
+}
+.card-cover-image {
+    background-color: rgb(3, 28, 139);
+    /* background-color: rgb(3, 28, 139); */
+    /* position: absolute; */
+
+}
+.card-content {
+    background-color: rgba(0, 0, 0, 0.671);
+    color: whitesmoke;
+}
