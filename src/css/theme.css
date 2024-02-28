@@ -1,3 +1,9 @@
+/* General */
+section {
+    min-height: 100vh;
+}
+
+/* Top nav */
 .top-nav { 
     display: flex;
     margin: 0 2rem 0rem 2px;
@@ -20,9 +26,12 @@
 .hero {
     min-height: 100vh;
     padding: 10vh 2.5vh;
+    display: flex;
+    align-items: center;
 }
 
 .hero-content {
+    width: 100%;
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: 2;
