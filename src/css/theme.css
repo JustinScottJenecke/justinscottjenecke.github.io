@@ -1,4 +1,11 @@
-/* General */
+/* ------ General ------ */
+
+/* headings */
+    h1 {font-size: 3rem !important;}
+    h2 {font-size: 2.25rem !important;}
+    h3 {font-size: 1.75rem !important;}
+/* headings */
+
 section {
     min-height: 100vh;
     padding: 0 5vh;
@@ -9,7 +16,12 @@ section {
     }
 }
 
-/* Top nav */
+.glass-card {
+    background-color: rgba(0, 0, 0, 0.596);
+    padding: 2.5rem;
+}
+
+/* ------ Top nav  ------ */
 .top-nav { 
     display: flex;
     margin: 0 2rem 0rem 2px;
@@ -27,7 +39,7 @@ section {
     }
 }
 
-/* hero */
+/* ------ hero ------ */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -59,7 +71,7 @@ section {
     }
 }
 
-/* mobile nav */
+/* ------ mobile nav ------ */
 .mobile-nav {
     display: none;
 }
@@ -88,7 +100,7 @@ section {
     }
 } 
 
-/* skills */
+/* ------ skills ------ */
 .card-wrapper:hover > .card-cover-image {
     z-index: -1;
 }
