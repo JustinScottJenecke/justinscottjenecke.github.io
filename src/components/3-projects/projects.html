@@ -7,14 +7,27 @@
         <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
         <!-- <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet"> -->
         <style>
+            /* project container */
             #featured-projects-container {
-                display: flex;
-                flex-wrap: nowrap;
+                display: grid;
+                grid-template-columns: 1fr 10fr 1fr;
             }
+            .project-header {
+                grid-column: 1 / 4;
+                background-color: aquamarine;
+            }
+           .projects-container-pagination {
+                grid-column: 1 / 4;
+                display: flex;
+                justify-content: center;
+                column-gap: 2rem;
+            }
+
+            /*  */
             .featured-project {
                 background-color: black;
                 color: white;
-                min-width: 50vw;
+                width: 50vw;
                 aspect-ratio: 3/2;
                 margin: 1rem;
             }
@@ -22,19 +35,14 @@
     </head>
 
     <body>
-        <div class="splide" role="group" aria-label="Splide Basic HTML Example">
-            <div class="splide__track">
-                  <ul class="splide__list">
-                      <li class="splide__slide">Slide 01</li>
-                      <li class="splide__slide">Slide 02</li>
-                      <li class="splide__slide">Slide 03</li>
-                  </ul>
-            </div>
-          </div>
-
-        <hr>
-
         <div id="featured-projects-container">
+            <!-- item 1 -->
+            <header class="project-header">
+                Project #1
+            </header>
+            <!-- item 2 -->
+            <div class="projects-container-left">{</div>
+            <!-- item 3 -->
             <ul id="featured-projects-list">
                 <li class="featured-project">
                     <article class="project-card">
@@ -67,6 +75,14 @@
                     </article>
                 </li>              
             </ul>
+            <!-- item 4 -->
+            <div class="projects-container-right">}</div>
+            <!-- item 5 -->
+            <div class="projects-container-pagination">
+                <button>0</button>
+                <button>0</button>
+                <button>0</button>
+            </div>
         </div>
     
     </body>
