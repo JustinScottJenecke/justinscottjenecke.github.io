@@ -127,7 +127,11 @@ section {
     position: absolute; 
 } */
 .card-content {
-    background-color: rgba(122, 122, 122, 0.616);
+    display: none;
+}
+.card-wrapper:hover > .card-content {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.692);
     color: whitesmoke;
 }
 
