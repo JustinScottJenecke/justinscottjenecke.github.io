@@ -120,17 +120,27 @@ section {
 /* ----- featured projects ----- */
 .featured-projects-container {
     display: flex;
-    width: 70vw;
+    width: 80vw;
     overflow-x: scroll;
     
    
 }
 .featured-project-card {
-    min-width: 50vw;
+    min-width: 70vw;
     background-color: tomato;
-    margin: 1rem;
-    margin-left: 6rem;
+    margin-bottom: 1rem;
+    margin-right: 7rem;
+    margin-left: 2rem;
+
+    display: flex;
 }
+.fpc-preview-image {
+    flex: 2;
+}
+.fpc-content {
+    flex: 3;
+}
+
 
 /* ------ skills ------ */
 .card-wrapper:hover > .card-cover-image {
