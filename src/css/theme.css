@@ -117,6 +117,20 @@ section {
         color: white;
     }
 } 
+/* ----- featured projects ----- */
+.featured-projects-container {
+    display: flex;
+    width: 70vw;
+    overflow-x: scroll;
+    
+   
+}
+.featured-project-card {
+    min-width: 50vw;
+    background-color: tomato;
+    margin: 1rem;
+    margin-left: 6rem;
+}
 
 /* ------ skills ------ */
 .card-wrapper:hover > .card-cover-image {
