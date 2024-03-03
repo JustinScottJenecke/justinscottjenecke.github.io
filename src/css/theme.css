@@ -118,26 +118,21 @@ section {
     }
 } 
 /* ----- featured projects ----- */
-.featured-projects-container {
-    display: flex;
-    width: 80vw;
-    overflow-x: scroll;
-    
-   
-}
-.featured-project-card {
-    min-width: 70vw;
-    margin-bottom: 1rem;
-    margin-right: 7rem;
-    margin-left: 2rem;
 
+.featured-project-card {
+    margin-bottom: 1rem;
     display: flex;
+    flex-direction: column;
 }
 .fpc-preview-image {
     flex: 2;
 }
 .fpc-content {
     flex: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 
