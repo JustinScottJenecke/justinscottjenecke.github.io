@@ -51,8 +51,8 @@
             <div class="hero">
                 <div class="hero-content ">
                     <div class="flex flex-col justify-end items-center text-center">
-                        <h1>Justin Jenecke</h1>
-                        <h3 class="mx-10">Junior Full-Stack Developer</h2>
+                        <h1 class="mb-4 md:mb-0">Justin Jenecke</h1>
+                        <h3 class="mb-4 md:mb-0 mx-10">Junior Full-Stack Developer</h2>
                     </div>
                     <div class="hero-graphic">
                         de433t5
@@ -161,8 +161,14 @@
 
         <!-- about -->
         <section id="about">
-            <div class="grid grid-cols-1 md:grid-cols-2">
-                <header class=" flex flex-col justify-center py-10">
+            <div class="
+                flex flex-col 
+                lg: grid lg:grid-cols-2"
+            >
+                <header class="
+                    flex flex-col justify-center py-10
+                    lg:col-span-1"
+                >
                     <h2>
                         <u>
                             About Me:
@@ -173,11 +179,14 @@
                     </p>
                 </header>
                 <!-- Start of about -->
-                <article class="glass-card text-white flex flex-col justify-center md:my-10 md:mx-20 mx:py-12">
+                <article class="glass-card text-white flex flex-col justify-center 
+                    md:my-5 md:mx-10 mx:py-6
+                    lg:my-10 lg:mx-20 lg:py-12"
+                >
                     <h3 class="about-card-title">
                         What Im doing:
                     </h3>
-                    <p class="md:p-4">
+                    <p class="hidden md:p-4">
                         These days I spend my time working as a Code Coach for CodeSpace Academy, and Ed-Tech startup
                         aimed at equipping students with programming and web development skills used in the tech
                         industry
@@ -188,7 +197,7 @@
                     <h3 class="about-card-title">
                         More about me:
                     </h3>
-                    <p class="md:p-4">
+                    <p class="hidden md:p-4">
                         My background in software is in backend development, since I started my coding journey
                         developing
                         desktop applications and REST APIs in Java, whilst at University at CPUT. Since I've started my
@@ -205,7 +214,7 @@
                     <h3 class="about-card-title">
                         Future Plans:
                     </h3>
-                    <p class="md:p-4">
+                    <p class="hidden md:p-4">
                         My current goal is to explore more technologies relating to software architecture and learning
                         more about
                         distributed systems. I have also been getting back into the .Net framework, and learning more
