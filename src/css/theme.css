@@ -29,15 +29,15 @@ section {
     min-height: 100vh;
     padding: 0 5vh;
 }
+
+.glass-card {
+    background-color: rgba(0, 0, 0, 0.596);
+    padding: 0.5rem;
+}
 @media only screen and (max-width: 770px) {
     section {
         padding: 0 2.5vh;
     }
-}
-
-.glass-card {
-    background-color: rgba(0, 0, 0, 0.596);
-    padding: 2.5rem;
 }
 
 /* ------ Top nav  ------ */
@@ -137,3 +137,7 @@ section {
 }
 
 /* ----- about ----- */
+
+.about-card:hover > p {
+    display: block;
+}
