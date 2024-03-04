@@ -265,32 +265,16 @@
     <footer id="footer" class="
         bg-neutral-950 
         flex flex-col py-4
-        md: grid md:grid-cols-2 md:py-8
-        lg:grid-cols-2">
+        md: grid md:grid-cols-3 md:py-8
+        lg:grid-cols-5">
+        <div class="hidden lg:block"></div>
         <div class="">
-            <h3 class="p-4">
-                <u>
-                    Contact Info:
-                </u>
-            </h3>
-            <ul class="pb-4 pl-8 flex flex-col">
-                <li>
-                    <button>
-                        email@some.com
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        github@github.git
-                    </button>
-                </li>
-            </ul>
-        </div>
-        <div class="">
-            <h3 class="p-4">
+            <h3 class="">
                 <u>Socials:</u>
             </h3>
-            <ul class="pb-8 flex justify-around lg:pb-2">
+            <ul class="
+                p-4 flex justify-around 
+                lg:flex-col lg:gap-6 items-start">
                 <li>
                     <a href="http://github.com" target="_blank" rel="noopener noreferrer">
                         <button>G</button>
@@ -313,6 +297,36 @@
                 </li>
             </ul>
         </div>
+        <div class="">
+            <h3 class="">
+                <u>
+                    Contact Info:
+                </u>
+            </h3>
+            <ul class="p-4 flex flex-col">
+                <li>
+                    <button>
+                        email@some.com
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        github@github.git
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="">
+                <u>Other Links:</u>
+            </h3>
+            <ul class="p-4 flex justify-around lg:pb-2">
+                <li>
+                    <a href="#">Portfolio Pieces and Projects</a>
+                </li>
+            </ul>
+        </div>
+        <div class="hidden lg:block"></div>
     </footer>
 </body>
 <!--=================== Body =====================-->
