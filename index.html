@@ -265,15 +265,17 @@
     <footer id="footer" class="
         bg-neutral-950 
         flex flex-col py-4
-        md: grid md:grid-cols-3 md:py-8
+        md: grid md:grid-cols-2 md:px-8
         lg:grid-cols-5">
         <div class="hidden lg:block"></div>
-        <div class="">
+        <!-- socials -->
+        <div class="md:order-3 col-start-1 col-end-3 text-center">
             <h3 class="">
                 <u>Socials:</u>
             </h3>
             <ul class="
                 p-4 flex justify-around 
+                md:justify-center md:gap-12
                 lg:flex-col lg:gap-6 items-start">
                 <li>
                     <a href="http://github.com" target="_blank" rel="noopener noreferrer">
@@ -297,7 +299,8 @@
                 </li>
             </ul>
         </div>
-        <div class="">
+        <!-- contact info -->
+        <div class="md:order-1">
             <h3 class="">
                 <u>
                     Contact Info:
@@ -316,8 +319,9 @@
                 </li>
             </ul>
         </div>
-        <div>
-            <h3 class="">
+        <!-- other links -->
+        <div class="md:order-2">
+            <h3>
                 <u>Other Links:</u>
             </h3>
             <ul class="p-4 flex justify-around lg:pb-2">
