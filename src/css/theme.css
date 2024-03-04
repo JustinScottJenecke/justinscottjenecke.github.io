@@ -4,6 +4,10 @@
     font-family: consolas;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: rgb(17, 17, 19);
     color: white;
