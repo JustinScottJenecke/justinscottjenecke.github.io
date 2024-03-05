@@ -97,6 +97,38 @@ section {
         flex-direction: column;
     }
 }
+/* ----- featured projects ----- */
+.fp-preview-pane {
+    flex: 2;
+}
+
+.fp-project-info {
+    flex: 3;
+}
+
+
+/* ------ skills ------ */
+.card-wrapper:hover > .card-cover-image {
+    z-index: -1;
+}
+/* .card-cover-image {
+    background-color: rgb(3, 28, 139);
+    position: absolute; 
+} */
+.card-content {
+    display: none;
+}
+.card-wrapper:hover > .card-content {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: whitesmoke;
+}
+
+/* ----- about ----- */
+
+.about-card:hover > p {
+    display: block;
+}
 
 /* ------ mobile nav ------ */
 .mobile-nav {
@@ -126,30 +158,7 @@ section {
         color: white;
     }
 } 
-/* ----- featured projects ----- */
 
-/* ------ skills ------ */
-.card-wrapper:hover > .card-cover-image {
-    z-index: -1;
-}
-/* .card-cover-image {
-    background-color: rgb(3, 28, 139);
-    position: absolute; 
-} */
-.card-content {
-    display: none;
-}
-.card-wrapper:hover > .card-content {
-    display: block;
-    background-color: rgba(0, 0, 0, 0.692);
-    color: whitesmoke;
-}
-
-/* ----- about ----- */
-
-.about-card:hover > p {
-    display: block;
-}
 
 /* ----- footer ----- */
 @media only screen and (min-width: 426px) and (max-width: 770px) {

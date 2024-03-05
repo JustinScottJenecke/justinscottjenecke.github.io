@@ -103,38 +103,52 @@
                 </p>
             </header>
             <article class="
-                flex flex-col mb-4
-                lg:flex-row
+                flex flex-col mb-10
+                md:flex-row
                 ">
                 <!-- preview pane -->
-                <div class="
+                <div class=" 
+                    fp-preview-pane
                     border-solid border-4 border-gray-300 p-6 m-2 
-                    md:h-80
-                    lg:grow">
+                    md:h-80 "
+                >
                     <div class="bg-red-700 h-full">
                         hi
                     </div>
                 </div>
                 <!-- project info -->
-                <ul class="
-                    m-4 mt-2
-                    lg:grow">
+                <ul class=" 
+                    fp-project-info
+                    m-4 mt-2 flex flex-col h-100">
                     <li>Project Name:
                         <span class="pl-4">?</span>
                     </li>
                     <li>
                         Stack:
-                        <p class="pl-4">?</p>
+                        <p class="pl-4">HTML, CSS, JavaScript, Tailwind CSS</p>
                     </li>
-                    <li>
+                    <li class="grow">
                         About:
-                        <p class="pl-4">?</p>
+                        <p class="pl-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Repellendus, voluptatem at voluptas quia nesciunt aliquid 
+                            molestias, harum soluta dolore rem voluptates, saepe esse 
+                            dolorem sequi. Autem architecto assumenda impedit ea!
+                        </p>
                     </li>
-                    <li>
+                    <li class="justify-self-end">
                         Links:
                         <ul class="flex justify-around">
-                            <li>Repo: <span>?</span></li>
-                            <li>Demo: <span>?</span></li>
+                            <li>
+                                <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
+                                    <button class="rounded-full bg-neutral-800 w-16 aspect-square">Repo</button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
+                                    <button class="rounded-full bg-neutral-800 w-16 aspect-square">Demo</button>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
