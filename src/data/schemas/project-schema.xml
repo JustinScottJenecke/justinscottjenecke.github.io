@@ -3,16 +3,16 @@
 <project>    
     <id type="int">
     <title type="string" />
-        <thumbnail type="string" />
     <category type="enum">
         <type>backend</type>
         <type>frontend</type>
         <type>full=stack</type>
     </category>
+    <thumbnail type="string" />
+    <description type="string" />
     <tech-stack type="list <technology>">
         <technology type='string' />
     </tech-stack>
-    <description type="string" />
     <links type="array<links>">
         <link>
             <icon type="url/path" />
