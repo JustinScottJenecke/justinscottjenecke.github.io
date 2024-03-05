@@ -1,0 +1,11 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+
+<Technology>
+    <id>int</id>
+    <icon>string</icon>
+    <tools>
+        <tool-id>1</tool-id>
+        <tool-id>2</tool-id>
+        <tool-id>5</tool-id>
+    </tools>
+</Technology>
