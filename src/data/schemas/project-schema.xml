@@ -3,15 +3,15 @@
 <project>    
     <id type="int">
     <title type="string" />
+        <thumbnail type="string" />
     <category type="enum">
         <type>backend</type>
         <type>frontend</type>
         <type>full=stack</type>
-    </stack>
+    </category>
     <tech-stack type="list <technology>">
         <technology type='string' />
     </tech-stack>
-    <thumbnail type="string" />
     <description type="string" />
     <links type="array<links>">
         <link>

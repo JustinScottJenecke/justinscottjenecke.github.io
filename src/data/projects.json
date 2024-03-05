@@ -1,10 +1,11 @@
 [
     {
-        "name": "JavaScript To-Do App",
-        "stack": "front",
+        "id" : 1,
+        "title": "JavaScript To-Do App",
+        "category": "front",
         "thumbnail": "js-todo.png",
-        "descript": "Simple JavaScript To-Do app project with CRUD operations and DOM manipulation. All the CSS was manually written and the application is responsive for the most part. README file has instructions and tips for creating a similar type of project, as the purpose of this project was to serve as a sample solution for students at CodeSpace Academy.",
-        "tech": "HTML, CSS, JavaScript, Storage API, DOM API, OOP",
+        "description": "Simple JavaScript To-Do app project with CRUD operations and DOM manipulation. All the CSS was manually written and the application is responsive for the most part. README file has instructions and tips for creating a similar type of project, as the purpose of this project was to serve as a sample solution for students at CodeSpace Academy.",
+        "tech-stack": "HTML, CSS, JavaScript, Storage API, DOM API, OOP",
         "previews": [
             "https://github.com/JustinScottJenecke/csa-js-todo.git",
             "https://justinscottjenecke.github.io/csa-js-todo/",
@@ -12,11 +13,12 @@
         ]
     },
     {
-        "name": "Hotel Booking App",
-        "stack": "front",
+        "id" : 2,
+        "title": "Hotel Booking App",
+        "category": "front",
         "thumbnail": "hotel-book.png",
-        "descript": "Mock site for Booking application. No functionality and still a static website. Further plans to integrate PHP into this frontend to create a Full-Stack app",
-        "tech": "HTML, CSS, JavaScript, Storage API, DOM API, OOP",
+        "description": "Mock site for Booking application. No functionality and still a static website. Further plans to integrate PHP into this frontend to create a Full-Stack app",
+        "tech-stack": "HTML, CSS, JavaScript, Storage API, DOM API, OOP",
         "previews": [
             "https://github.com/JustinScottJenecke/csa-hotel-booking-site",
             "https://justinscottjenecke.github.io/csa-hotel-booking-site/",
@@ -24,11 +26,12 @@
         ]
     },
     {
-        "name": "Storefront Landing Page",
-        "stack": "front",
+        "id" : 3,
+        "title": "Storefront Landing Page",
+        "category": "front",
         "thumbnail": "storefront.png",
-        "descript": "Mock site for Online-Store application. Functionality is in Vue.js using Vue 2 and global website syntax (none SPA). Main purpose of project was to practice Vue syntax while learning the language, and build a sample solution for CodeSpace academy students. Makes use of localStorage for Cart functionality. I also used this project as a means to brush up on more advanced CSS practices (positioning, layouts, responsiveness, etc.)",
-        "tech": "HTML, CSS, JavaScript, Storage API, Vue.js",
+        "description": "Mock site for Online-Store application. Functionality is in Vue.js using Vue 2 and global website syntax (none SPA). Main purpose of project was to practice Vue syntax while learning the language, and build a sample solution for CodeSpace academy students. Makes use of localStorage for Cart functionality. I also used this project as a means to brush up on more advanced CSS practices (positioning, layouts, responsiveness, etc.)",
+        "tech-stack": "HTML, CSS, JavaScript, Storage API, Vue.js",
         "previews": [
             "https://github.com/JustinScottJenecke/csa-hotel-booking-site",
             "https://justinscottjenecke.github.io/csa-online-store-fef/",
@@ -36,11 +39,12 @@
         ]
     },
     {
-        "name": "First Portfolio Website",
-        "stack": "front",
+        "id" : 4,
+        "title": "First Portfolio Website",
+        "category": "front",
         "thumbnail": "first-portfolio.png",
-        "descript": "My very first portfolio website I built during University. This website was built solely using vanilla frontend stack, with HTML and CSS for the design and mark-up, and I used JavaScript for the DOM manipulation, building of widgets, carousels, etc.",
-        "tech": "HTML, CSS, JavaScript",
+        "description": "My very first portfolio website I built during University. This website was built solely using vanilla frontend stack, with HTML and CSS for the design and mark-up, and I used JavaScript for the DOM manipulation, building of widgets, carousels, etc.",
+        "tech-stack": "HTML, CSS, JavaScript",
         "previews": [
             "https://github.com/JustinScottJenecke/portfolio",
             "https://justinscottjenecke.github.io/portfolio/",
@@ -48,11 +52,12 @@
         ]
     },
     {
-        "name": "CPUT Hotel Booking System",
-        "stack": "back",
+        "id" : 5,
+        "title": "CPUT Hotel Booking System",
+        "category": "back",
         "thumbnail": "booking-domain-model.jpg",
-        "descript": "This backend project is part of my Capstone Project for the ADP3 programming course in my final year at CPUT. I created the domain model, and most of the entities. I was also the group lead and worked on the Full-Stack for the project. There were plans to add a frontend to this project, but I was the only team member who capable in developing the frontend, so I had to juggle mutliple tasks and build the frontend as well.",
-        "tech": "Java, Maven, Spring-Boot, Spring-Data-JPA, Hibernate, MySQL, Domain Driven Design, JUnit, H2",
+        "description": "This backend project is part of my Capstone Project for the ADP3 programming course in my final year at CPUT. I created the domain model, and most of the entities. I was also the group lead and worked on the Full-Stack for the project. There were plans to add a frontend to this project, but I was the only team member who capable in developing the frontend, so I had to juggle mutliple tasks and build the frontend as well.",
+        "tech-stack": "Java, Maven, Spring-Boot, Spring-Data-JPA, Hibernate, MySQL, Domain Driven Design, JUnit, H2",
         "previews": [
             "https://github.com/JustinScottJenecke/cput-hotel-booking-system",
             "",
@@ -60,11 +65,12 @@
         ]
     },
     {
-        "name": "CPUT Java Collections Interface",
-        "stack": "back",
+        "id" : 6,
+        "title": "CPUT Java Collections Interface",
+        "category": "back",
         "thumbnail": "java-collections.png",
-        "descript": "University assignment on data structures, software development infrastructure and test driven development and practice using the Collections Interface in Java.",
-        "tech": "Java, Maven, JUnit",
+        "description": "University assignment on data structures, software development infrastructure and test driven development and practice using the Collections Interface in Java.",
+        "tech-stack": "Java, Maven, JUnit",
         "previews": [
             "https://github.com/JustinScottJenecke/cput-java-collections-interface-tdd",
             "",
@@ -72,11 +78,12 @@
         ]
     },
     {
-        "name": "Tutoring Board REST API",
-        "stack": "back",
+        "id" : 7,
+        "title": "Tutoring Board REST API",
+        "category": "back",
         "thumbnail": "tutorspace-rest-api.png",
-        "descript": "Simple REST API for a university project called 'TutorSpace', a posting board website where tutors can advertise their services, and students can find tutors to assist in the their requested field of study. This was originally meant to be a web service, but due lack of technical skills in team members I decided to scale down the project so the group could pass the assessment.",
-        "tech": "Java, Maven, Spring-Boot, Spring-Data-JPA",
+        "description": "Simple REST API for a university project called 'TutorSpace', a posting board website where tutors can advertise their services, and students can find tutors to assist in the their requested field of study. This was originally meant to be a web service, but due lack of stack-stacknical skills in team members I decided to scale down the project so the group could pass the assessment.",
+        "tech-stack": "Java, Maven, Spring-Boot, Spring-Data-JPA",
         "previews": [
             "https://github.com/JustinScottJenecke/cput-tutorspace-api",
             "",
@@ -84,11 +91,12 @@
         ]
     },
     {
-        "name": "OOP Hotel Booking App",
-        "stack": "back",
+        "id" : 8,
+        "title": "OOP Hotel Booking App",
+        "category": "back",
         "thumbnail": "booking-app.gif",
-        "descript": "Simple PHP app where users are able to sign-up, select one of two available hotels, compare prices and a list of features for both hotels, and finally confirm their booking using PHP mailer which sends an email with the booking details to the users email address.",
-        "tech": "PHP, Composer, HTML & CSS, Bulma CSS, PHP Mailer",
+        "description": "Simple PHP app where users are able to sign-up, select one of two available hotels, compare prices and a list of features for both hotels, and finally confirm their booking using PHP mailer which sends an email with the booking details to the users email address.",
+        "tech-stack": "PHP, Composer, HTML & CSS, Bulma CSS, PHP Mailer",
         "previews": [
             "https://github.com/JustinScottJenecke/csa-book-app-php",
             "",
