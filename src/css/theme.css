@@ -50,6 +50,16 @@ section {
     }
 }
 
+a:hover {
+    color: rgb(219, 46, 46);
+}
+button:disabled {
+    color: rgba(255, 255, 255, 0.438);
+    border: 1px solid rgba(255, 255, 255, 0.356);
+    background-color: rgba(0, 0, 0, 0.103);
+    cursor: not-allowed;
+}
+
 /* ------ Top nav  ------ */
 .top-nav { 
     display: flex;
