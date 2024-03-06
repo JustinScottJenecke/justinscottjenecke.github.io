@@ -104,7 +104,9 @@
                 md:flex-row
                 ">
                 <!-- preview pane -->
-                <div class=" 
+                <div
+                    data-fp-label="preview-image" 
+                    class=" 
                     fp-preview-pane
                     border-solid border-4 border-gray-300 p-6 m-2 
                     md:h-80 "
@@ -118,23 +120,36 @@
                     fp-project-info
                     m-4 mt-2 flex flex-col h-100">
                     <li>Project Name:
-                        <span class="pl-4">?</span>
+                        <span data-fp-label="project-name" class="pl-4">
+                            <b>?</b>
+                        </span>
                     </li>
                     <li>
-                        Stack:
-                        <p class="pl-4">HTML, CSS, JavaScript, Tailwind CSS</p>
+                        Category:
+                        <p class="pl-4">
+                            <span data-fp-label="Category">
+                                ?
+                            </span>
+                        </p>
+                    </li>
+                    <li>
+                        Tech Stack:
+                        <p class="pl-4">
+                            <span data-fp-label="tech-stack">
+                                ?
+                            </span>
+                        </p>
                     </li>
                     <li class="grow">
                         About:
                         <p class="pl-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Repellendus, voluptatem at voluptas quia nesciunt aliquid 
-                            molestias, harum soluta dolore rem voluptates, saepe esse 
-                            dolorem sequi. Autem architecto assumenda impedit ea!
+                            <span data-fp-label="about">
+                                ?
+                            </span>
                         </p>
                     </li>
                     <li class="justify-self-end">
-                        <ul class="flex justify-around">
+                        <ul data-fp-label="links" class="flex justify-around">
                             <li>
                                 <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
                                     <!-- icon button -->
