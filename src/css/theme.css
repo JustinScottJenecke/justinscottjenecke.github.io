@@ -60,6 +60,8 @@ button:disabled {
     cursor: not-allowed;
 }
 
+/* ----------------------------- Component Styling ----------------------------- */
+
 /* ------ Top nav  ------ */
 .top-nav { 
     display: flex;
