@@ -9,21 +9,9 @@ const FP_ABOUT_ELEMENT = document.querySelector('[data-fp-label="about"]');
 const FP_LINKS_ELEMENT = document.querySelector('[data-fp-label="links"]'); 
 
 // Project Store:
-const PROJECT_STORE = {
+const PROJECT_API = {
     
-    // PROPERTIES:
-    allProjects : [],
-    featuredProjects : [],
 
-    // METHODS:
-    /**
-     * Iterates over array of project objects and returns a new array of projects which have a featured property with a value of true (see project-schema.xml)
-     * @param {Array} unfilteredProjects - Array of project objects to be filtered
-     * @returns {Array} filteredProjects - list of projects whose featured propery === true
-     */
-    filterFeaturedProjects : (unfilteredProjects) => {
-        return unfilteredProjects.filter(project => project.featured);
-    }
 }
 
 // ============================== Functions ===========================================
@@ -34,35 +22,32 @@ const PROJECT_STORE = {
  * @require let loadedProjects - Must be a let: the array to be overwritten where the data of the resolved promise will be stored
  */
 const loadAllProjects = (filepath) => {
+    
+    let data;
+    
+    fetch(filepath)
+        // use Response Interface .json() method
+        .then(response => {
+            if (response.ok) {
+                return response.json()
+            }
+            else
+                console.log('error getting response')
+                return null
+        })
+        // callback that has access modified data
+        .then(data => data)
+        .catch(error => {
+            console.error('Request failed:', error)
+        })
 
-fetch(filepath)
-    .catch(error => {
-        console.error('Request failed:', error)
-    })
-    // use Response Interface .json() method
-    .then(response => {
-        if (response.ok) {
-            return response.json()
-        }
-        else
-            console.log('error getting response')
-            return null
-    })
-    // callback that has access modified data
-    .then(data => PROJECT_STORE.allProjects = data)
-    .then(loadedProjects => PROJECT_STORE.featuredProjects = PROJECT_STORE.filterFeaturedProjects(loadedProjects))
+    return data;
 }
 
 // ====================== Event Listeners =============================================
 
-window.addEventListener( 'DOMContentLoaded', () => {
-    loadAllProjects("./src/data/projects.json", PROJECT_STORE.allProjects);
+window.addEventListener('DOMContentLoaded', () => {
+    const data = loadAllProjects('./src/data/projects.json')
 
-    // failed while loop
-    /* while (condition) {
-        
-    }*/
-
-    console.log('data loaded..')
-    console.log(PROJECT_STORE.allProjects)
-}) 
+    console.log(data)
+})
