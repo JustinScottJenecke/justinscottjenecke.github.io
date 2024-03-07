@@ -12,9 +12,14 @@ let loadedProjects = [];
 
 // ============================== Functions ===========================================
 
-const loadAllProjects = () => {
+/**
+ * Description: Promised based function which loads in data from projects .json file, uses Response interface to convert data to json, and assigns the data to 'loadedProjects' array
+ * @param {string} filepath - The filepath of the json data to be fetch asynchronously
+ * @require let loadedProjects - Must be a let: the array to be overwritten where the data of the resolved promise will be stored
+ */
+const loadAllProjects = (filepath) => {
 
-fetch("./src/data/projects.json")
+fetch(filepath)
     .catch(error => {
         console.error('Request failed:', error)
     })
@@ -29,11 +34,10 @@ fetch("./src/data/projects.json")
     })
     // callback that has access modified data
     .then(data => loadedProjects = data)
-    .then(() => console.log(loadedProjects))
 }
 
 // ====================== Event Listeners =============================================
 
 window.addEventListener( 'DOMContentLoaded', () => {
-    loadAllProjects();
+    loadAllProjects("./src/data/projects.json", loadedProjects);
 }) 
