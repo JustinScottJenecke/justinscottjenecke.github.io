@@ -1,15 +1,16 @@
 // =============================== Data and Declarations ====================
 
 // All DOM references for featured projects
-const FP_PREVIEW_IMAGE_ELEMENT = document.querySelector('[data-fp-label="preview-image"]'); 
-const FP_NAME_ELEMENT = document.querySelector('[data-fp-label="name"]'); 
-const FP_CATEGORY_ELEMENT = document.querySelector('[data-fp-label="category"]'); 
-const FP_TECH_STACK_ELEMENT = document.querySelector('[data-fp-label="tech-stack"]'); 
-const FP_ABOUT_ELEMENT = document.querySelector('[data-fp-label="about"]'); 
-const FP_LINKS_ELEMENT = document.querySelector('[data-fp-label="links"]'); 
+const PREVIEW_ELEMENT = {
+    previewImage : document.querySelector('[data-fp-label="preview-image"]'),
+    name : document.querySelector('[data-fp-label="name"]'),
+    category : document.querySelector('[data-fp-label="category"]'),
+    techStack : document.querySelector('[data-fp-label="tech-stack"]'),
+    about : document.querySelector('[data-fp-label="about"]'),
+    links : document.querySelector('[data-fp-label="links"]')
+}
 
-
-// ============================== State ===========================================
+// ============================== Functions ===========================================
 
 const fetchAndParseData = (filepath) => {
     return fetch(filepath)
@@ -25,8 +26,12 @@ const fetchAndParseData = (filepath) => {
 // ====================== Event Listeners =============================================
 
 window.addEventListener('DOMContentLoaded', () => {
-
-    // Fetch all projects from json file
+    
+    // Fetch all and filter featured projects from json file
     fetchAndParseData('./src/data/projects.json')
-        .then(data => console.log(data))
+        .then(allProjects => {
+            // console.log(allProjects)
+            return allProjects.filter(project => project.featured)  
+        })
+        .then(filteredProjects => console.log(filteredProjects))
 })
