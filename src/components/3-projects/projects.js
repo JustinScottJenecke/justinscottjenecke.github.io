@@ -8,46 +8,25 @@ const FP_TECH_STACK_ELEMENT = document.querySelector('[data-fp-label="tech-stack
 const FP_ABOUT_ELEMENT = document.querySelector('[data-fp-label="about"]'); 
 const FP_LINKS_ELEMENT = document.querySelector('[data-fp-label="links"]'); 
 
-// Project Store:
-const PROJECT_API = {
-    
 
-}
+// ============================== State ===========================================
 
-// ============================== Functions ===========================================
-
-/**
- * Description: Promised based function which loads in data from projects .json file, uses Response interface to convert data to json, and assigns the data to 'loadedProjects' array
- * @param {string} filepath - The filepath of the json data to be fetch asynchronously
- * @require let loadedProjects - Must be a let: the array to be overwritten where the data of the resolved promise will be stored
- */
-const loadAllProjects = (filepath) => {
-    
-    let data;
-    
-    fetch(filepath)
-        // use Response Interface .json() method
-        .then(response => {
-            if (response.ok) {
-                return response.json()
-            }
-            else
-                console.log('error getting response')
-                return null
-        })
-        // callback that has access modified data
-        .then(data => data)
+const fetchAndParseData = (filepath) => {
+    return fetch(filepath)
         .catch(error => {
             console.error('Request failed:', error)
         })
-
-    return data;
+        // use Response Interface .json() method
+        .then(response => {
+            return response.ok ? response.json() : console.log('error getting response')
+        })
 }
 
 // ====================== Event Listeners =============================================
 
 window.addEventListener('DOMContentLoaded', () => {
-    const data = loadAllProjects('./src/data/projects.json')
 
-    console.log(data)
+    // Fetch all projects from json file
+    fetchAndParseData('./src/data/projects.json')
+        .then(data => console.log(data))
 })
