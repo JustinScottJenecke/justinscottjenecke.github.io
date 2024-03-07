@@ -1,3 +1,5 @@
+// =============================== Data and Declarations ====================
+
 // All DOM references for featured projects
 const FP_PREVIEW_IMAGE_ELEMENT = document.querySelector('[data-fp-label="preview-image"]'); 
 const FP_NAME_ELEMENT = document.querySelector('[data-fp-label="name"]'); 
@@ -7,6 +9,8 @@ const FP_ABOUT_ELEMENT = document.querySelector('[data-fp-label="about"]');
 const FP_LINKS_ELEMENT = document.querySelector('[data-fp-label="links"]'); 
 
 let loadedProjects = [];
+
+// ============================== Functions ===========================================
 
 const loadAllProjects = () => {
 
@@ -25,5 +29,11 @@ fetch("./src/data/projects.json")
     })
     // callback that has access modified data
     .then(data => loadedProjects = data)
-    .then(() => console.log(loadedProjects));
+    .then(() => console.log(loadedProjects))
 }
+
+// ====================== Event Listeners =============================================
+
+window.addEventListener( 'DOMContentLoaded', () => {
+    loadAllProjects();
+}) 
