@@ -8,7 +8,20 @@ const FP_TECH_STACK_ELEMENT = document.querySelector('[data-fp-label="tech-stack
 const FP_ABOUT_ELEMENT = document.querySelector('[data-fp-label="about"]'); 
 const FP_LINKS_ELEMENT = document.querySelector('[data-fp-label="links"]'); 
 
-let loadedProjects = [];
+// Project Stores:
+const PROJECT_STORE = {
+    allProjects : [],
+    featuredProjects : [],
+
+    /**
+     * Iterates over array of project objects and returns a new array of projects which have a featured property with a value of true (see project-schema.xml)
+     * @param {Array} unfilteredProjects - Array of project objects to be filtered
+     * @returns {Array} filteredProjects - list of projects whose featured propery === true
+     */
+    filterFeaturedProjects : (unfilteredProjects) => {
+        return unfilteredProjects.filter(project => project.featured);
+    }
+}
 
 // ============================== Functions ===========================================
 
@@ -33,11 +46,12 @@ fetch(filepath)
             return null
     })
     // callback that has access modified data
-    .then(data => loadedProjects = data)
+    .then(data => PROJECT_STORE.allProjects = data)
+    .then(loadedProjects => PROJECT_STORE.featuredProjects = PROJECT_STORE.filterFeaturedProjects(loadedProjects))
 }
 
 // ====================== Event Listeners =============================================
 
 window.addEventListener( 'DOMContentLoaded', () => {
-    loadAllProjects("./src/data/projects.json", loadedProjects);
+    loadAllProjects("./src/data/projects.json", PROJECT_STORE.allProjects);
 }) 

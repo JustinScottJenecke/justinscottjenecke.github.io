@@ -94,7 +94,7 @@
             "repo": "https://github.com/JustinScottJenecke/cput-tutorspace-api",
             "api-docs": "https://github.com/JustinScottJenecke/cput-tutorspace-api/blob/main/README.md"
         },
-        "featured" : false,
+        "featured" : true,
         "completed" : true
     },
     {
