@@ -8,11 +8,14 @@ const FP_TECH_STACK_ELEMENT = document.querySelector('[data-fp-label="tech-stack
 const FP_ABOUT_ELEMENT = document.querySelector('[data-fp-label="about"]'); 
 const FP_LINKS_ELEMENT = document.querySelector('[data-fp-label="links"]'); 
 
-// Project Stores:
+// Project Store:
 const PROJECT_STORE = {
+    
+    // PROPERTIES:
     allProjects : [],
     featuredProjects : [],
 
+    // METHODS:
     /**
      * Iterates over array of project objects and returns a new array of projects which have a featured property with a value of true (see project-schema.xml)
      * @param {Array} unfilteredProjects - Array of project objects to be filtered
@@ -54,4 +57,12 @@ fetch(filepath)
 
 window.addEventListener( 'DOMContentLoaded', () => {
     loadAllProjects("./src/data/projects.json", PROJECT_STORE.allProjects);
+
+    // failed while loop
+    /* while (condition) {
+        
+    }*/
+
+    console.log('data loaded..')
+    console.log(PROJECT_STORE.allProjects)
 }) 
