@@ -1,0 +1,166 @@
+[
+    {
+        "id" :0,
+        "name" : "Java",
+        "bgImgTag" : "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-plain.svg' />",
+        "tools" : [
+            {
+                "no": 0,
+                "tool": "Spring-Boot",
+                "skill-level": "good"
+            },
+            {
+                "no": 1,
+                "tool": "Hibernate",
+                "skill-level": "basics"
+            },
+            {
+                "no": 2,
+                "tool": "JUnit",
+                "skill-level": "basics"
+            },
+            {
+                "no": 3,
+                "tool": "Java Swing",
+                "skill-level": "good"
+            }
+        ]
+    },
+    {
+        "id" : 2,
+        "name" : "JavaScript",
+        "bgImgTag": "<img src'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg' />",
+        "tools" : [
+            {
+                "no": 1,
+                "tool": "ES6",
+                "skill-level": "good"
+            },
+            {
+                "no": 2,
+                "tool": "React.js",
+                "skill-level": "good"
+            },
+            {
+                "no": 3,
+                "tool": "Next.js",
+                "skill-level": "basics"
+            },
+            {
+                "no": 4,
+                "tool": "Vue.js",
+                "skill-level": "dev experience"
+            },
+            {
+                "no": 5,
+                "tool": "Nuxt.js",
+                "skill-level": "dev experience"
+            }
+        ]
+    },
+    {
+        "id" :3,
+        "name" : "PHP",
+        "bgImgTag": "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg' />",
+        "tools" : [
+            {
+                "no": 1,
+                "tool": "Syntax, OOP, etc.",
+                "skill-level": "good"
+            },
+            {
+                "no": 2,
+                "tool": "Composer",
+                "skill-level": "basics"
+            },
+            {
+                "no": 3,
+                "tool": "Slim Framework",
+                "skill-level": "basics"
+            }
+        ]
+    },
+    {
+        "id" : 4,
+        "name" : "C#",
+        "bgImgTag" : "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-plain.svg' />",
+        "tools" : [
+            {
+                "no": 1,
+                "tool": "Syntax, OOP, etc.",
+                "skill-level": "basicss"
+            }
+        ]
+    },
+    {
+        "id" : 5,
+        "name" : "MySQL",
+        "bgImgTag": "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg' />",
+        "tools" : [
+            {
+                "no": 1,
+                "tool": "Syntax, CRUD, etc.",
+                "skill-level": "basics"
+            }  
+        ]
+    },
+    {
+        "id" : 7,
+        "name" : "HTML&CSS",
+        "bgImgTag": "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg' />",
+        "tools" : [
+            {
+                "no": 1,
+                "tool": "Bulma CSS",
+                "skill-level": "dev experience"
+            },
+            {
+                "no": 2,
+                "tool": "Tailwind",
+                "skill-level": "basics"
+            },
+            {
+                "no": 3,
+                "tool": "SASS",
+                "skill-level": "basics"
+            },
+            {
+                "no": 4,
+                "tool": "Bootstrap",
+                "skill-level": "good"
+            }
+        ]
+    },
+    {
+        "id" :7,
+        "name" : "Tools & Programs",
+        "bgImgTag" : "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubcodespaces/githubcodespaces-original.svg' />",
+        "tools" : [
+            {
+                "no": 1,
+                "tool": "Git",
+                "skill-level": "good"
+            },
+            {
+                "no": 2,
+                "tool": "GitHub",
+                "skill-level": "good"
+            },
+            {
+                "no": 3,
+                "tool": "Agile (kanban)",
+                "skill-level": "good"
+            },
+            {
+                "no": 4,
+                "tool": "VS Code",
+                "skill-level": "good"
+            },
+            {
+                "no": 5,
+                "tool": "Intelli J",
+                "skill-level": "good"
+            }
+        ]
+    }
+]

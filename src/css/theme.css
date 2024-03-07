@@ -1,249 +1,185 @@
+/* ------ General ------ */
+
+* {
+    font-family: consolas;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-#app {
-    box-sizing: border-box;
-    margin: 0;
+body {
+    background-color: rgb(17, 17, 19);
+    color: white;
 }
 
-#header {
-    position: sticky;
-    margin: 0;
-    top: 0;
-    z-index: 2;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+/* headings */
+    h1 {
+        font-size: 3.75rem !important;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 900 !important;
+    }
+    h2 {
+        font-size: 3rem !important;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+        /* font-weight: 675; */
+        font-weight: 600;
+    }
+    h3 {
+        font-size: 2rem !important;
+        font-weight: 500;
+    }
+    h4 {
+        font-size: 1.4rem !important;
+        font-weight: 300;
+    }
+/* headings */
+
+section {
+    min-height: 100vh;
+    padding: 0 5vh;
 }
 
-.page-tab {
+.glass-card {
+    background-color: rgba(0, 0, 0, 0.596);
+    padding: 0.5rem;
+}
+@media only screen and (max-width: 770px) {
+    section {
+        padding: 0 2.5vh;
+    }
+}
+
+a:hover {
+    color: rgb(219, 46, 46);
+}
+button:disabled {
+    color: rgba(255, 255, 255, 0.438);
+    border: 1px solid rgba(255, 255, 255, 0.356);
+    background-color: rgba(0, 0, 0, 0.103);
+    cursor: not-allowed;
+}
+
+/* ----------------------------- Component Styling ----------------------------- */
+
+/* ------ Top nav  ------ */
+.top-nav { 
     display: flex;
-    flex-direction: column;
+    padding: 1rem 2rem;
+    /* padding-bottom: 1rem; */
+}
+.nav-links {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+@media only screen and (max-width: 770px) {
+    .top-nav {
+        display: none;
+    }
+}
 
-    min-height: 110vh;
-    padding: 5rem 4rem;
+/* ------ hero ------ */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
 
+.hero-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2;
+}
+
+.hero-graphic {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+    min-height: 50vh;
+}
+@media only screen and (max-width: 770px) {
+    .hero {
+        padding: 2vh 0;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* ----- featured projects ----- */
+.fp-preview-pane {
+    flex: 2;
+}
+
+.fp-project-info {
+    flex: 3;
+}
+
+
+/* ------ skills ------ */
+.card-wrapper:hover > .card-cover-image {
+    z-index: -1;
+}
+/* .card-cover-image {
+    background-color: rgb(3, 28, 139);
+    position: absolute; 
+} */
+.card-content {
+    display: none;
+}
+.card-wrapper:hover > .card-content {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.692);
     color: whitesmoke;
 }
 
-#footer {
-    padding-bottom: 0;
+/* ----- about ----- */
+
+.about-card:hover > p {
+    display: block;
 }
 
-h2 {
-    font-size: 3rem !important;
-    text-align: center;
-    margin: 1rem 0 !important ;
-}
-h3 {
-    font-size: 1.5rem !important;
-    text-align: center;
-}
-
-@media only screen and (max-width: 769px) {
-
-    * {
-        font-size: 0.7rem;
-    }
-
-}
-
-/* ======================== Background ======================== */
-
-.background {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    z-index: -1;
-}
-
-.bg {
-    height: 100vh;
-    width: 100vw;
-}
-
-.bg-filter {
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;
-}
-
-/* ======================== Header/Nav ======================== */
-
-#logo {
-    display: flex;
-    justify-content: space-between;
-}
-
-#burger-btn {
+/* ------ mobile nav ------ */
+.mobile-nav {
     display: none;
 }
-
-
-@media only screen and (max-width: 769px) {
-        
-    #burger-btn {
-        display: block;
-    }
-    
-    .nav-btn {
-        width: 100%;
-    }
-
-    .nav {
-        /* display: none !important; */
-        display: none;
-        height: 0px;
-        opacity: 0;
-    }
-    .nav > * {
-        display: none;
-    }
+.mobile-links {
+    display: none;
+}
+.mobile-interactive-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+.mobile-interactive-wrapper:hover > .mobile-links {
+    display: block;
 }
 
-.nav-mobile-display {
-    display: fixed;
-    transition: 400ms ease-in;
-    height: 100%;
-    opacity: 0.8;
+@media only screen and (max-width: 770px) { 
+    .mobile-nav {
+        display:block;
+    } 
+    .mobile-interactive-wrapper {
+        display: inline-flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+    }
+} 
+
+
+/* ----- footer ----- */
+@media only screen and (min-width: 426px) and (max-width: 770px) {
+    /* #other-links {
+       }
+    */
+
+    #footer-social-links {
+        /* order: 3; */
+        grid-column: 1 / 3;
+    }
 }
-
-/* ======================== Helpers ======================== */
-
-.hover:hover {
-    box-shadow: 0px 0px 4px 4px rgba(0, 255, 34, 0.568);
-}
-
-.invisi {
-    visibility: none;
-    font-size: 1.25rem;
-}
-
-/* ======================== Hero ======================== */
-
-    #hero {
-        justify-content: center;
-        text-align: center;
-    }
-
-    #hero h1 {
-        font-size: 3.5rem;
-    }
-    #hero h2 {
-        font-size: 3rem;
-    }
-
-    .hero-links {
-        margin: 2rem 15vw;
-    }
-
-    
-    @media only screen and (max-width: 769px) {
-        
-        #hero-links {
-            display: flex;
-            flex-direction: column;
-        }    
-    }
-
-    @media only screen and (max-width: 769px) {
-            
-        h3 {font-size: 1.15rem !important}
-        h2 {font-size: 2rem !important}
-        h1 {font-size: 2.5rem !important}
-        
-    }
-
-/* ======================== Projects ======================== */
-
-    /* --- swiper --- */
-        .swiper {
-            width: 65vw;
-            min-height: 60vh;
-        }
-        @media only screen and (max-width: 769px) {
-            .swiper {
-                width: 80vw;
-            }
-        }
-
-        .swiper-slide {
-            background-color: none;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            padding: 0.5rem;
-        }
-
-        .preview-thumb {
-            height: 40vh;
-            width: 40vw;
-            margin: 2rem 0;
-        }
-
-        .controls {
-            margin: 1rem 0.25rem;
-        }
-
-        :root {
-            --swiper-navigation-color: #2dff7d;
-            --swiper-pagination-color: #2dff7d;
-          }
-/* ======================== About ======================== */
-
-        #about * :hover {
-            cursor:default;
-        }
-
-        .about {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            margin-top: 1rem;
-        }
-
-        .skills-tools {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            text-align: center;
-            margin-top: 1rem;
-        }    
-        @media only screen and (max-width: 769px) {
-            .skills-tools {
-                grid-template-columns: repeat(2, 1fr);
-            }    
-        }
-        
-
-
-        .contact-grid-col {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .contact-icon {
-            height: 10rem;
-            width: 10rem;
-            border-radius: 50%;
-            color: whitesmoke;
-
-            margin-top: 2rem;
-        }
-        .contact-icon:hover {
-            box-shadow: 0px 0px 4px 4px rgba(0, 255, 34, 0.568);
-
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            text-align: center;
-        }
-        @media only screen and (max-width: 1000px) {
-            
-            .contact-grid {
-                display: flex;
-                flex-direction: column;
-            }
-        }

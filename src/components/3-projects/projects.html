@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>projects</title>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet"> -->
+        <style>
+            /* project container */
+            #featured-projects-container {
+                display: grid;
+                grid-template-columns: 1fr 10fr 1fr;
+            }
+            .project-header {
+                grid-column: 1 / 4;
+                background-color: aquamarine;
+            }
+           .projects-container-pagination {
+                grid-column: 1 / 4;
+                display: flex;
+                justify-content: center;
+                column-gap: 2rem;
+            }
+
+            /*  */
+            .featured-project {
+                background-color: black;
+                color: white;
+                min-width: 50vw;
+                aspect-ratio: 3/2;
+                margin: 1rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="featured-projects-container">
+            <!-- item 1 -->
+            <header class="project-header">
+                Project #1
+            </header>
+            <!-- item 2 -->
+            <div class="projects-container-left">{</div>
+            <!-- item 3 -->
+            <ul id="featured-projects-list">
+                <li class="featured-project">
+                    <article class="project-card">
+                        <div class="project-preview-image">
+                            <img src="" alt="preview image">
+                        </div>
+                        <div class="project-card-data">
+                            
+                        </div>
+                    </article>
+                </li>
+                <li class="featured-project">
+                    <article class="project-card">
+                        <div class="project-preview-image">
+                            <img src="" alt="preview image">
+                        </div>
+                        <div class="project-card-data">
+                            
+                        </div>
+                    </article>
+                </li>
+                <li class="featured-project">
+                    <article class="project-card">
+                        <div class="project-preview-image">
+                            <img src="" alt="preview image">
+                        </div>
+                        <div class="project-card-data">
+                            
+                        </div>
+                    </article>
+                </li>              
+            </ul>
+            </div>
+            <!-- item 4 -->
+            <div class="projects-container-right">}</div>
+            <!-- item 5 -->
+            <div class="projects-container-pagination">
+                <button>0</button>
+                <button>0</button>
+                <button>0</button>
+            </div>
+        </div>
+    
+    </body>
+    <script>
+
+    </script>
+</html>

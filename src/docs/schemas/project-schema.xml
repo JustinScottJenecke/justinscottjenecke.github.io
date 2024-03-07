@@ -1,0 +1,25 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+
+<project>    
+    <id type="int">
+    <title type="string" />
+    <category type="enum">
+        <type>backend</type>
+        <type>frontend</type>
+        <type>full=stack</type>
+    </category>
+    <thumbnail type="string" />
+    <description type="string" />
+    <tech-stack type="list <technology>">
+        <technology type='string' />
+    </tech-stack>
+    <links type="array<links>">
+        <link>
+            <icon type="url/path" />
+            <target type="string" />
+            <url type="string" />
+        </link>
+    </links>
+    <featured type="boolean" />
+    <completed type="boolean" />
+</project>

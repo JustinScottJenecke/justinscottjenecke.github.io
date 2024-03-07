@@ -1,0 +1,9 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+
+<Technology>
+    <id type="int" />
+    <icon type="url/path" />
+    <tools type="list<tool>">
+        <tool type="string" />
+    </tools>
+</Technology>

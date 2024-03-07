@@ -5,20 +5,453 @@
 
 <head>
     <!-- Meta tags -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page tags -->
-        <title>justin.dev</title>
-        <link rel="shortcut icon" href="./public/icon/JJ.ico" type="image/x-icon">
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>justin.dev</title>
+    <link rel="shortcut icon" href="./public/icon/JJ.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/css/theme.css">
+    <script defer src="./src/components/3-projects/projects.js"></script>
 </head>
 <!--=================== Head =====================-->
 
 <!--=================== Body =====================-->
-    <body>
-        
-    </body>
+
+<body>
+    <!-- nav -->
+    <nav id="top-nav" class="z-50 top-nav bg-neutral-950/95 sticky top-0">
+        <span id="logo-top">
+            <a href="#hero">"logo" : {}</a>
+        </span>
+        <ul class="nav-links">
+            <li>
+                <a href="#featured-projects">featured-projects</a>
+            </li>
+            <li>
+                <a href="#skills">skills</a>
+            </li>
+            <li>
+                <a href="#about">about-me</a>
+            </li>
+            <li>
+                <a href="#footer">contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- main website section -->
+    <main>
+        <!-- Hero -->
+        <header id="hero" class="">
+            <div class="hero">
+                <div class="hero-content ">
+                    <div class="flex flex-col justify-end items-center text-center">
+                        <h1 class="mb-4 md:mb-0">Justin Jenecke</h1>
+                        <h3 class="mb-4 md:mb-0 mx-10">Junior Full-Stack Developer</h2>
+                    </div>
+                    <div class="hero-graphic">
+                        <div class="w-9/12">
+                            <div class="border-solid border-4 border-gray-300 p-6 m-2">
+                                <img src="./src/resource/background/code-dribble-red.gif" alt="hero-graphic" srcset=""
+                                    class="text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="hero-links flex flex-wrap justify-center pt-4 gap-12">
+                        <li>
+                            <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
+                                <button class="rounded-full bg-neutral-800 w-10 aspect-square">G</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/justin-scott-jenecke/" target="_blank"
+                                rel="noopener noreferrer">
+                                <button class="rounded-full bg-neutral-800 w-10 aspect-square">in</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:justinjenecke@gmail.com">
+                                <button class="rounded-full bg-neutral-800 w-10 aspect-square">E</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./public/docs/Justin-Scott-Isaac-Jenecke_ CV.pdf" target="_blank"
+                                rel="noopener noreferrer">
+                                <button class="rounded-full bg-neutral-800 w-10 aspect-square">CV</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- featured projects -->
+        <div id="featured-projects"></div>
+        <section class="lg:mt-14">
+            <header class="mb-8">
+                <h2 class="pb-2">
+                    Projects
+                </h2>
+                <p>
+                    View some of the highlights from my list <br>
+                    of personal projects:
+                </p>
+            </header>
+            <article class="
+                flex flex-col mb-10
+                md:flex-row
+                ">
+                <!-- preview pane -->
+                <div
+                    data-fp-label="preview-image" 
+                    class=" 
+                    fp-preview-pane flex items-center	
+                    border-solid border-4 border-gray-300 p-6 m-2 
+                    md:h-80 "
+                >
+                </div>
+                <!-- project info -->
+                <ul class=" 
+                    fp-project-info
+                    m-4 mt-2 flex flex-col h-100">
+                    <li>Project Name:
+                        <span data-fp-label="name" class="pl-4">
+                            <b>?</b>
+                        </span>
+                    </li>
+                    <li>
+                        Category:
+                        <p class="pl-4">
+                            <span data-fp-label="category">
+                                ?
+                            </span>
+                        </p>
+                    </li>
+                    <li>
+                        Tech Stack:
+                        <p class="pl-4">
+                            <span data-fp-label="tech-stack">
+                                ?
+                            </span>
+                        </p>
+                    </li>
+                    <li class="grow">
+                        About:
+                        <p class="pl-4 overflow-clip	" data-fp-label="about">
+                            ?
+                        </p>
+                    </li>
+                    <li class="justify-self-end">
+                        <ul data-fp-label="links" class="flex justify-around">
+                            <!-- dynamic links go here -->
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+            <div class="flex justify-evenly">
+                <button disabled class="bg-neutral-800 py-1 px-4">prev</button>
+                <button disabled class="bg-neutral-800 py-1 px-4">
+                    href="all-projects"
+                </button>
+                <button disabled class="bg-neutral-800 py-1 px-4">next</button>
+            </div>
+        </section>
+
+        <!-- skills -->
+        <div id="skills"></div>
+        <section class="mt-14 mb-28">
+            <header class="mb-8">
+                <h2 class="pb-2">
+                    Skills
+                </h2>
+                <p>
+                    Take a look at some of the technical skills <br>
+                    I have mastered thus far into my journey <br>
+                    as a <b>developer</b>:
+                </p>
+            </header>
+            <ul id="skills-container" class="
+                sm:direction-column 
+                md:grid  md:grid-cols-2 gap-6 
+                lg:grid-cols-3
+                xl:grid-cols-3 xl:gap-20">
+                <!-- Skill Card -->
+                <li class="border-solid border-4 border-gray-300 p-6">
+                    <div class="card-wrapper w-full aspect-square relative">
+                        <div class="card-cover-image w-full aspect-square absolute flex">
+                            <!-- <img src="./src/resource/projects/tutorspace-rest-api.png" alt="" srcset=""> -->
+                            <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-plain.svg' />
+                        </div>
+                        <div class="card-content aspect-square">
+                            <ul class="flex flex-col px-1">
+                                <li class="flex gap-2">
+                                    <span>Java 8</span>
+                                    |
+                                    <span>Good</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>Spring-Boot</span>
+                                    |
+                                    <span>Good</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>JPA</span>
+                                    |
+                                    <span>Good</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>JUnit</span>
+                                    |
+                                    <span>Good</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>Hibernate</span>
+                                    |
+                                    <span>Basic</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- skill card -->
+                <li class="border-solid border-4 border-gray-300 p-6">
+                    <div class="card-wrapper w-full aspect-square relative">
+                        <div class="card-cover-image w-full aspect-square absolute flex">
+                            <!-- <img src="./src/resource/projects/tutorspace-rest-api.png" alt="" srcset=""> -->
+                            <img
+                                src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg' />
+                        </div>
+                        <div class="card-content aspect-square">
+                            <ul class="flex flex-col px-1">
+                                <li class="flex gap-2">
+                                    <span>ES6</span>
+                                    |
+                                    <span>Excellent</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>Vue.js</span>
+                                    |
+                                    <span>Good</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>Nuxt.js</span>
+                                    |
+                                    <span>Good</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>React.js</span>
+                                    |
+                                    <span>Good</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>Next.js</span>
+                                    |
+                                    <span>Good</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- skill card -->
+                <li class="border-solid border-4 border-gray-300 p-6">
+                    <div class="card-wrapper w-full aspect-square relative">
+                        <div class="card-cover-image w-full aspect-square absolute flex">
+                            <!-- <img src="./src/resource/projects/tutorspace-rest-api.png" alt="" srcset=""> -->
+                            <img
+                                src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubcodespaces/githubcodespaces-original.svg' />
+                        </div>
+                        <div class="card-content aspect-square">
+                            <ul class="flex flex-col px-1">
+                                <li class="flex gap-2">
+                                    <span>Git & GitHub</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>Agile (Kanban, Trello)</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>MySQL</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>IDEs & Editors (VSC, VS, IntelliJ)</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>Balsamiq Wireframes</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span>FigJam</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- about -->
+        <section id="about">
+            <div class="
+                flex flex-col 
+                lg:grid lg:grid-cols-2 lg:auto-rows-fr">
+                <header class="
+                    flex flex-col justify-center py-10
+                    lg:col-span-1">
+                    <h2 class="pb-2">
+                        About Me
+                    </h2>
+                    <p>
+                        A bit more about about me and what I <br> typically get up to these days:
+                    </p>
+                </header>
+                <!-- Start of about -->
+                <article class="
+                    about-card
+                    glass-card text-white flex flex-col justify-center p-2
+                    md:my-5 md:mx-10
+                    lg:my-10 lg:mx-10 lg:py-12">
+                    <h4 class="about-card-title text-center">
+                        What Im doing:
+                    </h4>
+                    <p class="hidden lg:block p-4">
+                        These days I spend my time working as a Code Coach for CodeSpace Academy, and Ed-Tech startup
+                        aimed at equipping students with programming and web development skills used in the tech
+                        industry
+                        today.
+                    </p>
+                </article>
+                <article class="
+                    about-card
+                    glass-card text-white flex flex-col justify-center p-2
+                    md:my-5 md:mx-10 
+                    lg:my-10 lg:mx-10 lg:py-12">
+                    <h4 class="about-card-title text-center">
+                        More About Me:
+                    </h4>
+                    <p class="hidden lg:block  p-4">
+                        My background in software is in backend development, since I started my coding journey
+                        developing
+                        desktop applications and REST APIs in Java, whilst at University at CPUT. Since I've started my
+                        current position as a Code Coach, I've focused a lot more of my time into learning frontend
+                        technologies
+                        such as React.js and Vue.js, and I have spent a lot of time understanding the foundations of
+                        JavaScript,
+                        due to the many intricacies and nuances of the language, when compared to something more
+                        traditional like
+                        Java or C#.
+                    </p>
+                </article>
+                <article class="
+                    about-card
+                    glass-card text-white flex flex-col justify-center p-2
+                    md:my-5 md:mx-10 
+                    lg:my-10 lg:mx-10 lg:py-12">
+                    <h4 class="about-card-title text-center">
+                        Future Plans:
+                    </h4>
+                    <p class="hidden lg:block  p-4">
+                        My current goal is to explore more technologies relating to software architecture and learning
+                        more about
+                        distributed systems. I have also been getting back into the .Net framework, and learning more
+                        about databases,
+                        optimizing data queries, etc. since I find that solving the complexity typically found in that
+                        sort of environment
+                        more engaging and interesting than those typically found in UI or customer facing application
+                        development.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- mobile Navbar -->
+    <nav id="mobile-nav" class="mobile-nav">
+        <div class="mobile-interactive-wrapper">
+            <ul class="mobile-links">
+                <li>
+                    <a href="#featured-projects">Project</a>
+                </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a href="#about">About Me</a>
+                </li>
+                <li>
+                    <a href="#footer">Contact</a>
+                </li>
+            </ul>
+            <div id="logo-bottom" class="p-2">
+                <button>=</button>
+            </div>
+        </div>
+    </nav>
+    <!-- footer section -->
+    <footer id="footer" class="
+        bg-neutral-950 flex flex-col py-8 pt-12
+        md:grid md:grid-cols-2 md:px-8 md:mt-28
+        lg:flex lg:flex-row lg:justify-evenly">
+        <!-- contact info -->
+        <div class="">
+            <h4 class="">
+
+                Contact Info:
+
+            </h4>
+            <ul class="p-4 flex flex-col">
+                <li class="pb-2">
+                    <a href="mailto:justinjenecke@gmail.com">justinjenecke@gmail.com</a>
+                </li>
+                <li class="pb-2">
+                    <a href="http://https://github.com/JustinScottJenecke" target="_blank"
+                        rel="noopener noreferrer">https://github.com/JustinScottJenecke</a>
+                </li>
+            </ul>
+        </div>
+        <!-- other links -->
+        <div id="other-links" class="">
+            <h4>
+                Other Links:
+            </h4>
+            <ul class="p-4 flex flex-col lg:pb-2">
+                <li class="pb-2">
+                    <a href="#">Portfolio Pieces and Projects</a>
+                </li>
+                <li class="pb-2">
+                    <a href="#">Resume</a>
+                </li>
+            </ul>
+        </div>
+        <!-- socials -->
+        <div id="footer-social-links" class="">
+            <h4 class="md:text-center">
+                Socials:
+            </h4>
+            <ul class="
+                flex gap-6 p-4
+                md:gap-12 md:justify-center md:p-0
+                lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start lg:p-4">
+                <li>
+                    <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
+                        <button class="rounded-full bg-neutral-800 w-10 aspect-square">G</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/justin-scott-jenecke/" target="_blank"
+                        rel="noopener noreferrer">
+                        <button class="rounded-full bg-neutral-800 w-10 aspect-square">in</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:justinjenecke@gmail.com">
+                        <button class="rounded-full bg-neutral-800 w-10 aspect-square">E</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
 <!--=================== Body =====================-->
 
 </html>
