@@ -6,11 +6,24 @@ const FP_TECH_STACK_ELEMENT = document.querySelector('[data-fp-label="tech-stack
 const FP_ABOUT_ELEMENT = document.querySelector('[data-fp-label="about"]'); 
 const FP_LINKS_ELEMENT = document.querySelector('[data-fp-label="links"]'); 
 
-// checks to ensure DOM references are !null
-console.log(FP_PREVIEW_IMAGE_ELEMENT)
-console.log(FP_PREVIEW_IMAGE_ELEMENT)
-console.log(FP_NAME_ELEMENT)
-console.log(FP_CATEGORY_ELEMENT )
-console.log(FP_TECH_STACK_ELEMENT)
-console.log(FP_ABOUT_ELEMENT)
-console.log(FP_LINKS_ELEMENT)
+let loadedProjects = [];
+
+const loadAllProjects = () => {
+
+fetch("./src/data/projects.json")
+    .catch(error => {
+        console.error('Request failed:', error)
+    })
+    // use Response Interface .json() method
+    .then(response => {
+        if (response.ok) {
+            return response.json()
+        }
+        else
+            console.log('error getting response')
+            return null
+    })
+    // callback that has access modified data
+    .then(data => loadedProjects = data)
+    .then(() => console.log(loadedProjects));
+}
