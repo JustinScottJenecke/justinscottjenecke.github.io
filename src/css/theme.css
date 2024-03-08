@@ -11,7 +11,12 @@ html {
 body {
     background-color: rgb(25, 25, 28);
     color: white;
+}@media only screen and (max-width: 770px) {
+    body {
+        font-size: 0.75rem;
+    }
 }
+
 
 /* headings */
     h1 {
@@ -116,7 +121,7 @@ button:disabled {
 }
 /* ----- featured projects ----- */
 .fp-preview-pane {
-    flex: 2;
+    flex: 3;
 }
 
 .fp-project-info {

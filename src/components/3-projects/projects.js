@@ -37,7 +37,7 @@ const insertFeaturedProject = (project) => {
             <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
                 <!-- icon button -->
                 <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
-                    <button class="rounded-full bg-neutral-800 w-10 aspect-square">G</button>
+                    <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">G</button>
                     <button class="">Repo</button>
                 </div>
             </a>
@@ -45,7 +45,7 @@ const insertFeaturedProject = (project) => {
         <li>
             <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
                 <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
-                    <button class="rounded-full bg-neutral-800 w-10 aspect-square">D</button>
+                    <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">D</button>
                     <button class="">Demo</button>
                 </div>
             </a>
