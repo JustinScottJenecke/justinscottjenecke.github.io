@@ -26,12 +26,14 @@ const fetchAndParseData = (filepath) => {
 const insertFeaturedProject = (project) => {
     PREVIEW_ELEMENT.previewImage.innerHTML += `
         <img src="/src/resource/projects/tutorspace-rest-api.png" alt="project-preview-image">
-    `
+    `;
 
-    PREVIEW_ELEMENT.name.innerText = project.title
-    PREVIEW_ELEMENT.category.innerText = project.category
-    PREVIEW_ELEMENT.techStack.innerText = project.techStack
-    PREVIEW_ELEMENT.about.innerText = project.description
+    console.log(project);
+
+    PREVIEW_ELEMENT.name.innerText = project.title;
+    PREVIEW_ELEMENT.category.innerText = project.category;
+    PREVIEW_ELEMENT.techStack.innerText = project["tech-stack"];
+    PREVIEW_ELEMENT.about.innerText = project.description;
     PREVIEW_ELEMENT.links.innerHTML += `
         <li>
             <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
@@ -66,5 +68,5 @@ window.addEventListener('DOMContentLoaded', () => {
         .then(filteredProjects => {
             insertFeaturedProject(filteredProjects[0]);
         })
-        .catch(error => console.error('problem with templating'), error)
+        .catch(error => console.error('problem with templating', error))
 })
