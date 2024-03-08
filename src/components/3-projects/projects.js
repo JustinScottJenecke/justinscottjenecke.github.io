@@ -61,9 +61,10 @@ window.addEventListener('DOMContentLoaded', () => {
     fetchAndParseData('./src/data/projects.json')
         .then(allProjects => {
             // console.log(allProjects)
-            return allProjects.filter(project => project.featured)
+            return allProjects.filter(project => project.featured);
         })
         .then(filteredProjects => {
-            insertFeaturedProject(filteredProjects[0])
+            insertFeaturedProject(filteredProjects[0]);
         })
+        .catch(error => console.error('problem with templating'), error)
 })
