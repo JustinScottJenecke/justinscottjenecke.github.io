@@ -26,18 +26,20 @@ const fetchAndParseData = (filepath) => {
 const insertFeaturedProject = (project) => {
     PREVIEW_ELEMENT.previewImage.innerHTML += `
         <img src="/src/resource/projects/tutorspace-rest-api.png" alt="project-preview-image">
-    `
+    `;
 
-    PREVIEW_ELEMENT.name.innerText = project.title
-    PREVIEW_ELEMENT.category.innerText = project.category
-    PREVIEW_ELEMENT.techStack.innerText = project.techStack
-    PREVIEW_ELEMENT.about.innerText = project.description
+    console.log(project);
+
+    PREVIEW_ELEMENT.name.innerText = project.title;
+    PREVIEW_ELEMENT.category.innerText = project.category;
+    PREVIEW_ELEMENT.techStack.innerText = project["tech-stack"];
+    PREVIEW_ELEMENT.about.innerText = project.description;
     PREVIEW_ELEMENT.links.innerHTML += `
         <li>
             <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
                 <!-- icon button -->
                 <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
-                    <button class="rounded-full bg-neutral-800 w-10 aspect-square">G</button>
+                    <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">G</button>
                     <button class="">Repo</button>
                 </div>
             </a>
@@ -45,7 +47,7 @@ const insertFeaturedProject = (project) => {
         <li>
             <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
                 <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
-                    <button class="rounded-full bg-neutral-800 w-10 aspect-square">D</button>
+                    <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">D</button>
                     <button class="">Demo</button>
                 </div>
             </a>
@@ -61,9 +63,10 @@ window.addEventListener('DOMContentLoaded', () => {
     fetchAndParseData('./src/data/projects.json')
         .then(allProjects => {
             // console.log(allProjects)
-            return allProjects.filter(project => project.featured)
+            return allProjects.filter(project => project.featured);
         })
         .then(filteredProjects => {
-            insertFeaturedProject(filteredProjects[0])
+            insertFeaturedProject(filteredProjects[0]);
         })
+        .catch(error => console.error('problem with templating', error))
 })
