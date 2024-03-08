@@ -33,6 +33,11 @@ body {
         font-size: 1.4rem !important;
         font-weight: 300;
     }
+    h5 {
+        font-weight:bold;
+        color: rgb(206, 97, 115);
+        display: inline;
+    }
 /* headings */
 
 section {
