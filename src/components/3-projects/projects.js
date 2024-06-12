@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
             return allProjects.filter(project => project.featured);
         })
         .then(filteredProjects => {
-            insertFeaturedProject(filteredProjects[0]);
+            insertFeaturedProject(filteredProjects[1]);
         })
         .catch(error => console.error('problem with templating', error))
 })
