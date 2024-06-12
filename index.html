@@ -109,13 +109,10 @@
                 md:flex-row
                 ">
                 <!-- preview pane -->
-                <div
-                    data-fp-label="preview-image" 
-                    class=" 
+                <div data-fp-label="preview-image" class=" 
                     fp-preview-pane flex items-center	
                     border-solid border-4 border-gray-300 p-3 m-2 
-                    md:p-6 sm:mx-24 md:mx-0"
-                >
+                    md:p-6 sm:mx-24 md:mx-0">
                 </div>
                 <!-- project info -->
                 <ul class=" 
@@ -216,7 +213,8 @@
                     <div class="card-wrapper w-full aspect-square relative">
                         <div class="card-cover-image w-full aspect-square absolute flex justify-center">
                             <h4 class="absolute flex justify-center text-black">JavaScript</h4>
-                            <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg' />
+                            <img
+                                src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg' />
                         </div>
                         <div class="card-content aspect-square">
                             <ul class="flex flex-col p-3 pt-8">
@@ -241,7 +239,8 @@
                     <div class="card-wrapper w-full aspect-square relative">
                         <div class="card-cover-image w-full aspect-square absolute flex justify-center">
                             <h4 class="absolute flex justify-center">Tools</h4>
-                            <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubcodespaces/githubcodespaces-original.svg' />
+                            <img
+                                src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubcodespaces/githubcodespaces-original.svg' />
                         </div>
                         <div class="card-content aspect-square">
                             <ul class="flex flex-col p-3 pt-8">
@@ -271,7 +270,7 @@
         </section>
 
         <!-- about -->
-        <section id="about">
+        <section id="about" class="md:mb-20">
             <div class="
                 flex flex-col 
                 lg:grid lg:grid-cols-2 lg:auto-rows-fr">
@@ -304,6 +303,7 @@
                 <article class="
                     about-card
                     glass-card text-white flex flex-col justify-center p-2
+                    my-5
                     md:my-5 md:mx-10 
                     lg:my-10 lg:mx-10 lg:py-12">
                     <h4 class="about-card-title text-center">
@@ -324,8 +324,9 @@
                 </article>
                 <article class="
                     about-card
-                    glass-card text-white flex flex-col justify-center p-2
-                    md:my-5 md:mx-10 
+                    glass-card text-white flex flex-col justify-center 
+                    mb-10 p-2
+                    md:mb-0 md:my-5 md:mx-10 
                     lg:my-10 lg:mx-10 lg:py-12">
                     <h4 class="about-card-title text-center">
                         Future Plans:
@@ -347,18 +348,18 @@
 
     <!-- mobile Navbar -->
     <nav id="mobile-nav" class="mobile-nav">
-        <div class="mobile-interactive-wrapper">
+        <div class="mobile-interactive-wrapper px-2 py-1">
             <ul class="mobile-links">
-                <li>
+                <li class="p-2">
                     <a href="#featured-projects">Project</a>
                 </li>
-                <li>
+                <li class="p-2">
                     <a href="#skills">Skills</a>
                 </li>
-                <li>
+                <li class="p-2">
                     <a href="#about">About Me</a>
                 </li>
-                <li>
+                <li class="p-2">
                     <a href="#footer">Contact</a>
                 </li>
             </ul>
@@ -368,69 +369,68 @@
         </div>
     </nav>
     <!-- footer section -->
-    <footer id="footer" class="
-        px-2
-        bg-neutral-950 flex flex-col py-8 pt-2 
-        sm:pt-12
-        md:grid md:grid-cols-2 md:px-8
-        lg:flex lg:flex-row lg:justify-evenly">
+    <footer id="footer" class="">
         <!-- contact info -->
-        <div class="">
-            <h4 class="">
-
-                Contact Info:
-
-            </h4>
-            <ul class="p-4 flex flex-col ">
-                <li class="pb-2 break-words">
-                    <a class="" href="mailto:justinjenecke@gmail.com">justinjenecke@gmail.com</a>
-                </li>
-                <li class="pb-2 break-words">
-                    <a class="text-wrap" href="http://https://github.com/JustinScottJenecke" target="_blank"
-                        rel="noopener noreferrer">https://github.com/JustinScottJenecke</a>
-                </li>
-            </ul>
-        </div>
-        <!-- other links -->
-        <div id="other-links" class="">
-            <h4>
-                Other Links:
-            </h4>
-            <ul class="p-4 flex flex-col lg:pb-2">
-                <li class="pb-2">
-                    <a href="#">Portfolio Pieces and Projects</a>
-                </li>
-                <li class="pb-2">
-                    <a href="#">Resume</a>
-                </li>
-            </ul>
-        </div>
-        <!-- socials -->
-        <div id="footer-social-links" class="">
-            <h4 class="md:text-center">
-                Socials:
-            </h4>
-            <ul class="
-                flex gap-6 p-4
-                md:gap-12 md:justify-center md:p-0
-                lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start lg:p-4">
-                <li>
-                    <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
-                        <button class="rounded-full bg-neutral-800 w-10 aspect-square">G</button>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/justin-scott-jenecke/" target="_blank"
-                        rel="noopener noreferrer">
-                        <button class="rounded-full bg-neutral-800 w-10 aspect-square">in</button>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:justinjenecke@gmail.com">
-                        <button class="rounded-full bg-neutral-800 w-10 aspect-square">E</button>
-                    </a>
-                </li>
-            </ul>
+        <div id="contact-info" class="
+            px-2
+            bg-neutral-950 flex flex-col py-8 
+            md:grid md:grid-cols-2 md:px-8
+            lg:flex lg:flex-row lg:justify-between">
+            <div class="contact-header">
+                <h4 class="">
+                    Contact Info:
+                </h4>
+                <ul class="p-4 flex flex-col ">
+                    <li class="pb-2 break-words">
+                        <a class="" href="mailto:justinjenecke@gmail.com">justinjenecke@gmail.com</a>
+                    </li>
+                    <li class="pb-2 break-words">
+                        <a class="text-wrap" href="http://https://github.com/JustinScottJenecke" target="_blank"
+                            rel="noopener noreferrer">https://github.com/JustinScottJenecke</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- other links -->
+            <div id="other-links" class="">
+                <h4>
+                    Other Links:
+                </h4>
+                <ul class="p-4 flex flex-col lg:pb-2">
+                    <li class="pb-2">
+                        <a href="#">Portfolio Pieces and Projects</a>
+                    </li>
+                    <li class="pb-2">
+                        <a href="#">Resume</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- socials -->
+            <div id="footer-social-links" class="">
+                <h4 class="md:text-center">
+                    Socials:
+                </h4>
+                <ul class="
+                    flex gap-6 p-4
+                    md:gap-12 md:justify-center md:p-0
+                    lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start lg:p-4">
+                    <li>
+                        <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
+                            <button class="rounded-full bg-neutral-800 w-10 aspect-square">G</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/justin-scott-jenecke/" target="_blank"
+                            rel="noopener noreferrer">
+                            <button class="rounded-full bg-neutral-800 w-10 aspect-square">in</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:justinjenecke@gmail.com">
+                            <button class="rounded-full bg-neutral-800 w-10 aspect-square">E</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>
