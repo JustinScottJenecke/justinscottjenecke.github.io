@@ -88,7 +88,7 @@
         "title": "Tutoring Board REST API",
         "category": "backend",
         "thumbnail": "tutorspace-rest-api.png",
-        "description": "Simple REST API for a university project called 'TutorSpace', a posting board website where tutors can advertise their services, and students can find tutors to assist in the their requested field of study. This was originally meant to be a web service, but due lack of stack-stacknical skills in team members I decided to scale down the project so the group could pass the assessment.",
+        "description": "Simple REST API for a university project called 'TutorSpace', a posting board website where tutors can advertise their services, and students can find tutors to assist in the their requested field of study. This was originally meant to be a web service, but due lack of technical skills in team members, we decided to scale down the project so the group could pass the assessment.",
         "tech-stack": "Java, Maven, Spring-Boot, Spring-Data-JPA",
         "links": {
             "repo": "https://github.com/JustinScottJenecke/cput-tutorspace-api",
