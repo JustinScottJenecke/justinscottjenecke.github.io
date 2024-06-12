@@ -25,7 +25,7 @@ const fetchAndParseData = (filepath) => {
 
 const insertFeaturedProject = (project) => {
     PREVIEW_ELEMENT.previewImage.innerHTML += `
-        <img src="/src/resource/projects/tutorspace-rest-api.png" alt="project-preview-image">
+        <img src="/src/resource/projects/calorie-tracker-preview.gif" alt="project-preview-image">
     `;
 
     console.log(project);
@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
             return allProjects.filter(project => project.featured);
         })
         .then(filteredProjects => {
-            insertFeaturedProject(filteredProjects[0]);
+            insertFeaturedProject(filteredProjects[1]);
         })
         .catch(error => console.error('problem with templating', error))
 })
