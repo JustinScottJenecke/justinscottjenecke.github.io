@@ -172,11 +172,13 @@ button:disabled {
 @media only screen and (max-width: 770px) { 
     .mobile-nav {
         display:block;
+        position: sticky;
+        bottom: 0;
     } 
     .mobile-interactive-wrapper {
         display: inline-flex;
         flex-direction: column;
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.9);
         color: white;
     }
 } 
