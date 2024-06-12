@@ -25,7 +25,7 @@ const fetchAndParseData = (filepath) => {
 
 const insertFeaturedProject = (project) => {
     PREVIEW_ELEMENT.previewImage.innerHTML += `
-        <img src="/src/resource/projects/tutorspace-rest-api.png" alt="project-preview-image">
+        <img src="/src/resource/projects/calorie-tracker-preview.gif" alt="project-preview-image">
     `;
 
     console.log(project);
