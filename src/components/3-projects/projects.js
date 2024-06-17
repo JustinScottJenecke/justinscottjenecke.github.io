@@ -1,5 +1,7 @@
 // =============================== Data and Declarations ====================
 
+// import { fetchAndParseJSON } from "../../utils/jsonFetching.js";
+
 // All DOM references for featured projects
 const PREVIEW_ELEMENT = {
     previewImage: document.querySelector('[data-fp-label="preview-image"]'),
@@ -12,7 +14,11 @@ const PREVIEW_ELEMENT = {
 
 // ============================== Functions ===========================================
 
-const fetchAndParseData = (filepath) => {
+/** Promise based function to asynchronously load in data from any local json file
+ * @param {string} filepath - File path of target json file which hold data to be loaded.
+ * @returns {Promise}
+ */
+const fetchAndParseJSON = (filepath) => {
     return fetch(filepath)
         .catch(error => {
             console.error('Request failed:', error)
@@ -60,7 +66,7 @@ const insertFeaturedProject = (project) => {
 window.addEventListener('DOMContentLoaded', () => {
 
     // Fetch all and filter featured projects from json file
-    fetchAndParseData('./src/data/projects.json')
+    fetchAndParseJSON('./src/data/projects.json')
         .then(allProjects => {
             // console.log(allProjects)
             return allProjects.filter(project => project.featured);
