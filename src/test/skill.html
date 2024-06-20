@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skill </title>
+    <script src="../components/4-skills/index.js"></script>
+</head>
+
+<body>
+
+</body>
+<script>
+    const mockJSON = `{
+        "id" : 0,
+        "name" : "Java",
+        "bgImgTag" : "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-plain.svg' />",
+        "tools" : [
+            {
+                "no": 0,
+                "tool": "Spring-Boot",
+                "skill-level": "good"
+            },
+            {
+                "no": 1,
+                "tool": "Hibernate",
+                "skill-level": "basic"
+            },
+            {
+                "no": 1,
+                "tool": "Hibernate",
+                "skill-level": "basic"
+            },
+            {
+                "no": 1,
+                "tool": "Hibernate",
+                "skill-level": "basic"
+            }
+        ]
+    }`;
+    const mockJSON2 = `
+    [
+    {
+        "id" :0,
+        "name" : "Java",
+        "bgImgTag" : "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-plain.svg' />",
+        "tools" : [
+            {
+                "no": 0,
+                "tool": "Spring-Boot",
+                "skill-level": "good"
+            },
+            {
+                "no": 1,
+                "tool": "Hibernate",
+                "skill-level": "basic"
+            },
+            {
+                "no": 2,
+                "tool": "JUnit",
+                "skill-level": "basic"
+            },
+            {
+                "no": 3,
+                "tool": "Java Swing",
+                "skill-level": "good"
+            }
+        ]
+    },
+    {
+        "id" : 2,
+        "name" : "JavaScript",
+        "bgImgTag": "<img src'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg' />",
+        "tools" : [
+            {
+                "no": 1,
+                "tool": "ES6",
+                "skill-level": "good"
+            },
+            {
+                "no": 2,
+                "tool": "React.js",
+                "skill-level": "good"
+            },
+            {
+                "no": 3,
+                "tool": "Next.js",
+                "skill-level": "basic"
+            },
+            {
+                "no": 4,
+                "tool": "Vue.js",
+                "skill-level": "good"
+            },
+            {
+                "no": 5,
+                "tool": "Nuxt.js",
+                "skill-level": "good"
+            }
+        ]
+    },
+    {
+        "id" :3,
+        "name" : "PHP",
+        "bgImgTag": "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg' />",
+        "tools" : [
+            {
+                "no": 1,
+                "tool": "Syntax, OOP, etc.",
+                "skill-level": "good"
+            },
+            {
+                "no": 2,
+                "tool": "Composer",
+                "skill-level": "basic"
+            },
+            {
+                "no": 3,
+                "tool": "Slim Framework",
+                "skill-level": "basic"
+            }
+        ]
+    },
+    {
+        "id" : 4,
+        "name" : "C#",
+        "bgImgTag" : "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-plain.svg' />",
+        "tools" : [
+            {
+                "no": 1,
+                "tool": "Syntax, OOP, etc.",
+                "skill-level": "basic"
+            }
+        ]
+    },
+    {
+        "id" : 5,
+        "name" : "MySQL",
+        "bgImgTag": "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg' />",
+        "tools" : [
+            {
+                "no": 1,
+                "tool": "Syntax, CRUD, etc.",
+                "skill-level": "basic"
+            }  
+        ]
+    },
+    {
+        "id" : 7,
+        "name" : "HTML&CSS",
+        "bgImgTag": "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg' />",
+        "tools" : [
+            {
+                "no": 1,
+                "tool": "Bulma CSS",
+                "skill-level": "good"
+            },
+            {
+                "no": 2,
+                "tool": "Tailwind",
+                "skill-level": "basic"
+            },
+            {
+                "no": 3,
+                "tool": "SASS",
+                "skill-level": "basic"
+            },
+            {
+                "no": 4,
+                "tool": "Bootstrap",
+                "skill-level": "good"
+            }
+        ]
+    },
+    {
+        "id" :7,
+        "name" : "Tools & Programs",
+        "bgImgTag" : "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubcodespaces/githubcodespaces-original.svg' />",
+        "tools" : [
+            {
+                "no": 1,
+                "tool": "Git",
+                "skill-level": "good"
+            },
+            {
+                "no": 2,
+                "tool": "GitHub",
+                "skill-level": "good"
+            },
+            {
+                "no": 3,
+                "tool": "Agile (kanban)",
+                "skill-level": "good"
+            },
+            {
+                "no": 4,
+                "tool": "VS Code",
+                "skill-level": "good"
+            },
+            {
+                "no": 5,
+                "tool": "Intelli J",
+                "skill-level": "good"
+            }
+        ]
+    }
+]
+    `;
+
+    const mockSkills = [JSON.parse(mockJSON)];
+    console.log(mockSkills);
+
+    document.body.innerHTML += createSkillCards(mockSkills);
+
+</script>
+
+</html>
