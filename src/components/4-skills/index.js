@@ -1,4 +1,4 @@
-
+// ================================ Functions ===============================
 
 const createSkillCard = (Skill) => {
     return `               
@@ -11,7 +11,7 @@ const createSkillCard = (Skill) => {
                 <div class="card-content aspect-square">
                     <ul class="flex flex-col p-3 pt-8">
                     ${
-                        Skill.tools.map(toolItem => `<li class="flex gap-2"><span>${toolItem}</span></li>`)
+                        Skill.tools.map(toolItem => `<li class="flex gap-2"><span>${toolItem.tool}</span></li>`)
                     }
                     </ul>
                 </div>
@@ -27,3 +27,13 @@ const renderSkills = (selector, skillList) => {
         entryPoint.innerHTML += createSkillCard(skill)
     });
 }
+
+// ================================ Listeners ===============================
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // const entryPoint = document.querySelector('skills-container');
+
+    fetchAndParseJSON("./src/data/skills.json")
+        .then(skillsData => renderSkills('#skills-container', skillsData))
+})
