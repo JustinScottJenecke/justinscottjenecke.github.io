@@ -12,6 +12,7 @@ const createSkillCard = (Skill) => {
                     <ul class="flex flex-col p-3 pt-8">
                     ${
                         Skill.tools.map(toolItem => `<li class="flex gap-2"><span>${toolItem.tool}</span></li>`)
+                            .join('')
                     }
                     </ul>
                 </div>

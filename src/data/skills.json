@@ -23,13 +23,18 @@
                 "no": 3,
                 "tool": "Java Swing",
                 "skill-level": "good"
+            },
+            {
+                "no": 4,
+                "tool": "Java 8",
+                "skill-level": "good"
             }
         ]
     },
     {
         "id" : 2,
         "name" : "JavaScript",
-        "bgImgTag": "<img src'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg' />",
+        "bgImgTag": "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg' />",
         "tools" : [
             {
                 "no": 1,
