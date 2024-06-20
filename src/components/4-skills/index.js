@@ -5,7 +5,7 @@ const createSkillCard = (Skill) => {
         <li class="border-solid border-4 border-gray-300 p-6" id="${Skill.id}">
             <div class="card-wrapper w-full aspect-square relative">
                 <div class="card-cover-image w-full aspect-square absolute flex justify-center">
-                    <h4 class="absolute flex justify-center">${Skill.name}</h4>
+                    <h4 class="absolute flex justify-center ${Skill.name === 'JavaScript' && 'text-black'}">${Skill.name}</h4>
                     ${Skill.bgImgTag}
                 </div>
                 <div class="card-content aspect-square">

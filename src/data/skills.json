@@ -94,6 +94,11 @@
                 "no": 1,
                 "tool": "Syntax, OOP, etc.",
                 "skill-level": "basic"
+            },
+            {
+                "no": 2,
+                "tool": "C# Generics",
+                "skill-level": "basic"
             }
         ]
     },
