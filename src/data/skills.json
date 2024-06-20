@@ -12,16 +12,21 @@
             {
                 "no": 1,
                 "tool": "Hibernate",
-                "skill-level": "basics"
+                "skill-level": "basic"
             },
             {
                 "no": 2,
                 "tool": "JUnit",
-                "skill-level": "basics"
+                "skill-level": "basic"
             },
             {
                 "no": 3,
                 "tool": "Java Swing",
+                "skill-level": "good"
+            },
+            {
+                "no": 4,
+                "tool": "Java 8",
                 "skill-level": "good"
             }
         ]
@@ -29,7 +34,7 @@
     {
         "id" : 2,
         "name" : "JavaScript",
-        "bgImgTag": "<img src'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg' />",
+        "bgImgTag": "<img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg' />",
         "tools" : [
             {
                 "no": 1,
@@ -44,17 +49,17 @@
             {
                 "no": 3,
                 "tool": "Next.js",
-                "skill-level": "basics"
+                "skill-level": "basic"
             },
             {
                 "no": 4,
                 "tool": "Vue.js",
-                "skill-level": "dev experience"
+                "skill-level": "good"
             },
             {
                 "no": 5,
                 "tool": "Nuxt.js",
-                "skill-level": "dev experience"
+                "skill-level": "good"
             }
         ]
     },
@@ -71,12 +76,12 @@
             {
                 "no": 2,
                 "tool": "Composer",
-                "skill-level": "basics"
+                "skill-level": "basic"
             },
             {
                 "no": 3,
                 "tool": "Slim Framework",
-                "skill-level": "basics"
+                "skill-level": "basic"
             }
         ]
     },
@@ -88,7 +93,12 @@
             {
                 "no": 1,
                 "tool": "Syntax, OOP, etc.",
-                "skill-level": "basicss"
+                "skill-level": "basic"
+            },
+            {
+                "no": 2,
+                "tool": "C# Generics",
+                "skill-level": "basic"
             }
         ]
     },
@@ -100,7 +110,7 @@
             {
                 "no": 1,
                 "tool": "Syntax, CRUD, etc.",
-                "skill-level": "basics"
+                "skill-level": "basic"
             }  
         ]
     },
@@ -112,17 +122,17 @@
             {
                 "no": 1,
                 "tool": "Bulma CSS",
-                "skill-level": "dev experience"
+                "skill-level": "good"
             },
             {
                 "no": 2,
                 "tool": "Tailwind",
-                "skill-level": "basics"
+                "skill-level": "basic"
             },
             {
                 "no": 3,
                 "tool": "SASS",
-                "skill-level": "basics"
+                "skill-level": "basic"
             },
             {
                 "no": 4,

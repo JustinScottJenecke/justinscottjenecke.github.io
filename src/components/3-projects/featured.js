@@ -52,6 +52,7 @@ const insertFeaturedProject = (project) => {
 window.addEventListener('DOMContentLoaded', () => {
 
     // Fetch all and filter featured projects from json file
+    // dependancy -> not using import due to hosting solution.
     fetchAndParseJSON('./src/data/projects.json')
         .then(allProjects => {
             // console.log(allProjects)
