@@ -1,7 +1,7 @@
 
-const createSkillCards = (SkillList) => {
 
-    const skillCardTemplate = (Skill) => `               
+const createSkillCard = (Skill) => {
+    return `               
         <li class="border-solid border-4 border-gray-300 p-6" id="${Skill.id}">
             <div class="card-wrapper w-full aspect-square relative">
                 <div class="card-cover-image w-full aspect-square absolute flex justify-center">
@@ -12,19 +12,19 @@ const createSkillCards = (SkillList) => {
                 <div class="card-content aspect-square">
                     <ul class="flex flex-col p-3 pt-8">
                     ${
-                        Skill.tools.map(toolItem => `<li class="flex gap-2"><span>${toolItem.tool}</span></li>`)
+                        Skill.tools.map(toolItem => `<li class="flex gap-2"><span>${toolItem}</span></li>`)
                     }
                     </ul>
                 </div>
             </div>
-        </li>`
-
-    let outputString = "";
-
-    SkillList.forEach(Skill => {
-        outputString += skillCardTemplate(Skill)
-    });
-
-    return outputString;
+        </li>
+    `;
 }
 
+const renderSkills = (selector, skillList) => {
+    const entryPoint = document.querySelector(selector);
+
+    skillList.forEach(skill => {
+        entryPoint.innerHTML += createSkillCard(skill)
+    });
+}
