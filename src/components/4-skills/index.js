@@ -6,8 +6,7 @@ const createSkillCard = (Skill) => {
             <div class="card-wrapper w-full aspect-square relative">
                 <div class="card-cover-image w-full aspect-square absolute flex justify-center">
                     <h4 class="absolute flex justify-center">${Skill.name}</h4>
-                    <img
-                        src='${Skill.bgImgTag}' />
+                    ${Skill.bgImgTag}
                 </div>
                 <div class="card-content aspect-square">
                     <ul class="flex flex-col p-3 pt-8">

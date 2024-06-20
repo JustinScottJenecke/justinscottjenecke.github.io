@@ -210,9 +210,13 @@
 
     const mockSkills2 = [JSON.parse(mockJSON2)];
 
+    // JSON is parse as 3D array, so array of Skill objects is stored as an 
+    // element inside of parsed array. Element 0 contains array of Skill objects.
+    // See example below
     console.log(mockSkills2[0])
-
-    // mockSkills2[0].tools.map(tool => console.log(tool));
+    
+    // Example:
+    mockSkills2[0][5].tools.map(tool => console.log(tool));
 
     renderSkills("body", mockSkills2[0])
 
