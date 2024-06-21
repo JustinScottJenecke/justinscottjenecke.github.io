@@ -1,64 +1,39 @@
-// =============================== Data and Declarations ====================
+// ================================ Functions ===============================
 
-// import { fetchAndParseJSON } from "../../utils/jsonFetching.js";
-
-// All DOM references for featured projects
-const PREVIEW_ELEMENT = {
-    previewImage: document.querySelector('[data-fp-label="preview-image"]'),
-    name: document.querySelector('[data-fp-label="name"]'),
-    category: document.querySelector('[data-fp-label="category"]'),
-    techStack: document.querySelector('[data-fp-label="tech-stack"]'),
-    about: document.querySelector('[data-fp-label="about"]'),
-    links: document.querySelector('[data-fp-label="links"]')
-}
-
-// ============================== Functions ===========================================
-
-
-const insertFeaturedProject = (project) => {
-    PREVIEW_ELEMENT.previewImage.innerHTML += `
-        <img src="/src/resource/projects/calorie-tracker-preview.gif" alt="project-preview-image">
-    `;
-
-    console.log(project);
-
-    PREVIEW_ELEMENT.name.innerText = project.title;
-    PREVIEW_ELEMENT.category.innerText = project.category;
-    PREVIEW_ELEMENT.techStack.innerText = project["tech-stack"];
-    PREVIEW_ELEMENT.about.innerText = project.description;
-    PREVIEW_ELEMENT.links.innerHTML += `
-        <li>
-            <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
-                <!-- icon button -->
-                <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
-                    <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">G</button>
-                    <button class="">Repo</button>
+const createSkillCard = (Skill) => {
+    return `               
+        <li class="border-solid border-4 border-gray-300 id="${Skill.id}">
+            <div class="card-wrapper w-full aspect-square relative">
+                <div class="card-cover-image w-full absolute grid grid-rows-3 h-full m-4">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
                 </div>
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
-                <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
-                    <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">D</button>
-                    <button class="">Demo</button>
+                <div class="card-content aspect-square">
+                    <ul class="flex flex-col p-3 pt-8">
+                        Banner Content
+                    </ul>
                 </div>
-            </a>
+            </div>
         </li>
     `;
 }
 
-// ====================== Event Listeners =============================================
 
-window.addEventListener('DOMContentLoaded', () => {
+const renderSkills = (selector, skillList) => {
+    const entryPoint = document.querySelector(selector);
 
-    // Fetch all and filter featured projects from json file
-    fetchAndParseJSON('./src/data/projects.json')
-        .then(allProjects => {
-            // console.log(allProjects)
-            return allProjects.filter(project => project.featured);
-        })
-        .then(filteredProjects => {
-            insertFeaturedProject(filteredProjects[1]);
-        })
-        .catch(error => console.error('problem with templating', error))
+    skillList.forEach(skill => {
+        entryPoint.innerHTML += createSkillCard(skill)
+    });
+}
+
+// ================================ Listeners ===============================
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // const entryPoint = document.querySelector('skills-container');
+
+    fetchAndParseJSON("./src/data/skills.json")
+        .then(skillsData => renderSkills('#skills-container', skillsData))
 })
