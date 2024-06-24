@@ -8,7 +8,7 @@
         "tech-stack": "HTML, CSS, JavaScript, Storage API, DOM API, OOP",
         "links": {
             "repo" : "https://github.com/JustinScottJenecke/csa-js-todo.git",
-            "preview" : "https://justinscottjenecke.github.io/csa-js-todo/"
+            "demo" : "https://justinscottjenecke.github.io/csa-js-todo/"
         },
         "featured" : false,
         "completed" : true
