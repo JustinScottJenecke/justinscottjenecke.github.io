@@ -45,11 +45,11 @@ const createProjectPreviewCard = (Project, thumbnailFilepath = "") => {
 
 // ============================== Functions =================================
 
-const renderProjectPreviews = (selector, skillList) => {
+const renderProjectPreviews = (selector, thumbnailFilepath, projectList) => {
     const entryPoint = document.querySelector(selector);
 
-    skillList.forEach(skill => {
-        entryPoint.innerHTML += createSkillCard(skill)
+    projectList.forEach(project => {
+        entryPoint.innerHTML += createProjectPreviewCard(project)
     });
 }
 
@@ -59,6 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // const entryPoint = document.querySelector('skills-container');
 
-    fetchAndParseJSON("./src/data/skills.json")
-        .then(skillsData => renderSkills('#skills-container', skillsData))
+    fetchAndParseJSON("./src/data/projects.json")
+        .then(projectData => renderProjectPreviews('#all-projects-container', "../../resrource/projects/", projectData))
 })
