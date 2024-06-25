@@ -128,6 +128,28 @@ button:disabled {
     flex: 3;
 }
 
+/* ------ all projects ------ */
+/*
+    card-cover-image == project-preview-card
+    card-content == project-banner
+ */
+.project-preview-wrapper:hover > .project-preview-card {
+    z-index: -1;
+}
+/* .card-cover-image {
+    background-color: rgb(3, 28, 139);
+    position: absolute; 
+} */
+.project-banner {
+    display: none;
+}
+.project-banner {
+    display: block;
+    background-color: none;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.774);
+}
+
 
 /* ------ skills ------ */
 .card-wrapper:hover > .card-cover-image {
@@ -145,6 +167,7 @@ button:disabled {
     background-color: rgba(0, 0, 0, 0.692);
     color: whitesmoke;
 }
+
 
 /* ----- about ----- */
 
