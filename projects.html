@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--=================== Head ===================-->
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page tags -->
+    <title>justin.dev</title>
+    <link rel="shortcut icon" href="./public/icon/JJ.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/css/theme.css">
+    <!-- utils -->
+    <script src="./src//utils/jsonFetching.js"></script>
+    <!-- component scripts -->
+    <script defer src="./src/components/3-projects/featured.js"></script>
+    <script defer src="./src/components/3-projects/projects.js"></script>
+    <!-- <script defer src="./src/components/4-skills/index.js"></script> -->
+</head>
+<!--=================== Head =====================-->
+
+<!--=================== Body =====================-->
+
+<body>
+    <!-- nav -->
+    <nav id="top-nav" class="z-50 top-nav bg-neutral-950/95 sticky top-0">
+        <span id="logo-top">
+            <a href="#hero">
+                <h5>
+                    "logo" : {}
+                </h5>
+            </a>
+            <a href="./">
+                <h5>
+                    return
+                </h5>
+            </a>
+        </span>
+        <ul class="nav-links">
+            <li>
+                <a href="#featured-projects">featured-projects</a>
+            </li>
+            <li>
+                <a href="#skills">skills</a>
+            </li>
+            <li>
+                <a href="#about">about-me</a>
+            </li>
+            <li>
+                <a href="#footer">contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- =============================== main website section ============================= -->
+    <main>
+        <!-- Hero -->
+        <header id="hero" class="">
+            <div class="hero">
+                <div class="hero-content ">
+                    <div class="flex flex-col justify-end items-center text-center">
+                        <h1 class="mb-4 md:mb-0">Projects</h1>
+                        <h3 class="mb-4 md:mb-0 mx-10 px-2 mt-4">View my personal and professional projects</h2>
+                    </div>
+                    <div class="hero-graphic flex justify-center">
+                        <div class="w-10/12 md:w-9/12">
+                            <div class="border-solid border-4 border-gray-300 p-3 md:p-6 m-2">
+                                <img src="./src/resource/background/code-dribble-red.gif" alt="hero-graphic" srcset=""
+                                    class="text-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- All Projects -->
+        <div id="all-projects"></div>
+        <section class="mt-14 mb-14 lg:mb-28">
+            <header class="mb-8">
+                <h2 class="pb-2">
+                    All Projects
+                </h2>
+            </header>
+            <ul id="all-projects-container" class="
+                        grid grid-cols-1 align-center gap-6 px-8
+                        md:grid md:grid-cols-2 md:px-6 md:gap-16
+                        lg:grid-cols-2 lg:px-8
+                        xl:grid-cols-2 xl:gap-20">
+                <!-- li -->
+                    <!-- Skill Card -->
+                <!-- li /-->
+            </ul>
+        </section>
+
+        <!-- featured projects -->
+        <div id="featured-projects"></div>
+        <section class="lg:mt-14 mb-20">
+            <header class="mb-8">
+                <h2 class="pb-2">
+                    Selected Project
+                </h2>
+                <p>
+                    View some of the highlights from my list <br>
+                    of personal projects:
+                </p>
+            </header>
+            <article class="
+                flex flex-col mb-4
+                md:flex-row
+                ">
+                <!-- preview pane -->
+                <div data-fp-label="preview-image" class=" 
+                    fp-preview-pane flex items-center	
+                    border-solid border-4 border-gray-300 p-3 m-2 
+                    md:p-6 sm:mx-24 md:mx-0">
+                </div>
+                <!-- project info -->
+                <ul class=" 
+                    fp-project-info
+                    p-0 sm:p-4 mt-2 flex flex-col h-100">
+                    <li>
+                        <h4 data-fp-label="name" class="text-center text-slate-200">Project Name:</h4>
+                    </li>
+                    <li>
+                        <h5>Category:</h5>
+                        <p class="md:pl-4 inline md:block">
+                            <span data-fp-label="category">
+                                ?
+                            </span>
+                        </p>
+                    </li>
+                    <li>
+                        <h5>Tech Stack:</h5>
+                        <p class="md:pl-4 inline md:block">
+                            <span data-fp-label="tech-stack">
+                                ?
+                            </span>
+                        </p>
+                    </li>
+                    <li class="grow">
+                        <h5>About:</h5>
+                        <p class="md:pl-4 overflow-clip	" data-fp-label="about">
+                            ?
+                        </p>
+                    </li>
+                    <li class="justify-self-end mt-5">
+                        <ul data-fp-label="links" class="flex justify-around">
+                            <!-- dynamic links go here -->
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+            <div class="flex justify-evenly">
+                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4">prev</button>
+                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4">
+                    all projects
+                </button>
+                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4">next</button>
+            </div>
+        </section>
+    </main>
+    <!-- mobile Navbar -->
+    <nav id="mobile-nav" class="mobile-nav">
+        <div class="mobile-interactive-wrapper px-2 py-1">
+            <ul class="mobile-links">
+                <li class="p-2">
+                    <a href="#featured-projects">Project</a>
+                </li>
+                <li class="p-2">
+                    <a href="#skills">Skills</a>
+                </li>
+                <li class="p-2">
+                    <a href="#about">About Me</a>
+                </li>
+                <li class="p-2">
+                    <a href="#footer">Contact</a>
+                </li>
+            </ul>
+            <div id="logo-bottom" class="p-2">
+                <button>=</button>
+            </div>
+        </div>
+    </nav>
+    <!-- footer section -->
+    <footer id="footer" class="">
+        <!-- contact info -->
+        <div id="contact-info" class="
+            px-2
+            bg-neutral-950 flex flex-col py-8 
+            md:grid md:grid-cols-2 md:px-8
+            lg:flex lg:flex-row lg:justify-between">
+            <div class="contact-header">
+                <h4 class="">
+                    Contact Info:
+                </h4>
+                <ul class="p-4 flex flex-col ">
+                    <li class="pb-2 break-words">
+                        <a class="" href="mailto:justinjenecke@gmail.com">justinjenecke@gmail.com</a>
+                    </li>
+                    <li class="pb-2 break-words">
+                        <a class="text-wrap" href="http://https://github.com/JustinScottJenecke" target="_blank"
+                            rel="noopener noreferrer">https://github.com/JustinScottJenecke</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- other links -->
+            <div id="other-links" class="">
+                <h4>
+                    Other Links:
+                </h4>
+                <ul class="p-4 flex flex-col lg:pb-2">
+                    <li class="pb-2">
+                        <a href="https://github.com/JustinScottJenecke?tab=repositories&q=&type=&language=&sort="
+                            target="_blank">Portfolio Pieces and Projects</a>
+                    </li>
+                    <li class="pb-2">
+                        <a href="./public/docs/Justin-Scott-Isaac-Jenecke_ CV.pdf" target="_blank">Resume</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- socials -->
+            <div id="footer-social-links" class="">
+                <h4 class="md:text-center">
+                    Socials:
+                </h4>
+                <ul class="
+                    flex gap-6 p-4
+                    md:gap-12 md:justify-center md:p-0
+                    lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start lg:p-4">
+                    <li>
+                        <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
+                            <button class="rounded-full bg-neutral-800 w-10 aspect-square">G</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/justin-scott-jenecke/" target="_blank"
+                            rel="noopener noreferrer">
+                            <button class="rounded-full bg-neutral-800 w-10 aspect-square">in</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:justinjenecke@gmail.com">
+                            <button class="rounded-full bg-neutral-800 w-10 aspect-square">E</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--=================== Body =====================-->
+<script>      
+    document.addEventListener('DOMContentLoaded', () => {
+        // const entryPoint = document.querySelector('skills-container');
+
+        fetchAndParseJSON("./src/data/projects.json")
+            .then(projectData => renderProjectPreviews('#all-projects-container', "./src/resource/projects/", projectData));
+    })
+
+    console.log('<img src="./src/resource/projects/js-todo.png" alt="">')
+</script>
+
+</html>

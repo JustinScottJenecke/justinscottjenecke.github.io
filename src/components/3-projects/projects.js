@@ -1,64 +1,82 @@
-// =============================== Data and Declarations ====================
+// ================================ Templating ===============================
 
-// import { fetchAndParseJSON } from "../../utils/jsonFetching.js";
+const createProjectPreviewCard = (thumbnailFilepath, Project) => {
 
-// All DOM references for featured projects
-const PREVIEW_ELEMENT = {
-    previewImage: document.querySelector('[data-fp-label="preview-image"]'),
-    name: document.querySelector('[data-fp-label="name"]'),
-    category: document.querySelector('[data-fp-label="category"]'),
-    techStack: document.querySelector('[data-fp-label="tech-stack"]'),
-    about: document.querySelector('[data-fp-label="about"]'),
-    links: document.querySelector('[data-fp-label="links"]')
+    const buttons = {
+        demo: Project.links.demo ? 
+            `
+                <a href="${Project.links.demo}" target="_blank" rel="noopener noreferrer" >
+                    <button class="cursor-pointer w-full">
+                        Live Demo
+                    </button>
+                </a>
+            ` : "",
+        repo: Project.links.repo ? 
+            `
+                <a href="${Project.links.repo}" target="_blank" rel="noopener noreferrer" >
+                    <button class="cursor-pointer w-full">
+                        Repository
+                    </button>
+                </a>
+            ` : "",
+        video: Project.links.video ? 
+            `
+                <a href="${Project.links.video}" target="_blank" rel="noopener noreferrer" >
+                    <button class="cursor-pointer w-full">
+                        Demo Video
+                    </button>
+                </a>
+            ` : "" 
+    }
+
+    const banner = `
+        <div class="project-banner">
+            <div class="flex flex-col justify-center items-center p-3 pt-8">
+                <h3 class="bg-slate-900">
+                    Effect Content
+                </h3>
+            </div>
+        </div>
+    `
+
+    const completeThumbPath = thumbnailFilepath + Project.thumbnail;
+    //console.log(completeThumbPath)
+
+    // 0800 030 007
+    // 0800 030 007
+
+    return `               
+        <li class="border-solid border-4 border-gray-300" id="${Project.id}">
+            <div class="project-preview-wrapper w-full aspect-[4/3]">
+                <div class="project-preview-card w-full grid grid-rows-[5fr_2fr_1fr] h-full m-4">
+                    <div class="overflow-hidden">
+                        <img src="${completeThumbPath}" alt="project-preview-thumb" class="pr-8">
+                    </div>
+                    <div class="pr-4 mt-2 overflow-hidden">${Project.description}</div>
+                    <div class="grid grid-cols-2 grid-rows-2 mb-2 mt-3">
+                        <a rel="noopener noreferrer">
+                            <button  class="cursor-pointer w-full">
+                                View More
+                            </button>
+                        </a>
+                        ${buttons.demo}
+                        ${buttons.repo}
+                        ${buttons.video}
+                    </div>
+                </div>
+            </div>
+        </li>
+    `;
 }
 
-// ============================== Functions ===========================================
+// ============================== Functions =================================
 
+const renderProjectPreviews = (selector, thumbnailFilepath, projectList) => {
+    const entryPoint = document.querySelector(selector);
 
-const insertFeaturedProject = (project) => {
-    PREVIEW_ELEMENT.previewImage.innerHTML += `
-        <img src="/src/resource/projects/calorie-tracker-preview.gif" alt="project-preview-image">
-    `;
-
-    console.log(project);
-
-    PREVIEW_ELEMENT.name.innerText = project.title;
-    PREVIEW_ELEMENT.category.innerText = project.category;
-    PREVIEW_ELEMENT.techStack.innerText = project["tech-stack"];
-    PREVIEW_ELEMENT.about.innerText = project.description;
-    PREVIEW_ELEMENT.links.innerHTML += `
-        <li>
-            <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
-                <!-- icon button -->
-                <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
-                    <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">G</button>
-                    <button class="">Repo</button>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
-                <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
-                    <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">D</button>
-                    <button class="">Demo</button>
-                </div>
-            </a>
-        </li>
-    `;
+    projectList.forEach(project => {
+        entryPoint.innerHTML += createProjectPreviewCard(thumbnailFilepath, project)
+    });
 }
 
-// ====================== Event Listeners =============================================
-
-window.addEventListener('DOMContentLoaded', () => {
-
-    // Fetch all and filter featured projects from json file
-    fetchAndParseJSON('./src/data/projects.json')
-        .then(allProjects => {
-            // console.log(allProjects)
-            return allProjects.filter(project => project.featured);
-        })
-        .then(filteredProjects => {
-            insertFeaturedProject(filteredProjects[1]);
-        })
-        .catch(error => console.error('problem with templating', error))
-})
+// ================================ Listeners ===============================
