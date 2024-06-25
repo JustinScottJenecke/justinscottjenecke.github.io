@@ -114,7 +114,7 @@
         "id" : 9,
         "title": "Kilojule/Calorie Tracker App",
         "category": "frontend",
-        "thumbnail": "",
+        "thumbnail": "calorie-tracker-preview.gif",
         "description": "Application helps users track their daily energy intake and three macronutrients. Currently working on integrating a data persistence layer into the application through the use of custom hooks and local storage plans including creating a .NET or Node REST API, with a Postgres or Supabase backend, to turn the app into a full-stack application.",
         "tech-stack": "React.js, React Router, Vite",
         "links": {
