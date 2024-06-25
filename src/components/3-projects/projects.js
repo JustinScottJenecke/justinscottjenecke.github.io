@@ -24,21 +24,25 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
 
     return `               
         <li class="border-solid border-4 border-gray-300" id="${Project.id}">
-            <div class="project-preview-wrapper w-full aspect-[4/3] relative">
-                <div class="project-preview-card w-full absolute grid grid-rows-[5fr_2fr_2fr] h-full m-4">
+            <div class="project-preview-wrapper w-full aspect-[4/3]">
+                <div class="project-preview-card w-full grid grid-rows-[5fr_2fr_2fr] h-full m-4">
                     <div class="overflow-hidden">
                         <img src="${completeThumbPath}" alt="project-preview-thumb" class="pr-8">
                     </div>
                     <div class="pr-4 mt-2 overflow-hidden">${Project.description}</div>
-                    <div class="grid grid-cols-2 grid-rows-2 mb-4">
-                        <button  class="cursor-pointer">
-                            View More
-                        </button>
-                        ${Project.links.demo &&
-        `
+                    <div class="grid grid-cols-2 grid-rows-2 mt-2">
+                        <a rel="noopener noreferrer">
                             <button  class="cursor-pointer">
-                                Live Demo
+                                View More
                             </button>
+                        </a>
+                        ${Project.links.demo &&
+                        `
+                            <a href="${Project.links.repo}" target="_blank" rel="noopener noreferrer">
+                                <button class="cursor-pointer">
+                                    Live Demo
+                                </button>
+                            </a>
                         `}
                         ${Project.links.repo &&
                         `       
@@ -50,13 +54,14 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
                         `}
                         ${Project.links.preview &&
                         `
-                            <button class="hover:cursor-pointer">
-                                Demo Video
-                            </button>
+                            <a href="${Project.links.repo}" target="_blank" rel="noopener noreferrer">
+                                <button class="hover:cursor-pointer">
+                                    Demo Video
+                                </button>
+                            </a>
                         `}
                     </div>
                 </div>
-
             </div>
         </li>
     `;
