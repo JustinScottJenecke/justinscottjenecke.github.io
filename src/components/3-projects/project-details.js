@@ -20,7 +20,7 @@ const insertFeaturedProject = (project) => {
         <img src="/src/resource/projects/calorie-tracker-preview.gif" alt="project-preview-image">
     `;
 
-    console.log(project);
+    // console.log(project);
 
     PREVIEW_ELEMENT.name.innerText = project.title;
     PREVIEW_ELEMENT.category.innerText = project.category;
@@ -49,17 +49,3 @@ const insertFeaturedProject = (project) => {
 
 // ====================== Event Listeners =============================================
 
-window.addEventListener('DOMContentLoaded', () => {
-
-    // Fetch all and filter featured projects from json file
-    // dependancy -> not using import due to hosting solution.
-    fetchAndParseJSON('./src/data/projects.json')
-        .then(allProjects => {
-            // console.log(allProjects)
-            return allProjects.filter(project => project.featured);
-        })
-        .then(filteredProjects => {
-            insertFeaturedProject(filteredProjects[1]);
-        })
-        .catch(error => console.error('problem with templating', error))
-})

@@ -17,7 +17,7 @@
     <!-- utils -->
     <script src="./src//utils/jsonFetching.js"></script>
     <!-- component scripts -->
-    <script defer src="./src/components/3-projects/featured.js"></script>
+    <script defer src="./src/components/3-projects/project-details.js"></script>
     <script defer src="./src/components/4-skills/index.js"></script>
 </head>
 <!--=================== Head =====================-->
@@ -350,5 +350,23 @@
     </footer>
 </body>
 <!--=================== Body =====================-->
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Fetch all and filter featured projects from json file
+        // dependancy -> not using import due to hosting solution.
+        fetchAndParseJSON('./src/data/projects.json')
+            .then(allProjects => {
+                // console.log(allProjects)
+                return allProjects.filter(project => project.featured);
+            })
+            .then(filteredProjects => {
+                insertFeaturedProject(filteredProjects[1]);
+            })
+            .catch(error => console.error('problem with templating', error))
+        }
+    )
+</script>
 
 </html>

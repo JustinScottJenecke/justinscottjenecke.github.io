@@ -17,7 +17,7 @@
     <!-- utils -->
     <script src="./src//utils/jsonFetching.js"></script>
     <!-- component scripts -->
-    <script defer src="./src/components/3-projects/featured.js"></script>
+    <script defer src="./src/components/3-projects/project-details.js"></script>
     <script defer src="./src/components/3-projects/projects.js"></script>
     <!-- <script defer src="./src/components/4-skills/index.js"></script> -->
 </head>
@@ -95,73 +95,6 @@
                     <!-- Skill Card -->
                 <!-- li /-->
             </ul>
-        </section>
-
-        <!-- featured projects -->
-        <div id="featured-projects"></div>
-        <section class="lg:mt-14 mb-20">
-            <header class="mb-8">
-                <h2 class="pb-2">
-                    Selected Project
-                </h2>
-                <p>
-                    View some of the highlights from my list <br>
-                    of personal projects:
-                </p>
-            </header>
-            <article class="
-                flex flex-col mb-4
-                md:flex-row
-                ">
-                <!-- preview pane -->
-                <div data-fp-label="preview-image" class=" 
-                    fp-preview-pane flex items-center	
-                    border-solid border-4 border-gray-300 p-3 m-2 
-                    md:p-6 sm:mx-24 md:mx-0">
-                </div>
-                <!-- project info -->
-                <ul class=" 
-                    fp-project-info
-                    p-0 sm:p-4 mt-2 flex flex-col h-100">
-                    <li>
-                        <h4 data-fp-label="name" class="text-center text-slate-200">Project Name:</h4>
-                    </li>
-                    <li>
-                        <h5>Category:</h5>
-                        <p class="md:pl-4 inline md:block">
-                            <span data-fp-label="category">
-                                ?
-                            </span>
-                        </p>
-                    </li>
-                    <li>
-                        <h5>Tech Stack:</h5>
-                        <p class="md:pl-4 inline md:block">
-                            <span data-fp-label="tech-stack">
-                                ?
-                            </span>
-                        </p>
-                    </li>
-                    <li class="grow">
-                        <h5>About:</h5>
-                        <p class="md:pl-4 overflow-clip	" data-fp-label="about">
-                            ?
-                        </p>
-                    </li>
-                    <li class="justify-self-end mt-5">
-                        <ul data-fp-label="links" class="flex justify-around">
-                            <!-- dynamic links go here -->
-                        </ul>
-                    </li>
-                </ul>
-            </article>
-            <div class="flex justify-evenly">
-                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4">prev</button>
-                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4">
-                    all projects
-                </button>
-                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4">next</button>
-            </div>
         </section>
     </main>
     <!-- mobile Navbar -->
