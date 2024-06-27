@@ -69,6 +69,15 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
     `;
 }
 
+
+const closeModal = () => {
+    
+    const parentNode = document.querySelector('#projects-main')
+    const element = document.querySelector('#selected-project-modal');
+    
+    parentNode.removeChild(element)
+}
+
 const createProjectDetailsModal = (thumbnailFilepath, Project) => {
     
     return `
@@ -76,6 +85,9 @@ const createProjectDetailsModal = (thumbnailFilepath, Project) => {
     <div id="selected-project-modal" class="selected-project-modal">
         <section class="lg:mt-14 mb-20">
             <header class="mb-8">
+                <button class="hover:text-red-300 border-solid border-2 p-2 border-gray-300"  onclick="closeModal()">
+                    return();
+                </button>
                 <h2 class="pb-2">
                     Selected Project
                 </h2>
@@ -130,13 +142,7 @@ const createProjectDetailsModal = (thumbnailFilepath, Project) => {
                     </li>
                 </ul>
             </article>
-            <div class="flex justify-evenly">
-                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4">prev</button>
-                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4">
-                    all projects
-                </button>
-                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4">next</button>
-            </div>
+
         </section>
     </div> 
     `;
