@@ -150,6 +150,12 @@ button:disabled {
     background-color: rgba(0, 0, 0, 0.774);
 }
 
+/* featured project modal */
+.featured-project-modal {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
 
 /* ------ skills ------ */
 .card-wrapper:hover > .card-cover-image {

@@ -46,7 +46,7 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
     // 0800 030 007
 
     return `               
-        <li class="border-solid border-4 border-gray-300" id="${Project.id}">
+        <li class="project-preview-card border-solid border-4 border-gray-300" id="${Project.id}">
             <div class="project-preview-wrapper w-full aspect-[4/3]">
                 <div class="project-preview-card w-full grid grid-rows-[5fr_2fr_1fr] h-full m-4">
                     <div class="overflow-hidden">
@@ -55,7 +55,7 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
                     <div class="pr-4 mt-2 overflow-hidden">${Project.description}</div>
                     <div class="grid grid-cols-2 grid-rows-2 mb-2 mt-3">
                         <a rel="noopener noreferrer">
-                            <button  class="cursor-pointer w-full">
+                            <button class="project-details-btn cursor-pointer w-full" data-project-id="${Project.id}">
                                 View More
                             </button>
                         </a>
@@ -73,7 +73,7 @@ const createProjectDetailsModal = (thumbnailFilepath, Project) => {
     
     return `
     <!-- Selected project -->
-    <div id="selected-project-modal">
+    <div id="selected-project-modal" class="selected-project-modal">
         <section class="lg:mt-14 mb-20">
             <header class="mb-8">
                 <h2 class="pb-2">
@@ -152,4 +152,16 @@ const renderProjectPreviews = (selector, thumbnailFilepath, projectList) => {
     });
 }
 
+const getProjectThumbId = (event) => {
+
+    if(event.target.classList.contains('project-details-btn')) {
+
+        console.log(event.target.dataset.projectId);
+        return event.target.dataset.projectId;
+    }
+}
+
 // ================================ Listeners ===============================
+
+
+

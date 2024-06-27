@@ -57,7 +57,7 @@
     </nav>
 
     <!-- =============================== main website section ============================= -->
-    <main>
+    <main id="projects-main">
         <!-- Hero -->
         <header id="hero" class="">
             <div class="hero">
@@ -188,14 +188,30 @@
 </body>
 <!--=================== Body =====================-->
 <script>      
+
+    // Controller for dynamically rendering project previews
     document.addEventListener('DOMContentLoaded', () => {
-        // const entryPoint = document.querySelector('skills-container');
 
         fetchAndParseJSON("./src/data/projects.json")
             .then(projectData => renderProjectPreviews('#all-projects-container', "./src/resource/projects/", projectData));
     })
 
-    console.log('<img src="./src/resource/projects/js-todo.png" alt="">')
+    // Listener for dynamically rendering selected project details
+    document.querySelector('#all-projects-container').addEventListener('click', (e) => {
+       
+        const selectedProjectId = getProjectThumbId(e);
+
+        fetchAndParseJSON('./src/data/projects.json')
+            .then(allProjects => {
+                return allProjects.filter(project => project.id == selectedProjectId);
+            })
+            .then(filteredProject => {
+                // console.log(filteredProject) bug here - result returns array
+                document.querySelector('#projects-main').innerHTML += createProjectDetailsModal("", "")
+                insertFeaturedProject("./src/resource/projects/", filteredProject[0]);
+            })
+            .catch(error => console.error('problem with templating', error))
+    })
 </script>
 
 </html>

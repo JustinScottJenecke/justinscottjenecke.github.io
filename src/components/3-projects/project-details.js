@@ -3,19 +3,29 @@
 // import { fetchAndParseJSON } from "../../utils/jsonFetching.js";
 
 // All DOM references for featured projects
-const PREVIEW_ELEMENT = {
-    previewImage: document.querySelector('[data-fp-label="preview-image"]'),
-    name: document.querySelector('[data-fp-label="name"]'),
-    category: document.querySelector('[data-fp-label="category"]'),
-    techStack: document.querySelector('[data-fp-label="tech-stack"]'),
-    about: document.querySelector('[data-fp-label="about"]'),
-    links: document.querySelector('[data-fp-label="links"]')
-}
+// const PREVIEW_ELEMENT = {
+//     previewImage: document.querySelector('[data-fp-label="preview-image"]'),
+//     name: document.querySelector('[data-fp-label="name"]'),
+//     category: document.querySelector('[data-fp-label="category"]'),
+//     techStack: document.querySelector('[data-fp-label="tech-stack"]'),
+//     about: document.querySelector('[data-fp-label="about"]'),
+//     links: document.querySelector('[data-fp-label="links"]')
+// }
 
 // ============================== Functions ===========================================
 
 
 const insertFeaturedProject = (dataFilePath, project) => {
+
+    // All DOM references for featured projects
+    const PREVIEW_ELEMENT = {
+        previewImage: document.querySelector('[data-fp-label="preview-image"]'),
+        name: document.querySelector('[data-fp-label="name"]'),
+        category: document.querySelector('[data-fp-label="category"]'),
+        techStack: document.querySelector('[data-fp-label="tech-stack"]'),
+        about: document.querySelector('[data-fp-label="about"]'),
+        links: document.querySelector('[data-fp-label="links"]')
+    }
 
     const thumbnailPath = dataFilePath + project.thumbnail;
 
