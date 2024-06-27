@@ -362,7 +362,7 @@
                 return allProjects.filter(project => project.featured);
             })
             .then(filteredProjects => {
-                insertFeaturedProject(filteredProjects[1]);
+                insertFeaturedProject("./src/resource/projects/", filteredProjects[1]);
             })
             .catch(error => console.error('problem with templating', error))
         }

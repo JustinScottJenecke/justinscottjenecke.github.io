@@ -15,9 +15,12 @@ const PREVIEW_ELEMENT = {
 // ============================== Functions ===========================================
 
 
-const insertFeaturedProject = (project) => {
+const insertFeaturedProject = (dataFilePath, project) => {
+
+    const thumbnailPath = dataFilePath + project.thumbnail;
+
     PREVIEW_ELEMENT.previewImage.innerHTML += `
-        <img src="/src/resource/projects/calorie-tracker-preview.gif" alt="project-preview-image">
+        <img src="${thumbnailPath}" alt="project-preview-image">
     `;
 
     // console.log(project);
