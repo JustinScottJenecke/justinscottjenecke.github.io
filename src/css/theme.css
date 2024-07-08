@@ -90,6 +90,44 @@ button:disabled {
     }
 }
 
+/* ------ mobile nav ------ */
+.mobile-nav {
+    display: none;
+}
+.mobile-nav-links {
+    display: none;
+}
+.mobile-links-active {
+    display: block;
+}
+
+.mobile-interactive-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+/* .mobile-interactive-wrapper:hover > .mobile-links {
+    display: block;
+} */
+
+@media only screen and (max-width: 770px) { 
+    .mobile-nav {
+        display:block;
+        position: sticky;
+        bottom: 0;
+    } 
+    .mobile-interactive-wrapper {
+        display: inline-flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+    }
+    .mobile-links-active {
+        display: block;
+    }
+} 
+
 /* ------ hero ------ */
 .hero {
     min-height: 100vh;
@@ -182,38 +220,6 @@ button:disabled {
 .about-card:hover > p {
     display: block;
 }
-
-/* ------ mobile nav ------ */
-.mobile-nav {
-    display: none;
-}
-.mobile-links {
-    display: none;
-}
-.mobile-interactive-wrapper {
-    display: inline-flex;
-    flex-direction: column;
-    background-color: black;
-    color: white;
-}
-.mobile-interactive-wrapper:hover > .mobile-links {
-    display: block;
-}
-
-@media only screen and (max-width: 770px) { 
-    .mobile-nav {
-        display:block;
-        position: sticky;
-        bottom: 0;
-    } 
-    .mobile-interactive-wrapper {
-        display: inline-flex;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
-        color: white;
-    }
-} 
-
 
 /* ----- footer ----- */
 @media only screen and (min-width: 426px) and (max-width: 770px) {
