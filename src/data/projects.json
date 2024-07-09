@@ -11,7 +11,8 @@
             "demo" : "https://justinscottjenecke.github.io/csa-js-todo/"
         },
         "featured" : false,
-        "completed" : true
+        "completed" : true,
+        "type" : "Learning Project"
     },
     {
         "id" : 2,
@@ -25,7 +26,8 @@
             "demo": "https://justinscottjenecke.github.io/csa-hotel-booking-site/"
         },
         "featured" : false,
-        "completed" : true
+        "completed" : true,
+        "type" :"Learning Project"
     },
     {
         "id" : 3,
@@ -39,7 +41,8 @@
             "demo": "https://justinscottjenecke.github.io/csa-online-store-fef/"
         },
         "featured" : false,
-        "completed" : true
+        "completed" : true,
+        "type":"Learning Project"
     },
     {
         "id" : 4,
@@ -54,7 +57,8 @@
             "docs": "https://github.com/JustinScottJenecke/portfolio/blob/main/misc/PortfolioDocumentaton.pdf"
         },
         "featured" : false,
-        "completed" : true
+        "completed" : true,
+        "type":"Personal Project"
     },
     {
         "id" : 5,
@@ -68,7 +72,8 @@
             "docs:": "https://github.com/JustinScottJenecke/cput-hotel-booking-system/blob/main/documentation/Booking-DomainModel.jpg"
         },
         "featured" : false,
-        "completed" : false
+        "completed" : false,
+        "type":"Learning Project"
     },
     {
         "id" : 6,
@@ -81,7 +86,8 @@
             "repo": "https://github.com/JustinScottJenecke/cput-java-collections-interface-tdd"
         },
         "featured" : false,
-        "completed" : true
+        "completed" : true,
+        "type":"Learning Project"
     },
     {
         "id" : 7,
@@ -95,7 +101,8 @@
             "api-docs": "https://github.com/JustinScottJenecke/cput-tutorspace-api/blob/main/README.md"
         },
         "featured" : true,
-        "completed" : true
+        "completed" : true,
+        "type":"Personal Project"
     },
     {
         "id" : 8,
@@ -108,7 +115,8 @@
             "repo": "https://github.com/JustinScottJenecke/csa-book-app-php"
         },
         "featured" : false,
-        "completed" : true
+        "completed" : true,
+        "type":"Learning Project"
     },
     {
         "id" : 9,
@@ -121,6 +129,22 @@
             "repo": "https://github.com/JustinScottJenecke/calorie-tracker-react"
         },
         "featured" : true,
-        "completed" : false
+        "completed" : false,
+        "type":"Personal Project"
+    },
+    {
+        "id" : 10,
+        "title": "Gamestore REST API",
+        "category": "backend",
+        "thumbnail": "",
+        "description": "Simple ASP .NET Core minimal API to learn how to build REST APIs in .NET Core and C#",
+        "tech-stack": "C#, .NET Core, Entity Framework, SQLite",
+        "links": {
+            "repo": "https://github.com/JustinScottJenecke/tut-gamestore-rest-api.git"
+        },
+        "featured" : false,
+        "completed" : false,
+        "type":"Tutorial"
     }
+
 ]
