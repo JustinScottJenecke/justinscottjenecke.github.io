@@ -28,6 +28,11 @@
                 "no": 4,
                 "tool": "Java 8",
                 "skill-level": "good"
+            },
+            {
+                "no": 5,
+                "tool": "Spring Data JPA",
+                "skill-level": "good"
             }
         ]
     },
@@ -93,11 +98,21 @@
             {
                 "no": 1,
                 "tool": "Syntax, OOP, etc.",
-                "skill-level": "basic"
+                "skill-level": "good"
             },
             {
                 "no": 2,
                 "tool": "C# Generics",
+                "skill-level": "basic"
+            },
+            {
+                "no": 3,
+                "tool": "ASP .NET Core",
+                "skill-level": "basic"
+            },            
+            {
+                "no": 4,
+                "tool": "Entity Framework",
                 "skill-level": "basic"
             }
         ]
