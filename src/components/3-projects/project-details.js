@@ -12,9 +12,14 @@
 //     links: document.querySelector('[data-fp-label="links"]')
 // }
 
-const Globals = {
-    featuredNextBtn: document.querySelector('[data-fp-label="category"]'),
-    featuredPrevBtn: document.querySelector('[data-fp-label="category"]')
+const FeaturedProjectData = {
+    projects: [],
+    activeIndex: 1
+};
+
+const FPElementControls = {
+    nextBtn: document.querySelector('[data-fp-controls="previous"]'),
+    prevBtn: document.querySelector('[data-fp-controls="next"]')
 }
 
 // ============================== Functions ===========================================
@@ -34,7 +39,7 @@ const insertFeaturedProject = (dataFilePath, project) => {
 
     const thumbnailPath = dataFilePath + project.thumbnail;
 
-    PREVIEW_ELEMENT.previewImage.innerHTML += `
+    PREVIEW_ELEMENT.previewImage.innerHTML = `
         <img src="${thumbnailPath}" alt="project-preview-image">
     `;
 
@@ -44,7 +49,7 @@ const insertFeaturedProject = (dataFilePath, project) => {
     PREVIEW_ELEMENT.category.innerText = project.category;
     PREVIEW_ELEMENT.techStack.innerText = project["tech-stack"];
     PREVIEW_ELEMENT.about.innerText = project.description;
-    PREVIEW_ELEMENT.links.innerHTML += `
+    PREVIEW_ELEMENT.links.innerHTML = `
         <li>
             <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
                 <!-- icon button -->
@@ -55,7 +60,7 @@ const insertFeaturedProject = (dataFilePath, project) => {
             </a>
         </li>
         <li>
-            <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
                 <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
                     <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">D</button>
                     <button class="">Demo</button>
@@ -77,10 +82,35 @@ document.addEventListener('DOMContentLoaded', () => {
             return allProjects.filter(project => project.featured);
         })
         .then(filteredProjects => {
-            console.log(filteredProjects)
-            insertFeaturedProject("./src/resource/projects/", filteredProjects[1]);
+
+            // presistFeaturedProjects(filteredProjects);
+            FeaturedProjectData.projects = filteredProjects
+            insertFeaturedProject("./src/resource/projects/", FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
+
+            // console.log(retrieveFeatureProjects());
         })
         .catch(error => console.error('problem with templating', error))
     }
 )
 
+FPElementControls.nextBtn.addEventListener("click", () => {
+
+    // if featured project list has next, set next to featured, otherwise reset to first element.
+    FeaturedProjectData.projects[FeaturedProjectData.activeIndex + 1] !== undefined ? FeaturedProjectData.activeIndex++ : FeaturedProjectData.activeIndex = 0;
+    console.log(FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
+
+    // insertFeaturedProject(null, null);
+    insertFeaturedProject("./src/resource/projects/", FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
+    
+})
+
+FPElementControls.prevBtn.addEventListener("click", () => {
+    
+    // if featured project list has prev, set prev to featured, otherwise reset to last element.
+    FeaturedProjectData.projects[FeaturedProjectData.activeIndex - 1] !== undefined ? FeaturedProjectData.activeIndex-- : FeaturedProjectData.activeIndex = FeaturedProjectData.projects.length - 1;
+    console.log(FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
+    
+    // insertFeaturedProject(null, null);
+    insertFeaturedProject("./src/resource/projects/", FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
+    
+})
