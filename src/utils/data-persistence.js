@@ -9,7 +9,7 @@ const STORAGE_KEYS = {
  * @param {Array} filteredProjectObjects - Array of project objects that have featured property set to true
  * @returns {Boolean}
  */
-const presistFeaturedProjectd = (filteredProjectObjects) => {
+const presistFeaturedProjects = (filteredProjectObjects) => {
     sessionStorage.setItem(`${STORAGE_KEYS.MASTER_KEY + STORAGE_KEYS.featuredProjects}`, JSON.stringify(filteredProjectObjects));
     return true;
 };
@@ -19,5 +19,5 @@ const presistFeaturedProjectd = (filteredProjectObjects) => {
  * @returns {Array|null}
  */
 const retrieveFeatureProjects = () => {
-    return sessionStorage.getItem((`${STORAGE_KEYS.MASTER_KEY + STORAGE_KEYS.featuredProjects}`) );
+    return JSON.parse(sessionStorage.getItem((`${STORAGE_KEYS.MASTER_KEY + STORAGE_KEYS.featuredProjects}`)));
 };

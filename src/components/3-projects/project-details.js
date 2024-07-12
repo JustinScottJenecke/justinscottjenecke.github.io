@@ -77,8 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return allProjects.filter(project => project.featured);
         })
         .then(filteredProjects => {
-            console.log(filteredProjects)
+
+            presistFeaturedProjects(filteredProjects);
+
             insertFeaturedProject("./src/resource/projects/", filteredProjects[1]);
+
+            console.log(retrieveFeatureProjects());
         })
         .catch(error => console.error('problem with templating', error))
     }
