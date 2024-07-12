@@ -159,13 +159,13 @@
                 </ul>
             </article>
             <div class="flex justify-evenly">
-                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4">prev</button>
+                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4" data-fp-controls="previous">prev</button>
                 <a href="./projects.html">
                     <button class="bg-neutral-800 py-1 px-1 sm:px-4">
                         all projects
                     </button>
                 </a>
-                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4">next</button>
+                <button disabled class="bg-neutral-800 py-1 px-1 sm:px-4" data-fp-controls="next">next</button>
             </div>
         </section>
 
@@ -359,21 +359,21 @@
 <!--=================== Body =====================-->
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    // document.addEventListener('DOMContentLoaded', () => {
 
-        // Fetch all and filter featured projects from json file
-        // dependancy -> not using import due to hosting solution.
-        fetchAndParseJSON('./src/data/projects.json')
-            .then(allProjects => {
-                // console.log(allProjects)
-                return allProjects.filter(project => project.featured);
-            })
-            .then(filteredProjects => {
-                insertFeaturedProject("./src/resource/projects/", filteredProjects[1]);
-            })
-            .catch(error => console.error('problem with templating', error))
-        }
-    )
+    //     // Fetch all and filter featured projects from json file
+    //     // dependancy -> not using import due to hosting solution.
+    //     fetchAndParseJSON('./src/data/projects.json')
+    //         .then(allProjects => {
+    //             // console.log(allProjects)
+    //             return allProjects.filter(project => project.featured);
+    //         })
+    //         .then(filteredProjects => {
+    //             insertFeaturedProject("./src/resource/projects/", filteredProjects[1]);
+    //         })
+    //         .catch(error => console.error('problem with templating', error))
+    //     }
+    // )
 </script>
 
 </html>

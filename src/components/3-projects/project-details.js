@@ -12,6 +12,11 @@
 //     links: document.querySelector('[data-fp-label="links"]')
 // }
 
+const Globals = {
+    featuredNextBtn: document.querySelector('[data-fp-label="category"]'),
+    featuredPrevBtn: document.querySelector('[data-fp-label="category"]')
+}
+
 // ============================== Functions ===========================================
 
 
@@ -61,4 +66,21 @@ const insertFeaturedProject = (dataFilePath, project) => {
 }
 
 // ====================== Event Listeners =============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Fetch all and filter featured projects from json file
+    // dependancy -> not using import due to hosting solution.
+    fetchAndParseJSON('./src/data/projects.json')
+        .then(allProjects => {
+            // console.log(allProjects)
+            return allProjects.filter(project => project.featured);
+        })
+        .then(filteredProjects => {
+            console.log(filteredProjects)
+            insertFeaturedProject("./src/resource/projects/", filteredProjects[1]);
+        })
+        .catch(error => console.error('problem with templating', error))
+    }
+)
 
