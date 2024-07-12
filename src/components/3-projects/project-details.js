@@ -12,9 +12,14 @@
 //     links: document.querySelector('[data-fp-label="links"]')
 // }
 
-const Globals = {
-    featuredNextBtn: document.querySelector('[data-fp-label="category"]'),
-    featuredPrevBtn: document.querySelector('[data-fp-label="category"]')
+const FeaturedProjectData = {
+    projects: [],
+    activeIndex: 1
+};
+
+const FPElementControls = {
+    nextBtn: document.querySelector('[data-fp-label="category"]'),
+    prevBtn: document.querySelector('[data-fp-label="category"]')
 }
 
 // ============================== Functions ===========================================
@@ -79,7 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(filteredProjects => {
 
             presistFeaturedProjects(filteredProjects);
-            insertFeaturedProject("./src/resource/projects/", filteredProjects[1]);
+            FeaturedProjectData.projects = filteredProjects
+            insertFeaturedProject("./src/resource/projects/", FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
 
             // console.log(retrieveFeatureProjects());
         })
@@ -87,3 +93,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 )
 
+FPElementControls.nextBtn.addEventListener("click", () => {
+
+    // if featured project list has next, set next to featured, otherwise reset to first element.
+    FeaturedProjectData.projects[FeaturedProjectData.activeIndex + 1] !== null ? FeaturedProjectData.activeIndex++ : FeaturedProjectData.activeIndex = 0;
+
+    insertFeaturedProject("./src/resource/projects/", FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
+    
+})
+
+FPElementControls.prevBtn.addEventListener("click", () => {
+    
+    // if featured project list has prev, set prev to featured, otherwise reset to last element.
+    FeaturedProjectData.projects[FeaturedProjectData.activeIndex - 1] !== null ? FeaturedProjectData.activeIndex-- : FeaturedProjectData.activeIndex = FeaturedProjectData.projects.length - 1;
+
+    insertFeaturedProject("./src/resource/projects/", FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
+    
+})
