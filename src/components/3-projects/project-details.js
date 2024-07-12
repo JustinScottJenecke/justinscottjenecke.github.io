@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(filteredProjects => {
 
-            presistFeaturedProjects(filteredProjects);
+            // presistFeaturedProjects(filteredProjects);
             FeaturedProjectData.projects = filteredProjects
             insertFeaturedProject("./src/resource/projects/", FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
 
