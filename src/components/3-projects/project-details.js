@@ -18,8 +18,8 @@ const FeaturedProjectData = {
 };
 
 const FPElementControls = {
-    nextBtn: document.querySelector('[data-fp-label="category"]'),
-    prevBtn: document.querySelector('[data-fp-label="category"]')
+    nextBtn: document.querySelector('[data-fp-controls="previous"]'),
+    prevBtn: document.querySelector('[data-fp-controls="next"]')
 }
 
 // ============================== Functions ===========================================
@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
 FPElementControls.nextBtn.addEventListener("click", () => {
 
     // if featured project list has next, set next to featured, otherwise reset to first element.
-    FeaturedProjectData.projects[FeaturedProjectData.activeIndex + 1] !== null ? FeaturedProjectData.activeIndex++ : FeaturedProjectData.activeIndex = 0;
-
+    FeaturedProjectData.projects[FeaturedProjectData.activeIndex + 1] !== undefined ? FeaturedProjectData.activeIndex++ : FeaturedProjectData.activeIndex = 0;
+    console.log(FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
     insertFeaturedProject("./src/resource/projects/", FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
     
 })
@@ -105,8 +105,8 @@ FPElementControls.nextBtn.addEventListener("click", () => {
 FPElementControls.prevBtn.addEventListener("click", () => {
     
     // if featured project list has prev, set prev to featured, otherwise reset to last element.
-    FeaturedProjectData.projects[FeaturedProjectData.activeIndex - 1] !== null ? FeaturedProjectData.activeIndex-- : FeaturedProjectData.activeIndex = FeaturedProjectData.projects.length - 1;
-
+    FeaturedProjectData.projects[FeaturedProjectData.activeIndex - 1] !== undefined ? FeaturedProjectData.activeIndex-- : FeaturedProjectData.activeIndex = FeaturedProjectData.projects.length - 1;
+    console.log(FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
     insertFeaturedProject("./src/resource/projects/", FeaturedProjectData.projects[FeaturedProjectData.activeIndex]);
     
 })
