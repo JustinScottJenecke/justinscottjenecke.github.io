@@ -208,18 +208,7 @@ const getProjectThumbId = (event) => {
             console.log(selectedProject[0])
 
             document.querySelector('#projects-main').innerHTML += createProjectDetailsModal("", "")
-            insertFeaturedProject("./src/resource/projects/", selectedProject[0]);
-            
-            // fetchAndParseJSON('./src/data/projects.json')
-            // .then(allProjects => {
-            //     return allProjects.filter(project => project.id == selectedProjectId);
-            // })
-            // .then(filteredProject => {
-            //     // console.log(filteredProject) bug here - result returns array
-            //     document.querySelector('#projects-main').innerHTML += createProjectDetailsModal("", "")
-            //     insertFeaturedProject("./src/resource/projects/", filteredProject[0]);
-            // })
-            // .catch(error => console.error('problem with templating', error))            
+            insertFeaturedProject("./src/resource/projects/", selectedProject[0]);         
         }
 
     })
