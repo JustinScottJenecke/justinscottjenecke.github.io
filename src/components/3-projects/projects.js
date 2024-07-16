@@ -73,16 +73,99 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
 
 const projectDetailsModal = {
 
+    parentNode: document.querySelector('#selected-project-modal-container'),
+    selector: '#selected-project-modal',
+    status: false,
+    toggle: () => {
+
+        projectDetailsModal.status 
+            ? 
+            projectDetailsModal.parentNode.innerHTML += createProjectDetailsModal("","")
+            : 
+            projectDetailsModal.parentNode.innerHTML = "";
+
+        projectDetailsModal.status = !projectDetailsModal.status
+    }
+
 }
 
-const closeModal = () => {
-    
-    const parentNode = document.querySelector('#projects-main')
-    const element = document.querySelector('#selected-project-modal');
-    
-    parentNode.removeChild(element)
+/**
+ * Lifecycle function to render out a list of project-preview cards inside a container specified in the selector parameter.
+ * @param {String} selector - CSS Selector of container element where project preview cards will be rendered inside.
+ * @param {String} thumbnailFilepath - Filepath where all Project thumbnails are stored locally.
+ * @param {Array} projectList - Array of Project objects containing project data.
+ */
+const renderProjectPreviews = (selector, thumbnailFilepath, projectList) => {
+    const entryPoint = document.querySelector(selector);
+
+    projectList.forEach(project => {
+        entryPoint.innerHTML += createProjectPreviewCard(thumbnailFilepath, project)
+    });
 }
 
+/**
+ * Handler function that extracts the id of a project-preview-card 
+ * from the project preview list if the click event's target has 
+ * a class of 'project-details-btn'.
+ * 
+ * @param {document#event:click} event 
+ * @returns 
+ */
+const getProjectThumbId = (event) => {
+
+    if(event.target.classList.contains('project-details-btn')) {
+
+        console.log(event.target.dataset.projectId);
+        return event.target.dataset.projectId;
+    }
+}
+
+const insertFeaturedProject = (dataFilePath, project) => {
+
+    // All DOM references for featured projects
+    const PREVIEW_ELEMENT = {
+        previewImage: document.querySelector('[data-fp-label="preview-image"]'),
+        name: document.querySelector('[data-fp-label="name"]'),
+        category: document.querySelector('[data-fp-label="category"]'),
+        techStack: document.querySelector('[data-fp-label="tech-stack"]'),
+        about: document.querySelector('[data-fp-label="about"]'),
+        links: document.querySelector('[data-fp-label="links"]')
+    }
+
+    const thumbnailPath = dataFilePath + project.thumbnail;
+
+    PREVIEW_ELEMENT.previewImage.innerHTML = `
+        <img src="${thumbnailPath}" alt="project-preview-image">
+    `;
+
+    // console.log(project);
+
+    PREVIEW_ELEMENT.name.innerText = project.title;
+    PREVIEW_ELEMENT.category.innerText = project.category;
+    PREVIEW_ELEMENT.techStack.innerText = project["tech-stack"];
+    PREVIEW_ELEMENT.about.innerText = project.description;
+    PREVIEW_ELEMENT.links.innerHTML = `
+        <li>
+            <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
+                <!-- icon button -->
+                <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
+                    <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">G</button>
+                    <button class="">Repo</button>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
+                    <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">D</button>
+                    <button class="">Demo</button>
+                </div>
+            </a>
+        </li>
+    `;
+}
+
+// Template
 const createProjectDetailsModal = (thumbnailFilepath, Project) => {
     
     return `
@@ -90,7 +173,7 @@ const createProjectDetailsModal = (thumbnailFilepath, Project) => {
     <div id="selected-project-modal" class="selected-project-modal">
         <section class="lg:mt-14 mb-20">
             <header class="mb-8">
-                <button class="hover:text-red-300 border-solid border-2 p-2 border-gray-300"  onclick="closeModal()">
+                <button class="hover:text-red-300 border-solid border-2 p-2 border-gray-300"  onclick="projectDetailsModal.toggle()">
                     return();
                 </button>
                 <h2 class="pb-2">
@@ -153,43 +236,13 @@ const createProjectDetailsModal = (thumbnailFilepath, Project) => {
     `;
 }
 
-// ============================== Functions =================================
-
-/**
- * Lifecycle function to render out a list of project-preview cards inside a container specified in the selector parameter.
- * @param {String} selector - CSS Selector of container element where project preview cards will be rendered inside.
- * @param {String} thumbnailFilepath - Filepath where all Project thumbnails are stored locally.
- * @param {Array} projectList - Array of Project objects containing project data.
- */
-const renderProjectPreviews = (selector, thumbnailFilepath, projectList) => {
-    const entryPoint = document.querySelector(selector);
-
-    projectList.forEach(project => {
-        entryPoint.innerHTML += createProjectPreviewCard(thumbnailFilepath, project)
-    });
-}
-
-/**
- * Handler function that extracts the id of a project-preview-card 
- * from the project preview list if the click event's target has 
- * a class of 'project-details-btn'.
- * 
- * @param {document#event:click} event 
- * @returns 
- */
-const getProjectThumbId = (event) => {
-
-    if(event.target.classList.contains('project-details-btn')) {
-
-        console.log(event.target.dataset.projectId);
-        return event.target.dataset.projectId;
-    }
-}
-
 // ================================ Listeners ===============================
 
     // Controller for dynamically rendering project previews
     document.addEventListener('DOMContentLoaded', () => {
+
+        // document.body.innerHTML += createProjectDetailsModal("", "");
+        // document.querySelector(projectDetailsModal.selector).style = "z-index: -20; display: none;",
 
         fetchAndParseJSON("./src/data/projects.json")
             .then(projectData => {
@@ -200,15 +253,24 @@ const getProjectThumbId = (event) => {
 
     // Listener for dynamically rendering selected project details
     document.querySelector('#all-projects-container').addEventListener('click', (e) => {
-       
-        const selectedProjectId = getProjectThumbId(e);
+
+        console.log(99)
+        
+        let selectedProjectId = getProjectThumbId(e);
+
+        projectDetailsModal.toggle();
 
         if (selectedProjectId) {
+
             const selectedProject = ALL_PROJECTS.filter(project => project.id == selectedProjectId);
             console.log(selectedProject[0])
 
-            document.querySelector('#projects-main').innerHTML += createProjectDetailsModal("", "")
+            projectDetailsModal.toggle();
+
+            // document.querySelector('#projects-main').innerHTML += createProjectDetailsModal("", "")
             insertFeaturedProject("./src/resource/projects/", selectedProject[0]);         
         }
+
+        selectedProjectId = false
 
     })
