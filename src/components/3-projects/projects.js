@@ -1,6 +1,12 @@
-// ================================ Templating ===============================
+// ================================ Global Constants ==================================
+
+let ALL_PROJECTS = [];
+
+// ================================ ProjectPreview Card ===============================
 
 const createProjectPreviewCard = (thumbnailFilepath, Project) => {
+
+    const completeThumbPath = thumbnailFilepath + Project.thumbnail;
 
     const buttons = {
         demo: Project.links.demo ? 
@@ -39,12 +45,6 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
         </div>
     `
 
-    const completeThumbPath = thumbnailFilepath + Project.thumbnail;
-    //console.log(completeThumbPath)
-
-    // 0800 030 007
-    // 0800 030 007
-
     return `               
         <li class="project-preview-card border-solid border-4 border-gray-300" id="${Project.id}">
             <div class="project-preview-wrapper w-full aspect-[4/3]">
@@ -56,7 +56,7 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
                     <div class="grid grid-cols-2 grid-rows-2 mb-2 mt-3">
                         <a rel="noopener noreferrer">
                             <button class="project-details-btn cursor-pointer w-full" data-project-id="${Project.id}">
-                                View More
+                                View Details
                             </button>
                         </a>
                         ${buttons.demo}
@@ -69,6 +69,11 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
     `;
 }
 
+// ================================= Project Details Modal ========================================
+
+const projectDetailsModal = {
+
+}
 
 const closeModal = () => {
     
@@ -150,6 +155,12 @@ const createProjectDetailsModal = (thumbnailFilepath, Project) => {
 
 // ============================== Functions =================================
 
+/**
+ * Lifecycle function to render out a list of project-preview cards inside a container specified in the selector parameter.
+ * @param {String} selector - CSS Selector of container element where project preview cards will be rendered inside.
+ * @param {String} thumbnailFilepath - Filepath where all Project thumbnails are stored locally.
+ * @param {Array} projectList - Array of Project objects containing project data.
+ */
 const renderProjectPreviews = (selector, thumbnailFilepath, projectList) => {
     const entryPoint = document.querySelector(selector);
 
@@ -158,6 +169,14 @@ const renderProjectPreviews = (selector, thumbnailFilepath, projectList) => {
     });
 }
 
+/**
+ * Handler function that extracts the id of a project-preview-card 
+ * from the project preview list if the click event's target has 
+ * a class of 'project-details-btn'.
+ * 
+ * @param {document#event:click} event 
+ * @returns 
+ */
 const getProjectThumbId = (event) => {
 
     if(event.target.classList.contains('project-details-btn')) {
@@ -169,5 +188,38 @@ const getProjectThumbId = (event) => {
 
 // ================================ Listeners ===============================
 
+    // Controller for dynamically rendering project previews
+    document.addEventListener('DOMContentLoaded', () => {
 
+        fetchAndParseJSON("./src/data/projects.json")
+            .then(projectData => {
+                ALL_PROJECTS = projectData;
+                return renderProjectPreviews('#all-projects-container', "./src/resource/projects/", projectData)
+            })
+    })
 
+    // Listener for dynamically rendering selected project details
+    document.querySelector('#all-projects-container').addEventListener('click', (e) => {
+       
+        const selectedProjectId = getProjectThumbId(e);
+
+        if (selectedProjectId) {
+            const selectedProject = ALL_PROJECTS.filter(project => project.id == selectedProjectId);
+            console.log(selectedProject[0])
+
+            document.querySelector('#projects-main').innerHTML += createProjectDetailsModal("", "")
+            insertFeaturedProject("./src/resource/projects/", selectedProject[0]);
+            
+            // fetchAndParseJSON('./src/data/projects.json')
+            // .then(allProjects => {
+            //     return allProjects.filter(project => project.id == selectedProjectId);
+            // })
+            // .then(filteredProject => {
+            //     // console.log(filteredProject) bug here - result returns array
+            //     document.querySelector('#projects-main').innerHTML += createProjectDetailsModal("", "")
+            //     insertFeaturedProject("./src/resource/projects/", filteredProject[0]);
+            // })
+            // .catch(error => console.error('problem with templating', error))            
+        }
+
+    })
