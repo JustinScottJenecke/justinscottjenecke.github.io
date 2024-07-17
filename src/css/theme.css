@@ -191,7 +191,7 @@ button:disabled {
 /* featured project modal */
 .selected-project-modal {
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.856);
+    background-color: rgba(0, 0, 0, 0.956);
     position: fixed;
     top: 0;
 }

@@ -180,17 +180,13 @@ const createProjectDetailsModal = (dataFilePath, project) => {
     <!-- Selected project -->
     <div id="selected-project-modal" class="selected-project-modal">
         <section class="lg:mt-14 mb-20">
-            <header class="mb-8">
-                <button class="hover:text-red-300 border-solid border-2 p-1 border-gray-300"  onclick="projectDetailsModal.toggleOff()">
+            <header class="mb-2 flex flex-col sm:flex-row sm:justify-between">
+                <button class="sm:order-2 hover:text-red-300 border-solid border-2 border-gray-300 h-min p-2"  onclick="projectDetailsModal.toggleOff()">
                     return();
                 </button>
                 <h2 class="pb-2">
-                    project title
+                    ${project.title}
                 </h2>
-                <p>
-                    View some of the highlights from my list <br>
-                    of personal projects:
-                </p>
             </header>
             <article class="
                 flex flex-col mb-4
@@ -207,9 +203,6 @@ const createProjectDetailsModal = (dataFilePath, project) => {
                 <ul class=" 
                     fp-project-info
                     p-0 sm:p-4 mt-2 flex flex-col h-100">
-                    <li>
-                        <h4 data-fp-label="name" class="text-center text-slate-200">${project.title}:</h4>
-                    </li>
                     <li>
                         <h5>Category:</h5>
                         <p class="md:pl-4 inline md:block">
