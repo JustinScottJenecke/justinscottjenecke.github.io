@@ -76,15 +76,17 @@ const projectDetailsModal = {
     parentNode: document.querySelector('#selected-project-modal-container'),
     selector: '#selected-project-modal',
     status: false,
-    toggle: () => {
+    toogleOn: (Filepath, project) => {
+        projectDetailsModal.parentNode.innerHTML += createProjectDetailsModal(Filepath,project);
+        projectDetailsModal.status = true;
 
-        projectDetailsModal.status 
-            ? 
-            projectDetailsModal.parentNode.innerHTML += createProjectDetailsModal("","")
-            : 
-            projectDetailsModal.parentNode.innerHTML = "";
+        // if (projectDetailsModal.status) 
 
-        projectDetailsModal.status = !projectDetailsModal.status
+    },
+    toggleOff: () => { 
+        // if (!projectDetailsModal.status) 
+        projectDetailsModal.parentNode.innerHTML = "";
+        projectDetailsModal.status = false
     }
 
 }
@@ -166,18 +168,24 @@ const insertFeaturedProject = (dataFilePath, project) => {
 }
 
 // Template
-const createProjectDetailsModal = (thumbnailFilepath, Project) => {
+const createProjectDetailsModal = (dataFilePath, project) => {
+
+    const thumbnailPath = dataFilePath + project.thumbnail;
+
+    const previewImage = `
+        <img src="${thumbnailPath}" alt="project-preview-image">
+    `; 
     
     return `
     <!-- Selected project -->
     <div id="selected-project-modal" class="selected-project-modal">
         <section class="lg:mt-14 mb-20">
             <header class="mb-8">
-                <button class="hover:text-red-300 border-solid border-2 p-2 border-gray-300"  onclick="projectDetailsModal.toggle()">
+                <button class="hover:text-red-300 border-solid border-2 p-1 border-gray-300"  onclick="projectDetailsModal.toggleOff()">
                     return();
                 </button>
                 <h2 class="pb-2">
-                    Selected Project
+                    project title
                 </h2>
                 <p>
                     View some of the highlights from my list <br>
@@ -193,19 +201,20 @@ const createProjectDetailsModal = (thumbnailFilepath, Project) => {
                     fp-preview-pane flex items-center	
                     border-solid border-4 border-gray-300 p-3 m-2 
                     md:p-6 sm:mx-24 md:mx-0">
+                    ${previewImage}
                 </div>
                 <!-- project info -->
                 <ul class=" 
                     fp-project-info
                     p-0 sm:p-4 mt-2 flex flex-col h-100">
                     <li>
-                        <h4 data-fp-label="name" class="text-center text-slate-200">Project Name:</h4>
+                        <h4 data-fp-label="name" class="text-center text-slate-200">${project.title}:</h4>
                     </li>
                     <li>
                         <h5>Category:</h5>
                         <p class="md:pl-4 inline md:block">
                             <span data-fp-label="category">
-                                ?
+                                ${project.category}
                             </span>
                         </p>
                     </li>
@@ -213,19 +222,35 @@ const createProjectDetailsModal = (thumbnailFilepath, Project) => {
                         <h5>Tech Stack:</h5>
                         <p class="md:pl-4 inline md:block">
                             <span data-fp-label="tech-stack">
-                                ?
+                                ${project['tech-stack']}
                             </span>
                         </p>
                     </li>
                     <li class="grow">
                         <h5>About:</h5>
                         <p class="md:pl-4 overflow-clip	" data-fp-label="about">
-                            ?
+                            ${project.description}
                         </p>
                     </li>
                     <li class="justify-self-end mt-5">
                         <ul data-fp-label="links" class="flex justify-around">
-                            <!-- dynamic links go here -->
+                            <li>
+                                <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
+                                    <!-- icon button -->
+                                    <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
+                                        <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">G</button>
+                                        <button class="">Repo</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                                    <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
+                                        <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">D</button>
+                                        <button class="">Demo</button>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -258,17 +283,13 @@ const createProjectDetailsModal = (thumbnailFilepath, Project) => {
         
         let selectedProjectId = getProjectThumbId(e);
 
-        projectDetailsModal.toggle();
-
         if (selectedProjectId) {
 
             const selectedProject = ALL_PROJECTS.filter(project => project.id == selectedProjectId);
             console.log(selectedProject[0])
 
-            projectDetailsModal.toggle();
-
-            // document.querySelector('#projects-main').innerHTML += createProjectDetailsModal("", "")
-            insertFeaturedProject("./src/resource/projects/", selectedProject[0]);         
+            projectDetailsModal.toogleOn("./src/resource/projects/", selectedProject[0]);
+            // insertFeaturedProject("./src/resource/projects/", selectedProject[0]);         
         }
 
         selectedProjectId = false
