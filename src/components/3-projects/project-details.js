@@ -51,7 +51,7 @@ const insertFeaturedProject = (dataFilePath, project) => {
     PREVIEW_ELEMENT.about.innerText = project.description;
     PREVIEW_ELEMENT.links.innerHTML = `
         <li>
-            <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
+            <a href="${project.links.repo}" target="_blank" rel="noopener noreferrer">
                 <!-- icon button -->
                 <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
                     <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">G</button>
@@ -59,7 +59,7 @@ const insertFeaturedProject = (dataFilePath, project) => {
                 </div>
             </a>
         </li>
-        <li>
+        <li class='hidden'>
             <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
                 <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
                     <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">D</button>
