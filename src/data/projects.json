@@ -134,16 +134,30 @@
     },
     {
         "id" : 10,
-        "title": "Gamestore REST API",
+        "title": "Gamestore REST API Tut",
         "category": "backend",
         "thumbnail": "",
         "description": "Simple ASP .NET Core minimal API to learn how to build REST APIs in .NET Core and C#",
-        "tech-stack": "C#, .NET Core, Entity Framework, SQLite",
+        "tech-stack": "C#, .NET Core, Entity Framework, SQLite, REST",
         "links": {
             "repo": "https://github.com/JustinScottJenecke/tut-gamestore-rest-api.git"
         },
         "featured" : false,
-        "completed" : false,
+        "completed" : true,
+        "type":"Tutorial"
+    },
+    {
+        "id" : 11,
+        "title": "Spend Smart Tut",
+        "category": "backend",
+        "thumbnail": "spend-smart-preview.gif",
+        "description": "Expense tracker tutorial project built out to learn ASP .NET MVC",
+        "tech-stack": "C#, ASP .NET Core, Entity Framework, In Memory Database",
+        "links": {
+            "repo": "https://github.com/JustinScottJenecke/expense-tacker-net-tut"
+        },
+        "featured" : false,
+        "completed" : true,
         "type":"Tutorial"
     }
 
