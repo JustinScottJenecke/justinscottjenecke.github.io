@@ -48,7 +48,8 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
     return `               
         <li class="project-preview-card border-solid border-4 border-gray-300" id="${Project.id}">
             <div class="project-preview-wrapper w-full aspect-[4/3]">
-                <div class="project-preview-card w-full grid grid-rows-[5fr_2fr_1fr] h-full m-4">
+                <div class="project-preview-card w-full grid grid-rows-[1fr_5fr_2fr_1fr] h-full m-4">                    
+                    <h4 class="text-center">${Project.title}</h4>
                     <div class="overflow-hidden">
                         <img src="${completeThumbPath}" alt="project-preview-thumb" class="pr-8">
                     </div>
