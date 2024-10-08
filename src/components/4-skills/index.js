@@ -9,9 +9,9 @@ const createSkillCard = (Skill) => {
                     ${Skill.bgImgTag}
                 </div>
                 <div class="card-content aspect-square overflow-hidden">
-                    <ul class="flex flex-col p-3 pt-8">
+                    <ul class="flex flex-wrap gap-6 p-3 pt-8">
                     ${
-                        Skill.tools.map(toolItem => `<li class="flex gap-2"><span>${toolItem.tool}</span></li>`)
+                        Skill.tools.map(toolItem => `<li class="flex bg-stone-800/50 p-1"><span>${toolItem.tool}</span></li>`)
                             .join('')
                     }
                     </ul>
