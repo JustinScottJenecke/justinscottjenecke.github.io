@@ -221,6 +221,39 @@ button:disabled {
     display: block;
 }
 
+.about-card > h4 {
+    position: relative;
+    top: 35%;
+    justify-self: center;
+
+    transition-property: top;
+    transition-duration: 500ms;
+}
+
+.about-card-text {
+    transition: opacity 1s 0.15s;
+
+    visibility: hidden;
+    opacity: 0;
+} 
+
+.about-card:hover > h4 {
+    /* position: static; */
+    top: 0;
+    /* justify-self: top !important; */
+    
+}
+
+.about-card:hover > .about-card-text {
+    visibility: visible;
+    /* transition-duration: 1s;
+    transition-property: visibility; */
+
+    opacity: 1;
+}
+
+
+
 /* ----- footer ----- */
 @media only screen and (min-width: 426px) and (max-width: 770px) {
     /* #other-links {
