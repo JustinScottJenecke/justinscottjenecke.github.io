@@ -8,7 +8,7 @@ const createSkillCard = (Skill) => {
                     <h4 class="absolute flex justify-center ${Skill.name === 'JavaScript' && 'text-black'}">${Skill.name}</h4>
                     ${Skill.bgImgTag}
                 </div>
-                <div class="card-content aspect-square">
+                <div class="card-content aspect-square overflow-hidden">
                     <ul class="flex flex-col p-3 pt-8">
                     ${
                         Skill.tools.map(toolItem => `<li class="flex gap-2"><span>${toolItem.tool}</span></li>`)

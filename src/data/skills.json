@@ -31,7 +31,7 @@
             },
             {
                 "no": 5,
-                "tool": "Spring Data JPA",
+                "tool": "Spring Data",
                 "skill-level": "good"
             }
         ]
@@ -65,7 +65,13 @@
                 "no": 5,
                 "tool": "Nuxt.js",
                 "skill-level": "good"
+            },
+            {
+                "no": 6,
+                "tool": "TypeScript",
+                "skill-level": "good"
             }
+            
         ]
     },
     {
@@ -75,7 +81,7 @@
         "tools" : [
             {
                 "no": 1,
-                "tool": "Syntax, OOP, etc.",
+                "tool": "PHP 8",
                 "skill-level": "good"
             },
             {
@@ -164,12 +170,12 @@
             {
                 "no": 1,
                 "tool": "Git",
-                "skill-level": "good"
+                "skill-level": "great"
             },
             {
                 "no": 2,
                 "tool": "GitHub",
-                "skill-level": "good"
+                "skill-level": "great"
             },
             {
                 "no": 3,
@@ -179,13 +185,29 @@
             {
                 "no": 4,
                 "tool": "VS Code",
-                "skill-level": "good"
+                "skill-level": "great"
             },
             {
                 "no": 5,
                 "tool": "Intelli J",
                 "skill-level": "good"
+            },
+            {
+                "no": 6,
+                "tool": "GraphQL",
+                "skill-level": "novice"
+            },
+            {
+                "no": 7,
+                "tool": "Notion",
+                "skill-level": "great"
+            },
+            {
+                "no": 8,
+                "tool": "Google Suit",
+                "skill-level": "good"
             }
+            
         ]
     }
 ]

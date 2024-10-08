@@ -198,7 +198,7 @@ button:disabled {
 
 
 /* ------ skills ------ */
-.card-wrapper:hover > .card-cover-image {
+.card-cover-image {
     z-index: -1;
 }
 /* .card-cover-image {
@@ -206,12 +206,17 @@ button:disabled {
     position: absolute; 
 } */
 .card-content {
-    display: none;
+    /* visibility: hidden; */
+    height: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.692);
+    transition: height 1s;
 }
 .card-wrapper:hover > .card-content {
-    display: block;
+    /* visibility: visible; */
     background-color: rgba(0, 0, 0, 0.692);
-    color: whitesmoke;
+    /* color: whitesmoke; */
+    height: 100%;
 }
 
 
