@@ -6,32 +6,32 @@
         "tools" : [
             {
                 "no": 0,
-                "tool": "Spring-Boot",
+                "name": "Spring-Boot",
                 "skill-level": "good"
             },
             {
                 "no": 1,
-                "tool": "Hibernate",
+                "name": "Hibernate",
                 "skill-level": "basic"
             },
             {
                 "no": 2,
-                "tool": "JUnit",
+                "name": "JUnit",
                 "skill-level": "basic"
             },
             {
                 "no": 3,
-                "tool": "Java Swing",
+                "name": "Java Swing",
                 "skill-level": "good"
             },
             {
                 "no": 4,
-                "tool": "Java 8",
+                "name": "Java 8",
                 "skill-level": "good"
             },
             {
                 "no": 5,
-                "tool": "Spring Data JPA",
+                "name": "Spring Data JPA",
                 "skill-level": "good"
             }
         ]
@@ -43,27 +43,27 @@
         "tools" : [
             {
                 "no": 1,
-                "tool": "ES6",
+                "name": "ES6",
                 "skill-level": "good"
             },
             {
                 "no": 2,
-                "tool": "React.js",
+                "name": "React.js",
                 "skill-level": "good"
             },
             {
                 "no": 3,
-                "tool": "Next.js",
+                "name": "Next.js",
                 "skill-level": "basic"
             },
             {
                 "no": 4,
-                "tool": "Vue.js",
+                "name": "Vue.js",
                 "skill-level": "good"
             },
             {
                 "no": 5,
-                "tool": "Nuxt.js",
+                "name": "Nuxt.js",
                 "skill-level": "good"
             }
         ]
@@ -75,17 +75,17 @@
         "tools" : [
             {
                 "no": 1,
-                "tool": "Syntax, OOP, etc.",
+                "name": "Syntax, OOP, etc.",
                 "skill-level": "good"
             },
             {
                 "no": 2,
-                "tool": "Composer",
+                "name": "Composer",
                 "skill-level": "basic"
             },
             {
                 "no": 3,
-                "tool": "Slim Framework",
+                "name": "Slim Framework",
                 "skill-level": "basic"
             }
         ]
@@ -97,22 +97,22 @@
         "tools" : [
             {
                 "no": 1,
-                "tool": "Syntax, OOP, etc.",
+                "name": "Syntax, OOP, etc.",
                 "skill-level": "good"
             },
             {
                 "no": 2,
-                "tool": "C# Generics",
+                "name": "C# Generics",
                 "skill-level": "basic"
             },
             {
                 "no": 3,
-                "tool": "ASP .NET Core",
+                "name": "ASP .NET Core",
                 "skill-level": "basic"
             },            
             {
                 "no": 4,
-                "tool": "Entity Framework",
+                "name": "Entity Framework",
                 "skill-level": "basic"
             }
         ]
@@ -124,7 +124,7 @@
         "tools" : [
             {
                 "no": 1,
-                "tool": "Syntax, CRUD, etc.",
+                "name": "Syntax, CRUD, etc.",
                 "skill-level": "basic"
             }  
         ]
@@ -136,22 +136,22 @@
         "tools" : [
             {
                 "no": 1,
-                "tool": "Bulma CSS",
+                "name": "Bulma CSS",
                 "skill-level": "good"
             },
             {
                 "no": 2,
-                "tool": "Tailwind",
+                "name": "Tailwind",
                 "skill-level": "basic"
             },
             {
                 "no": 3,
-                "tool": "SASS",
+                "name": "SASS",
                 "skill-level": "basic"
             },
             {
                 "no": 4,
-                "tool": "Bootstrap",
+                "name": "Bootstrap",
                 "skill-level": "good"
             }
         ]
@@ -163,27 +163,27 @@
         "tools" : [
             {
                 "no": 1,
-                "tool": "Git",
+                "name": "Git",
                 "skill-level": "good"
             },
             {
                 "no": 2,
-                "tool": "GitHub",
+                "name": "GitHub",
                 "skill-level": "good"
             },
             {
                 "no": 3,
-                "tool": "Agile (kanban)",
+                "name": "Agile (kanban)",
                 "skill-level": "good"
             },
             {
                 "no": 4,
-                "tool": "VS Code",
+                "name": "VS Code",
                 "skill-level": "good"
             },
             {
                 "no": 5,
-                "tool": "Intelli J",
+                "name": "Intelli J",
                 "skill-level": "good"
             }
         ]
