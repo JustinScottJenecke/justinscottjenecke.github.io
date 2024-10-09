@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--=================== Head ===================-->
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page tags -->
+    <title>justin.dev</title>
+    <link rel="shortcut icon" href="./public/icon/JJ.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/css/theme.css">
+    <!-- utils -->
+    <script src="./src//utils/jsonFetching.js"></script>
+    <!-- component scripts -->
+    <!-- <script defer src="./src/components/3-projects/project-details.js"></script> -->
+    <script defer src="./src/components/3-projects/projects.js"></script>
+    <script defer src="./src/components/1-nav/nav.js"></script>
+    <!-- <script defer src="./src/components/4-skills/index.js"></script> -->
+</head>
+<!--=================== Head =====================-->
+
+<!--=================== Body =====================-->
+
+<body>
+    <!-- nav -->
+    <nav id="top-nav" class="z-50 top-nav bg-neutral-950/95 sticky top-0">
+        <span id="logo-top">
+            <a href="#hero">
+                <h5>
+                    "logo" : {}
+                </h5>
+            </a>
+            |
+            <a href="./">
+                <h5>
+                    return();
+                </h5>
+            </a>
+        </span>
+        <ul class="nav-links">
+            <li>
+                <a href="#footer">contact-info</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- =============================== main website section ============================= -->
+    <span id="selected-project-modal-container">
+
+    </span>
+    <main id="projects-main">
+        <!-- Hero -->
+        <header id="hero" class="">
+            <div class="h-screen flex flex-col justify-center">
+                    <div class="flex flex-col items-center ">
+                        <h1 class="mb-4 md:mb-0">Tutoring</h1>
+                        <h4 class="mb-4 md:mb-0 mx-28 mt-4">
+                            Get assistance with coding homework and assignments, build micro programs to improve understanding of coding concepts, and more.
+                            All available in a 1-on-1, or a group setting.
+                        </h4>
+                        <ul class="
+                            hero-links flex flex-wrap justify-center 
+                            pt-8  gap-6
+                            sm:pt-4 sm:gap-12
+                            md: mt-8
+                            "
+                        >
+                            <li>
+                                <a href="#pricing">
+                                    <button class="rounded-full bg-neutral-800 w-10 aspect-square">R - pricing</button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#services">
+                                    <button class="rounded-full bg-neutral-800 w-10 aspect-square">S - services</button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#build-along-projects"
+                                    rel="noopener noreferrer">
+                                    <button class="rounded-full bg-neutral-800 w-10 aspect-square"><;> - build-along-projects</button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#get-in-contact">
+                                    <button class="rounded-full bg-neutral-800 w-10 aspect-square">C - get in contact</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <div class="hero-graphic flex justify-center">
+                        <div class="w-10/12 md:w-9/12">
+                            <div class="border-solid border-4 border-gray-300 p-3 md:p-6 m-2">
+                                <img src="./src/resource/background/code-dribble-red.gif" alt="hero-graphic" srcset=""
+                                    class="text-center">
+                            </div>
+                        </div>
+                    </div> -->
+            </div>
+        </header>
+
+        <!-- Services -->
+         <div id="services"></div>
+        <section class="md:mb-20">
+            <header class="
+            flex flex-col justify-center py-5
+            lg:col-span-1">
+                <h2 class="pb-2">
+                    Services on offer:
+                </h2>
+                <p>
+                    A bit more details on how my tutoring services work, <br>
+                    what I offer, and why students are my primary demographic.
+                </p>
+            </header>
+            <div class="
+                flex flex-col 
+                lg:grid lg:grid-cols-2 lg:auto-rows-fr">
+
+            <!-- Start of about -->
+                <article class="
+                    about-card
+                    glass-card text-white flex flex-col p-2
+                    md:my-5 md:mx-10
+                    lg:my-10 lg:mx-10">
+                    <h4 class="about-card-title text-center ">
+                        Tutoring Service
+                    </h4>
+                    <p class="about-card-text p-4">
+                        Tutoring and mentoring for students typically consists of online sessions where I 
+                        assist students with any array of coding-related issues. Means include assisting 
+                        with school/uni assignments, Q/A discussions, teaching new concepts and creating isolated
+                        examples to explain them, etc.
+
+                        Students are welcome to send their lesson plans as well, as this will help keep tutoring 
+                        sessions coherent with topics of a student's school curriculum.
+                    </p>
+                </article>
+
+                <article class="
+                    about-card
+                    glass-card text-white flex flex-col 
+                    mb-10 p-2
+                    md:mb-0 md:my-5 md:mx-10 
+                    lg:my-10 lg:mx-10">
+                    <h4 class="about-card-title text-center">
+                        Build Along Projects
+                    </h4>
+                    <p class="about-card-text  p-4">
+                        I also offer build-along projects for those who pefer to keep School/Uni work seperate
+                        from tutoring sessions. Build-along sessions are sessions where my screen is shared and I 
+                        code along with you, I explain concepts, and I explain my thought process, as I am 
+                        building out the project. This doubles as learning and practice experience, since you as the student
+                        are required to code the projects as well using recordngs made during our sessions.
+                    </p>
+                </article>
+
+                <article class="
+                about-card
+                glass-card text-white flex flex-col 
+                mb-10 p-2
+                md:mb-0 md:my-5 md:mx-10 
+                lg:my-10 lg:mx-10">
+                <h4 class="about-card-title text-center">
+                    How topics for sessions are selected
+                </h4>
+                <p class="about-card-text  p-4">
+                    With standard tutoring sessions, the topic for discussion or focul point of the coding excercises
+                    are usually selected by the student(s) before sessions. With group sessions, studets can vote for a 
+                    topic from a list of all topics/concepts, and the topic with the most votes for it will be the one 
+                    chose for the session. Multiple topics can be discussed in a single session given the urgency of the
+                    student wanting assistance, time constraints, and the approval of the other students in the session.
+                </p>
+                </article>
+
+            <article class="
+                about-card
+                glass-card text-white flex flex-col p-2
+                my-5
+                md:my-5 md:mx-10 
+                lg:my-10 lg:mx-10 ">
+                <h4 class="about-card-title text-center">
+                    Tutoring Models and offerings
+                </h4>
+                <p class="about-card-text p-4">
+                    Offerings include 1-on-1 sessions, with the standard session being 1 hour long, and the
+                    price being per hour. Pricing is outlined in the pricing section. This option is good for 
+                    those seeking more individual attention or have a very specific problem that need a deep debugging
+                    session to resolve.
+                    <br><br>
+                    I also offer group sessions which function as a more cost-effective option and run for a 
+                    bit longer at 90 minutes, to make up for possible lack of individual attention due to number
+                    of attendees. This model is great for learning to work in a team, networking with other novice 
+                    devs like yourself, and gaining exposure to issues and bugs others struggling from and to hopefully
+                    learn from them.
+                </p>
+            </article>
+
+            <article class="
+                about-card
+                glass-card text-white flex flex-col p-2
+                my-5
+                md:my-5 md:mx-10 
+                lg:my-10 lg:mx-10 ">
+                <h4 class="about-card-title text-center">
+                    Group Sessions
+                </h4>
+                <p class="about-card-text p-4">
+                    Minimum number of students per group are 4 in order to ensure that the sessions are still
+                    cost effective to host.
+                    <br><br>
+                    Sessions also have a maximum number capped at 6, 
+                    in order to ensure all students get the most of the time allocated to the session.
+                    <br><br>
+                    At this point in time, the models offered are unfortunately all online as there are too many logistical issues involved 
+                    with in-person tutoring and training, however this might be subject to change in the future.
+                </p>
+            </article>
+
+            </div>
+        </section>
+
+        <!-- Build along projects -->
+        <div id="build-along-projects"></div>
+        <section class="mt-14 mb-14 lg:mb-28">
+            <header class="mb-8">
+                <h2 class="pb-2">
+                    Previews of Build-Along Projects
+                </h2>
+                <p>
+                    Have a look at some of the example projects we might build, <br>
+                    or work on during tutoring or build-along sessions.
+                </p>
+            </header>
+            <ul id="all-projects-container" class="
+                        grid grid-cols-1 align-center 
+                        gap-4 px-0
+                        sm:grid sm:grid-cols-2 sm:px-4 sm:gap-8
+                        lg:grid-cols-2 lg:px-8 
+                        xl:grid-cols-2 xl:gap-20">
+                <!-- li -->
+                    <!-- Skill Card -->
+                <!-- li /-->
+            </ul>
+        </section>
+
+        <!-- Offerings and Pricing -->
+        <div id="pricing"></div>
+        <section class="mt-14 mb-14 lg:mb-28">
+            <header class="mb-8">
+                <h2 class="pb-2">
+                    All Projects
+                </h2>
+            </header>
+            <ul id="all-projects-container" class="
+                        grid grid-cols-1 align-center 
+                        gap-4 px-0
+                        sm:grid sm:grid-cols-2 sm:px-4 sm:gap-8
+                        lg:grid-cols-2 lg:px-8 
+                        xl:grid-cols-2 xl:gap-20">
+                <!-- li -->
+                    <!-- Skill Card -->
+                <!-- li /-->
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- mobile Navbar -->
+    <nav id="mobile-nav" class="mobile-nav">
+        <div class="mobile-interactive-wrapper px-2 py-1">
+            <ul class="mobile-nav-links">
+                <li class="p-2">
+                    <a href="./index.html">
+                        <h5>
+                            return();
+                        </h5>
+                    </a>
+                </li>
+                <li class="p-2">
+                    <a href="#footer">contact-info</a>
+                </li>
+            </ul>
+            <div id="mobile-nav-logo-btn" class="p-2">
+                <button>=</button>
+            </div>
+        </div>
+    </nav>
+    <!-- footer section -->
+    <footer id="footer" class="">
+        <!-- contact info -->
+        <div id="contact-info" class="
+            px-2
+            bg-neutral-950 flex flex-col py-8 
+            md:grid md:grid-cols-2 md:px-8
+            lg:flex lg:flex-row lg:justify-between">
+            <div class="contact-header">
+                <h4 class="">
+                    Contact Info:
+                </h4>
+                <ul class="p-4 flex flex-col ">
+                    <li class="pb-2 break-words">
+                        <a class="" href="mailto:justinjenecke@gmail.com">justinjenecke@gmail.com</a>
+                    </li>
+                    <li class="pb-2 break-words">
+                        <a class="text-wrap" href="http://https://github.com/JustinScottJenecke" target="_blank"
+                            rel="noopener noreferrer">https://github.com/JustinScottJenecke</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- other links -->
+            <div id="other-links" class="">
+                <h4>
+                    Other Links:
+                </h4>
+                <ul class="p-4 flex flex-col lg:pb-2">
+                    <li class="pb-2">
+                        <a href="https://github.com/JustinScottJenecke?tab=repositories&q=&type=&language=&sort="
+                            target="_blank">Portfolio Pieces and Projects</a>
+                    </li>
+                    <li class="pb-2">
+                        <a href="./public/docs/Resume-Justin-Scott-Issac-Jenecke.pdf" target="_blank">Resume</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- socials -->
+            <div id="footer-social-links" class="">
+                <h4 class="md:text-center">
+                    Socials:
+                </h4>
+                <ul class="
+                    flex gap-6 p-4
+                    md:gap-12 md:justify-center md:p-0
+                    lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start lg:p-4">
+                    <li>
+                        <a href="https://github.com/JustinScottJenecke" target="_blank" rel="noopener noreferrer">
+                            <button class="rounded-full bg-neutral-800 w-10 aspect-square">G</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/justin-scott-jenecke/" target="_blank"
+                            rel="noopener noreferrer">
+                            <button class="rounded-full bg-neutral-800 w-10 aspect-square">in</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:justinjenecke@gmail.com">
+                            <button class="rounded-full bg-neutral-800 w-10 aspect-square">E</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--=================== Body =====================-->
+<script>      
+
+
+</script>
+
+</html>
