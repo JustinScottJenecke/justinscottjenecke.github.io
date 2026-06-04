@@ -1,7 +1,10 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
 /* ------ General ------ */
 
 * {
-    font-family: consolas;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 0.85rem;
 }
 
 html {
@@ -10,7 +13,7 @@ html {
 
 body {
     background-color: rgb(25, 25, 28);
-    color: white;
+    color: rgb(220, 220, 220);
 }@media only screen and (max-width: 770px) {
     body {
         font-size: 0.75rem;
@@ -21,22 +24,30 @@ body {
 /* headings */
     h1 {
         font-size: 3.75rem !important;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: "Orbitron", monospace;
         font-weight: 900 !important;
+        margin-bottom: 1.5rem;
+        color: white;
     }
     h2 {
         font-size: 3rem !important;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+          font-family: "Orbitron", monospace;
         /* font-weight: 675; */
         font-weight: 600;
+        color: white;
+
     }
     h3 {
         font-size: 2rem !important;
         font-weight: 500;
+        color: white;
+
     }
     h4 {
         font-size: 1.4rem !important;
         font-weight: 300;
+        color: white;
+
     }
     h5 {
         font-weight:bold;
@@ -63,11 +74,18 @@ section {
 a:hover {
     color: rgb(219, 46, 46);
 }
+
 button:disabled {
     color: rgba(255, 255, 255, 0.438);
     border: 1px solid rgba(255, 255, 255, 0.356);
     background-color: rgba(0, 0, 0, 0.103);
     cursor: not-allowed;
+}
+
+a {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 0.75rem;
+    color: white;
 }
 
 /* ----------------------------- Component Styling ----------------------------- */
@@ -88,6 +106,11 @@ button:disabled {
     .top-nav {
         display: none;
     }
+}
+
+/* ------ icon link ------ */
+.icon-link {
+  font-size: 1rem !important;
 }
 
 /* ------ mobile nav ------ */
