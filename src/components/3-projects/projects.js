@@ -13,7 +13,7 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
             `
                 <a href="${Project.links.demo}" target="_blank" rel="noopener noreferrer" >
                     <button class="cursor-pointer w-full">
-                        Live Demo
+                        live demo
                     </button>
                 </a>
             ` : "",
@@ -21,7 +21,7 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
             `
                 <a href="${Project.links.repo}" target="_blank" rel="noopener noreferrer" >
                     <button class="cursor-pointer w-full">
-                        Repository
+                        repository
                     </button>
                 </a>
             ` : "",
@@ -29,7 +29,7 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
             `
                 <a href="${Project.links.video}" target="_blank" rel="noopener noreferrer" >
                     <button class="cursor-pointer w-full">
-                        Demo Video
+                        demo video
                     </button>
                 </a>
             ` : "" 
@@ -57,7 +57,7 @@ const createProjectPreviewCard = (thumbnailFilepath, Project) => {
                     <div class="grid grid-cols-2 grid-rows-2 mb-2 mt-3">
                         <a rel="noopener noreferrer">
                             <button class="project-details-btn cursor-pointer w-full" data-project-id="${Project.id}">
-                                View Details
+                                view details
                             </button>
                         </a>
                         ${buttons.demo}
@@ -233,7 +233,7 @@ const createProjectDetailsModal = (dataFilePath, project) => {
                                     <!-- icon button -->
                                     <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
                                         <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">G</button>
-                                        <button class="">Repo</button>
+                                        <button class="a">repo</button>
                                     </div>
                                 </a>
                             </li>
@@ -241,7 +241,7 @@ const createProjectDetailsModal = (dataFilePath, project) => {
                                 <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
                                     <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
                                         <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">D</button>
-                                        <button class="">Demo</button>
+                                        <button class="a">demo</button>
                                     </div>
                                 </a>
                             </li>

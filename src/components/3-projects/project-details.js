@@ -55,7 +55,7 @@ const insertFeaturedProject = (dataFilePath, project) => {
                 <!-- icon button -->
                 <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
                     <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">G</button>
-                    <button class="">Repo</button>
+                    <button class="a">repo</button>
                 </div>
             </a>
         </li>
@@ -63,7 +63,7 @@ const insertFeaturedProject = (dataFilePath, project) => {
             <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
                 <div class="bg-neutral-700 rounded-tl-full rounded-bl-full pr-6">
                     <button class="rounded-full bg-neutral-800 w-6 sm:w-8 md:w-10 aspect-square">D</button>
-                    <button class="">Demo</button>
+                    <button class="a">demo</button>
                 </div>
             </a>
         </li>

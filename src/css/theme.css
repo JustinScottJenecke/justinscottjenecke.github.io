@@ -110,6 +110,10 @@ a {
 a:hover {
     color: rgb(239, 81, 81);
 }
+.a {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 0.75rem;
+}
 
 
 /* ----------------------------- Component Styling ----------------------------- */
