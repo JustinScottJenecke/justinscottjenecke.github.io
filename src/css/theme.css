@@ -1,10 +1,21 @@
 /* imports */
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/thehook');
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
 /* ------ General ------ */
 
 * {
-    font-family: "Press Start 2P", system-ui;
-    font-size: 0.85rem;
+    /* font-family: "Press Start 2P", system-ui; */
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.95rem;
 }
 
 html {
@@ -24,36 +35,49 @@ body {
 /* headings */
     h1 {
         font-size: 3.75rem !important;
-        font-family: "Orbitron", monospace;
+        font-family: "Audiowide", sans-serif;
         font-weight: 900 !important;
         margin-bottom: 1.5rem;
         color: white;
     }
     h2 {
-        font-size: 3rem !important;
-          font-family: "Orbitron", monospace;
+        font-size: 2.25rem !important;
+        /* font-family: "Helvetica"; */
         /* font-weight: 675; */
+        font-variant-caps: all-petite-caps;
         font-weight: 600;
         color: white;
 
     }
     h3 {
         font-size: 2rem !important;
-        font-weight: 500;
+        font-weight: 800;
         color: white;
 
     }
     h4 {
+        font-variant-caps: all-petite-caps;
         font-size: 1.4rem !important;
-        font-weight: 300;
+        font-weight: 400;
         color: white;
 
     }
     h5 {
-        font-weight:bold;
+        font-weight: 1000;
         color: rgb(206, 97, 115);
         display: inline;
     }
+
+    h6 {
+        /* interactable in some way */
+        font-family: "Press Start 2P", system-ui;
+        font-size: 0.75rem;
+        /* font-size: 1.4rem !important; */
+        font-weight: 400;
+        color: white;
+    }
+
+
 /* headings */
 
 section {
@@ -71,10 +95,6 @@ section {
     }
 }
 
-a:hover {
-    color: rgb(219, 46, 46);
-}
-
 button:disabled {
     color: rgba(255, 255, 255, 0.438);
     border: 1px solid rgba(255, 255, 255, 0.356);
@@ -87,6 +107,10 @@ a {
     font-size: 0.75rem;
     color: white;
 }
+a:hover {
+    color: rgb(239, 81, 81);
+}
+
 
 /* ----------------------------- Component Styling ----------------------------- */
 
