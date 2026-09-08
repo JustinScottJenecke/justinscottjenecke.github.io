@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 
-/* ------ General ------ */
+/* ------ General ------ */f
 
 * {
     /* font-family: "Press Start 2P", system-ui; */
@@ -119,17 +119,35 @@ a:hover {
 /* ----------------------------- Component Styling ----------------------------- */
 
 /* ------ Top nav  ------ */
+
 .top-nav { 
     display: flex;
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
     /* padding-bottom: 1rem; */
 }
 .nav-links {
     display: flex;
     flex: 1;
     justify-content: flex-end;
-    gap: 2rem;
+
+} .nav-links > li {
+    padding: 0.75rem 0rem;
+    border-bottom: solid 2px;
+    border-color:rgba(239, 81, 81, 0);
 }
+ .nav-links > li:hover {
+    cursor: pointer;
+    border-color:rgb(239, 81, 81);
+}
+
+.nav-links > li > a {
+    padding: 0 1rem;
+
+} .nav-links > li > a:hover {
+    padding: 0 1rem;
+    color:  rgb(220, 220, 220)
+}
+
 @media only screen and (max-width: 770px) {
     .top-nav {
         display: none;
