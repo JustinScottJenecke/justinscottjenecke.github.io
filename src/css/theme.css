@@ -135,10 +135,11 @@ a:hover {
     padding: 0.75rem 0rem;
     border-bottom: solid 2px;
     border-color:rgba(239, 81, 81, 0);
-}
- .nav-links > li:hover {
+} .nav-links > li:hover {
     cursor: pointer;
     border-color:rgb(239, 81, 81);
+}  .nav-links > li:hover > a {
+    color:  rgb(255, 255, 255)
 }
 
 .nav-links > li > a {
@@ -146,7 +147,6 @@ a:hover {
 
 } .nav-links > li > a:hover {
     padding: 0 1rem;
-    color:  rgb(220, 220, 220)
 }
 
 @media only screen and (max-width: 770px) {
